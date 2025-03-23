@@ -1,152 +1,261 @@
 <!DOCTYPE html>
+<html lang="cs">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Robert Vokáč's personal website. Learn about my work in software development, C++ and Java, and my projects.">
+    <meta name="keywords" content="Robert Vokáč, software development, C++, Java, Speedy Blupi, CNA library, SDL 3, Ogre 3D, game development">
     <meta http-equiv="Content-Language" content="cs" />
     <title>Robert Vokáč's Personal Page</title>
-    <!--  <meta name="robots" content="noindex,follow" />-->
+    <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16" ></link>
     <style>
-
-
-        .links_to_other_websites,
-        .li_importance_highest,
-        .li_importance_high,
-        .li_importance_medium,
-        .li_importance_low,
-        .li_importance_lowest,
-        .li_importance_none
-        {
-            margin:4px 0px;
-            padding-left:0px;
-
-        }
-
-        .links_to_other_websites li,
-        .li_importance_highest li,
-        .li_importance_high li,
-        .li_importance_medium li,
-        .li_importance_low li,
-        .li_importance_lowest li,
-        .li_importance_none li,
-        .importance_highest,
-        .importance_high,
-        .importance_medium,
-        .importance_low,
-        .importance_lowest,
-        .importance_none
-        {
-            margin:4px;
-            padding:4px;
-            display:inline;
-            display: inline-block;
-
-        }
-
-        .importance_highest,
-        .importance_high,
-        .importance_medium,
-        .importance_low,
-        .importance_lowest,
-        .importance_none
-        {
-            font-weight:bold;
-
-        }
-
-        .importance_highest_ {
-            background:#FFFF66;
-            color:black;
-        }
-        .importance_high_ {
-            background:#66ff00;
-        }
-
-        .importance_medium_ {
-            background:blue;
-            color:white;
-        }
-
-        .importance_low_ {
-            background:brown;
-            color:white;
-        }
-
-        .importance_lowest_ {
-            background: black;
-            color: white;
-        }
-
-        .importance_none_ {
-            background: lightgray;
-        }
-        #interests div span {
-        /*
-        background: blue;
-        color: white;
-        */
-        border:1px solid gray;
-        }
-        
-        .critical_
-        {
-            padding-bottom:1px!important;
-            border-bottom:3px solid red;
-        }
-
         * {
-            font-family: Arial;
-        }
-        pre {
-            font-family: "Courier New";
-            background:#eee;
-            border: 2px solid #bbb;
-            color: black;
-            padding:10px;
-            font-size:100%;
-            letter-spacing:1px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        p, ol {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        ol {
+            padding-left: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 600px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        .photo-container {
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-container img {
+            border-radius: 50%;
+            width: 150px;
+            height: 213px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .highlighted-projects {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 30px 0;
+            font-weight: bold;
+            border-radius: 5px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .highlighted-projects ul li {
+            list-style-type: none;
+            }
+        
+        .highlighted-projects ul li {
+            padding-bottom: 10px;
+            }
+        
+        .links_to_other_websites {
+            list-style: none;
+            margin: 20px 0;
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .links_to_other_websites li {
+            margin: 10px 15px;
+        }
+
+        .links_to_other_websites li a {
+            background: #3498db;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: block;
+        }
+
+        .links_to_other_websites li a:hover {
+            background: #e74c3c;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        footer a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .critical_ {
+            padding-bottom: 1px !important;
+            border-bottom: 3px solid #e74c3c;
+        }
+
+        .gpg-key {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p, ol {
+                font-size: 0.95rem;
+            }
+
+            .photo-container img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .links_to_other_websites li a {
+                font-size: 0.9rem;
+            }
+        }
 
     </style>
 </head>
-<body style="padding:10px;">
-    <h1 style="text-align:center">Robert Vokáč's Personal Page</h1>
-    <div style="text-align:center"><img src="photo-of-robert-vokac.jpg" width="150px" /></div>
-    <h2>Introduction</h2>
-    I am a Java and C++ software developer. In my free time I work on: 
-    <ol>
-    <li>the revival of game Speedy Blupi for Windows (1998, 2002) - decompilation, improvements</li>
-    <li>the revival of game Speedy Blupi for Windows Phone (2013) - migration from C# and XNA to C++ and SDL 3</li>
-    <li>the CNA library - XNA like wrapper around the SDL 3 library</li>
-    <li>I also plan to create the game Galaxy Eggbert - 3D version of Speedy Blupi (2002), C++ and Ogre 3D will be used</li>
-    </ol>
+<body>
 
-    <h3>GPG key</h3>
-    <pre>
+    <header>
+        <h1>Robert Vokáč's Personal Page</h1>
+        <div class="photo-container">
+            <img src="photo-of-robert-vokac.jpg" alt="Robert Vokáč">
+        </div>
+    </header>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>Welcome to my personal website! I'm Robert Vokáč, a passionate software developer specializing in Java and C++. <br> I dedicate a large portion of my free time for game development and the C++ programming language. </p>
+        <p>Below are some of the projects I’m currently working on:</p>
+        
+        <div class="highlighted-projects">
+            <ul>
+                <li>The revival of the iconic game <strong>Speedy Blupi</strong> (1998, 2002) for Windows - focusing on decompilation and game improvements.</li>
+                <li>Porting <strong>Speedy Blupi</strong> to Windows Phone (2013) - migrating from C# and XNA to C++ and SDL 3 for a more modern experience.</li>
+                <li>Developing the <strong>CNA library</strong> - a powerful XNA-like wrapper built around the SDL 3 framework.</li>
+                <li>Planning the creation of <strong>Galaxy Eggbert</strong> - a 3D version of Speedy Blupi, leveraging C++ and Ogre 3D for graphics and physics.</li>
+            </ul>
+        </div>
+
+        <h3>My GPG Key</h3>
+        <div class="gpg-key">
+            <pre>
 pub   4096R/FB9CE8E20AADA55F 2024-09-28
       Key fingerprint = 255C 69CC 1D09 CA54 EF0C C9DF FB9C E8E2 0AAD A55F
-uid   Robert Vokac &lt;robertvokac@robertvokac.com&gt;</pre>
+uid   Robert Vokac &lt;robertvokac@robertvokac.com&gt;
+            </pre>
+        </div>
 
+        <p>
+            <a href="https://stallman.org/facebook.html" target="_blank">
+                <img src="images/no-facebook.svg" alt="Not on Facebook" width="200">
+            </a>
+        </p>
+    </section>
 
-    <p><a href="https://stallman.org/facebook.html" target="_blank"><img src="images/no-facebook.svg" alt="Not f'd. You won't find me on Facebook" width="200"></a></p>
-    <h2>Links to my other websites</h2>
-    <ul class="links_to_other_websites">
-        <li><a href="https://openeggbert.com" target="_blank">openeggbert.com</a></li>
-        <li><a href="https://speedyblupi.com" target="_blank">speedyblupi.com</a></li>
-        <li><a href="https://cppforever.com" target="_blank">cppforever.com</a></li>
-        <li><a href="https://github.com/openeggbert" target="_blank">https://github.com/openeggbert</a></li>
-        <li><a href="https://github.com/robertvokac" target="_blank">https://github.com/robertvokac</a></li>
-    </ul>
+    <section>
+        <h2>Links to My Other Websites</h2>
+        <ul class="links_to_other_websites">
+            <li><a href="https://openeggbert.com" target="_blank">openeggbert.com</a></li>
+            <li><a href="https://speedyblupi.com" target="_blank">speedyblupi.com</a></li>
+            <li><a href="https://cppforever.com" target="_blank">cppforever.com</a></li>
+            <li><a href="https://github.com/openeggbert" target="_blank">GitHub - openeggbert</a></li>
+            <li><a href="https://github.com/robertvokac" target="_blank">GitHub - robertvokac</a></li>
+        </ul>
+    </section>
 
-
-
-    <hr />
-
-    Copyright © 2025 Robert Vokáč<br>
-    Licenced under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">Attribution-NonCommercial-NoDerivs 4.0 International</a> licence or later.<br>
-    Verbatim copying and redistribution of this entire page are permitted provided this notice is preserved.
-
+    <footer>
+        Copyright &copy; 2025 Robert Vokáč<br>
+        Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" target="_blank">Attribution-NonCommercial-NoDerivs 4.0 International</a> license or later.<br>
+        Verbatim copying and redistribution of this entire page are permitted provided this notice is preserved.
+    </footer>
 
 </body>
 </html>
