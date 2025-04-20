@@ -63,6 +63,7 @@ h2::after {
     margin: 20px auto;
     text-align: left;
 }
+
 .highlighted-projects li {
     list-style: none;
 }
@@ -100,9 +101,48 @@ footer {
     padding: 15px;
     margin-top: 30px;
 }
-footer p a{
-color:var(--sky-blue);
+
+footer p a {
+    color: var(--sky-blue);
 }
-footer p a:visited{
-    color:var(--sky-blue);
+
+footer p a:visited {
+    color: var(--sky-blue);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .photo-container img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .highlighted-projects, .gpg-key {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    /*.links a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }*/
+
+    footer {
+        padding: 12px;
+    }
 }
