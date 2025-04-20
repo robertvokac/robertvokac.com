@@ -4,47 +4,50 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Robert Vokáč's personal website. Learn about my work in software development, C++ and Java, and my projects.">
-    <meta name="keywords" content="Robert Vokáč, software development, C++, Java, Speedy Blupi, CNA library, SDL 3, Ogre 3D, game development">
+    <meta name="description" content="Explore Robert Vokáč’s expertise in C++ software development, game projects, and innovative programming solutions.">
+    <meta name="keywords" content="Robert Vokáč, C++ developer, game development, Speedy Blupi, CNA library, SDL 3, Ogre 3D, software projects">
     <meta http-equiv="Content-Language" content="cs" />
-    <title>Robert Vokáč's Personal Page</title>
+    <title>Robert Vokáč | C++ Developer & Game Projects</title>
     <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
         :root {
             --sky-blue: #3498db;
+            --dark-blue: #2c3e50;
         }
         
         * {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            background-color: #f0f4f8;
+            background-color: #f8f9fa;
             color: #333;
             padding: 20px;
             font-size: 1rem;
+            line-height: 1.8;
         }
 
         h1, h2, h3 {
-            color: #2c3e50;
+            color: var(--dark-blue);
+            text-align: center;
             margin: 20px 0;
         }
 
         h1 {
             font-size: 2.5rem;
-            text-align: center;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         h2 {
             font-size: 2rem;
-            text-align: center;
-            border-bottom: 2px solid var(--sky-blue);
+            border-bottom: 3px solid var(--sky-blue);
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
@@ -52,80 +55,65 @@
         h3 {
             font-size: 1.5rem;
             margin-top: 30px;
-            text-align: center;
             text-decoration: underline;
         }
 
         p, ol {
             font-size: 1rem;
-            line-height: 1.7;
-            margin: 15px 0;
             text-align: center;
-        }
-
-        ol {
-            padding-left: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 600px;
-        }
-
-        a {
-            color: var(--sky-blue);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #e74c3c;
-            text-decoration: underline;
         }
 
         .photo-container {
             text-align: center;
             margin-bottom: 30px;
-            transition: transform 0.3s ease;
         }
 
         .photo-container img {
             border-radius: 50%;
             width: 150px;
             height: 213px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .photo-container img:hover {
             transform: scale(1.1);
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
         }
 
         .highlighted-projects {
-            background-color: transparent;
-            color: black;
+            background-color: #fff;
+            color: #333;
             border: 2px solid var(--sky-blue);
             padding: 20px;
-            margin: 30px 0;
-            font-weight: normal;
             border-radius: 5px;
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 30px auto;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .highlighted-projects ul li {
+            list-style: none;
+            padding-bottom: 10px;
+        }
+        
+        .gpg-key {
+            background-color: white;
+            color: black;
+            border: 2px solid var(--sky-blue);
+            padding: 15px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 5px;
             text-align: left;
         }
-        .highlighted-projects ul li {
-            list-style-type: none;
-            }
-        
-        .highlighted-projects ul li {
-            padding-bottom: 10px;
-            }
-        
+
+
         .links_to_other_websites {
             list-style: none;
-            margin: 20px 0;
-            padding-left: 0;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 20px;
         }
 
         .links_to_other_websites li {
@@ -138,7 +126,6 @@
             padding: 10px 18px;
             border-radius: 5px;
             transition: background 0.3s ease, transform 0.3s ease;
-            display: block;
         }
 
         .links_to_other_websites li a:hover {
@@ -147,13 +134,12 @@
         }
 
         footer {
-            background-color: #2c3e50;
+            background-color: var(--dark-blue);
             color: #ecf0f1;
             text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
-            margin-top: 40px;
+            padding: 20px;
             border-radius: 5px;
+            margin-top: 40px;
         }
 
         footer a {
@@ -163,22 +149,6 @@
 
         footer a:hover {
             text-decoration: underline;
-        }
-
-        .critical_ {
-            padding-bottom: 1px !important;
-            border-bottom: 3px solid #e74c3c;
-        }
-
-        .gpg-key {
-            background-color: transparent;
-            color: black;
-            border: 2px solid var(--sky-blue);
-            padding: 15px;
-            margin: 30px auto;
-            max-width: 800px;
-            border-radius: 5px;
-            text-align: left;
         }
 
         /* Responsive Design */
@@ -210,29 +180,31 @@
 <body>
 
     <header>
-        <h1>Robert Vokáč's Personal Page</h1>
+        <h1>Robert Vokáč's Personal Site</h1>
         <div class="photo-container">
-            <img src="photo-of-robert-vokac.jpg" alt="Robert Vokáč">
+            <img src="photo-of-robert-vokac.jpg" alt="Photo of Robert Vokáč">
         </div>
     </header>
 
     <section>
         <h2>Introduction</h2>
         <p>Welcome to my personal website! I'm Robert Vokáč, a C++ software developer.</p>
-        <p>Below are some of the current or planned projects: </p>
+        <p>Below are some of my current and planned projects:</p>
         
         <div class="highlighted-projects">
             <ul>
-                <li><strong>Free Eggbert: </strong> revival of the game <strong>Speedy Blupi</strong> (1998, 2002) for Windows - decompilation and game improvements</li>
-                <li><strong>Mobile Eggbert: </strong>Porting <strong>Speedy Blupi Windows Phone (2013)</strong>  - from C# and XNA to C++ and CNA</li>
-                <li><strong>CNA: </strong>XNA-like wrapper built around the SDL 3 framework.</li>
-                <li><strong>Galaxy Eggbert: </strong>3D version of Speedy Blupi, leveraging C++ and Ogre 3D for graphics and physics</li>
-                <li><strong>Free API: </strong>Implementation of the subset of WinAPI</li>
-                <li><strong>Galaxy Eggbert: </strong> DirectX 3 implemented using SDL 3</li>
+                <li><strong>Free Eggbert:</strong> Revival of the classic game <strong>Speedy Blupi (1998, 2001) for Windows</strong> via decompilation and improvements</li>
+                <li><strong>Mobile Eggbert:</strong> Porting <strong>Speedy Blupi for Windows Phone (2013)</strong> to C++ and CNA</li>
+                <li><strong>CNA Library:</strong> A XNA-like framework built on SDL 3</li>
+                <li><strong>Galaxy Eggbert:</strong> A 3D version of Speedy Blupi game using Ogre 3D library</li>
+                <li><strong>Free API:</strong> Partial implementation of WinAPI</li>
+                <li><strong>Free Direct:</strong> DirectX 3 implementation build on SDL 3</li>
             </ul>
         </div>
+    </section>
 
-        <h3>My GPG Key</h3>
+<section>
+        <h2>My GPG Key</h2>
         <div class="gpg-key">
             <pre>
 pub   4096R/FB9CE8E20AADA55F 2024-09-28
@@ -240,13 +212,7 @@ pub   4096R/FB9CE8E20AADA55F 2024-09-28
 uid   Robert Vokac &lt;robertvokac@robertvokac.com&gt;
             </pre>
         </div>
-
-        <p>
-            <a href="https://stallman.org/facebook.html" target="_blank">
-                <img src="images/no-facebook.svg" alt="Not on Facebook" width="200">
-            </a>
-        </p>
-    </section>
+<section>
 
     <section>
         <h2>Links to My Other Websites</h2>
@@ -260,7 +226,7 @@ uid   Robert Vokac &lt;robertvokac@robertvokac.com&gt;
 
     <footer>
         Copyright &copy; 2025 Robert Vokáč<br>
-        Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" target="_blank">Attribution-NonCommercial-NoDerivs 4.0 International</a> license or later.<br>
+        Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" target="_blank">CC BY-NC-ND 4.0</a> license.<br>
         Verbatim copying and redistribution of this entire page are permitted provided this notice is preserved.
     </footer>
 
