@@ -47,10 +47,22 @@
 
         h2 {
             font-size: 2rem;
-            border-bottom: 3px solid var(--sky-blue);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: 3px;
+    background-color: var(--sky-blue);
+    margin: 10px auto 0;
+}
+
 
         h3 {
             font-size: 1.5rem;
@@ -70,8 +82,8 @@
 
         .photo-container img {
             border-radius: 50%;
-            width: 150px;
-            height: 213px;
+            max-width: 150px;
+            height: auto;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -168,8 +180,8 @@
             }
 
             .photo-container img {
-                width: 120px;
                 height: 120px;
+                max-width: 120px;
             }
 
             .links_to_other_websites li a {
@@ -208,10 +220,9 @@
 <section>
         <h2>My GPG Key</h2>
         <div class="gpg-key">
-            <pre>
-pub   4096R/FB9CE8E20AADA55F 2024-09-28
-      Key fingerprint = 255C 69CC 1D09 CA54 EF0C C9DF FB9C E8E2 0AAD A55F
-uid   Robert Vokac &lt;robertvokac@robertvokac.com&gt;</pre>
+pub   4096R/FB9CE8E20AADA55F 2024-09-28<br>
+Key fingerprint = 255C 69CC 1D09 CA54 EF0C C9DF FB9C E8E2 0AAD A55F<br>
+uid   Robert Vokac &lt;robertvokac@robertvokac.com&gt;
         </div>
 <section>
 
