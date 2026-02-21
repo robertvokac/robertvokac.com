@@ -4,54 +4,168 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Explore Robert Vokáč’s expertise in C++ software development.">
-    <meta name="keywords" content="Robert Vokáč, C++ developer">
-    <title>Robert Vokáč | C++ Developer</title>
-    <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
+
+    <title>Robert Vokáč | C++ Backend & Systems Engineer</title>
+
+    <meta name="description" content="Robert Vokáč – C++ Backend and Systems Engineer focused on data platforms, infrastructure, and performance-oriented systems.">
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>Robert Vokáč's Personal Site</h1>
-        <!--
-        <div class="photo-container">
-            <img src="photo-of-robert-vokac.jpg" alt="Photo of Robert Vokáč">
-        </div>
-        -->
-    </header>
 
-    <section class="intro">
-        <h2>Introduction</h2>
-        <p>Welcome to my personal website! I'm Robert Vokáč, a C++ software developer.</p>
-        <p class="highlighted">Below are some of my projects:</p>
+<header class="hero">
+    <div class="container">
+        <h1>Robert Vokáč</h1>
+        <p class="subtitle">
+            C++ Backend & Systems Engineer<br>
+            Data Platforms • Infrastructure • Performance-Oriented Systems
+        </p>
+    </div>
+</header>
 
-        <div class="highlighted-projects">
-            <ul>
-                <li><strong>Mind Net:</strong> Universal data server</li>
-            </ul>
-        </div>
-    </section>
+<section class="section">
+    <div class="container">
+        <h2>Professional Summary</h2>
+        <p>
+            Software engineer focused on modern C++ (C++20/23) backend and systems development.
+            I build infrastructure-level software including data servers, relational databases,
+            and cross-platform abstraction layers.
+        </p>
+        <p>
+            My work emphasizes modular architecture, performance optimization,
+            memory ownership models, and long-term maintainability.
+        </p>
+    </div>
+</section>
 
-    <section>
-        <h2>My GPG Key</h2>
-        <div class="gpg-key">
-            <p><strong>Key:</strong> 4096R/FB9CE8E20AADA55F 2024-09-28</p>
-            <p><strong>Fingerprint:</strong> 255C 69CC 1D09 CA54 EF0C C9DF FB9C E8E2 0AAD A55F</p>
-            <p><strong>Owner:</strong> Robert Vokáč &lt;robertvokac@robertvokac.com&gt;</p>
-        </div>
-    </section>
+<section class="section alt">
+    <div class="container">
+        <h2>Mind-Net</h2>
 
-    <section>
-        <h2>Links to My Other Websites</h2>
-        <ul class="links">
-            <li><a href="https://github.com/robertvokac" target="_blank">GitHub - robertvokac</a></li>
-            <li><a href="https://cppforever.com" target="_blank">cppforever.com</a></li>
+        <p class="project-tagline">
+            Advanced universal data server and storage platform built in C++23.
+        </p>
+
+        <p>
+            Modular backend platform combining custom ORM, automatic REST API generation,
+            authentication/authorization, scheduling, and plugin-based extensibility.
+        </p>
+
+        <ul>
+            <li>Modern C++23 backend (GCC 14)</li>
+            <li>SQLite with automatic migrations</li>
+            <li>Custom ORM & REST generator</li>
+            <li>Role-based permissions</li>
+            <li>Plugin architecture (Dictionary)</li>
         </ul>
-    </section>
 
-    <footer>
-        <p>&copy; 2024-2025 Robert Vokáč | Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" target="_blank">CC BY-NC-ND 4.0</a></p>
-        <p>Verbatim copying and redistribution of this page are permitted provided this notice is preserved.</p>
-    </footer>
+        <a class="cta" href="https://github.com/robertvokac/mind-net" target="_blank">
+            View Repository
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Core SQL</h2>
+
+        <p class="project-tagline">
+            Relational database engine written in modern C++.
+        </p>
+
+        <p>
+            Experimental database project exploring storage engines,
+            indexing structures, and query execution pipelines.
+        </p>
+
+        <ul>
+            <li>C++20/23 codebase</li>
+            <li>B+Tree & indexing experiments</li>
+            <li>Custom storage engine exploration</li>
+            <li>Query parsing pipeline (in progress)</li>
+        </ul>
+
+        <a class="cta" href="https://github.com/robertvokac/core-sql" target="_blank">
+            View Repository
+        </a>
+    </div>
+</section>
+
+<section class="section alt">
+    <div class="container">
+        <h2>CNA</h2>
+
+        <p class="project-tagline">
+            C++ reimplementation of XNA 4.0 built on SDL3.
+        </p>
+
+        <p>
+            Cross-platform abstraction layer preserving XNA API structure,
+            replacing GC-based memory management with deterministic RAII.
+        </p>
+
+        <ul>
+            <li>API alignment with original XNA</li>
+            <li>SDL3 backend</li>
+            <li>Deterministic memory ownership</li>
+        </ul>
+
+        <a class="cta" href="https://github.com/openeggbert/cna" target="_blank">
+            View Repository
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>C# → C++ Game Port</h2>
+
+        <p class="project-tagline">
+            Source-level migration from C# (XNA) to C++ (CNA).
+        </p>
+
+        <p>
+            Architectural and behavioral parity between managed
+            and unmanaged implementations.
+        </p>
+
+        <ul>
+            <li>GC → RAII migration</li>
+            <li>Ownership model refactoring</li>
+            <li>API compatibility validation</li>
+        </ul>
+
+        <a class="cta" href="https://github.com/openeggbert/mobile-eggbert" target="_blank">
+            View Repository
+        </a>
+    </div>
+</section>
+
+<section class="section alt">
+    <div class="container">
+        <h2>Open Source & Security</h2>
+
+        <p>All projects are publicly available on GitHub.</p>
+
+        <a class="cta" href="https://github.com/robertvokac" target="_blank">
+            View GitHub Profile
+        </a>
+
+        <div class="gpg">
+            <p><strong>GPG Key:</strong> 4096R/FB9CE8E20AADA55F</p>
+            <p><strong>Fingerprint:</strong> 255C 69CC 1D09 CA54 EF0C C9DF FB9C E8E2 0AAD A55F</p>
+            <p><strong>Email:</strong> robertvokac@robertvokac.com</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2024–2026 Robert Vokáč</p>
+        <p>C++ Backend • Systems Engineering • Data Infrastructure</p>
+    </div>
+</footer>
+
 </body>
 </html>
