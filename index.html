@@ -1,171 +1,663 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Robert Vokáč | C++ Backend & Systems Engineer</title>
+    <meta
+            name="description"
+            content="Personal website of Robert Vokáč — C++ backend and systems engineer focused on modern C++, infrastructure software, HTTP servers, and maintainable system design."
+    />
+    <style>
+        :root {
+            --bg: #f5f7fb;
+            --surface: #ffffff;
+            --surface-alt: #f8fbff;
+            --text: #0f1728;
+            --muted: #5f6b7a;
+            --line: #e3e8f1;
+            --accent: #1d4ed8;
+            --accent-dark: #153ca8;
+            --accent-soft: #edf4ff;
+            --max: 1080px;
+            --radius: 22px;
+            --shadow-sm: 0 10px 28px rgba(15, 23, 40, 0.05);
+            --shadow-md: 0 20px 50px rgba(15, 23, 40, 0.08);
+        }
 
-    <meta name="description" content="Robert Vokáč – C++ Backend and Systems Engineer focused on data platforms, infrastructure, and performance-oriented systems.">
+        * {
+            box-sizing: border-box;
+        }
 
-    <link rel="stylesheet" href="styles.css">
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--text);
+            background: radial-gradient(circle at top left, rgba(29, 78, 216, 0.07), transparent 28%),
+            linear-gradient(180deg, #fbfcff 0%, var(--bg) 100%);
+            line-height: 1.72;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-dark);
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(calc(100% - 32px), var(--max));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid rgba(227, 232, 241, 0.9);
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-size: 1rem;
+            font-weight: 750;
+            letter-spacing: 0.01em;
+            color: var(--text);
+        }
+
+        .brand span {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .nav {
+            display: flex;
+            gap: 26px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: var(--muted);
+            font-size: 0.96rem;
+            font-weight: 550;
+        }
+
+        .nav a:hover {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .hero {
+            padding: 90px 0 58px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .portrait-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .portrait {
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+          background: #ffffff;
+          border: 1px solid #e3e8f1;
+          box-shadow: var(--shadow-sm);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
+
+        .portrait img {
+          max-width: 148px;
+          max-height: 148px;
+          width: auto;
+          height: auto;
+          display: block;
+          object-fit: contain;
+          border-radius: 12px;
+        }
+
+        .photo-note {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 0.88rem;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: clamp(2.6rem, 5vw, 4.5rem);
+            line-height: 1.03;
+            letter-spacing: -0.05em;
+        }
+
+        .subtitle {
+            margin: 0 0 18px;
+            color: #1f2d44;
+            font-size: clamp(1.08rem, 2vw, 1.34rem);
+            font-weight: 650;
+            line-height: 1.5;
+            max-width: 760px;
+        }
+
+        .lead {
+            margin: 0;
+            max-width: 800px;
+            color: var(--muted);
+            font-size: 1.04rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 18px;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--text);
+            font-weight: 650;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+        }
+
+        .button:hover {
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 14px 28px rgba(15, 23, 40, 0.08);
+            border-color: #cfd8e8;
+        }
+
+        .button.primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .button.primary:hover {
+            background: var(--accent-dark);
+            border-color: var(--accent-dark);
+            color: #fff;
+        }
+
+        section {
+            padding: 28px 0 50px;
+        }
+
+        .section-header {
+            margin-bottom: 24px;
+        }
+
+        .section-header h2 {
+            margin: 0 0 8px;
+            font-size: 1.95rem;
+            letter-spacing: -0.03em;
+        }
+
+        .section-header p {
+            margin: 0;
+            color: var(--muted);
+            max-width: 790px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .project-list {
+            display: grid;
+            gap: 22px;
+        }
+
+        .project {
+            padding: 30px;
+        }
+
+        .project-top {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 12px;
+        }
+
+        .project h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            letter-spacing: -0.02em;
+        }
+
+        .project-summary {
+            margin: 0 0 16px;
+            color: var(--muted);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            min-height: 30px;
+            padding: 0 10px;
+            border-radius: 999px;
+            font-size: 0.76rem;
+            font-weight: 750;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+            border: 1px solid var(--line);
+            background: #fafbfc;
+            color: var(--muted);
+        }
+
+        .badge.progress {
+            background: #edf4ff;
+            border-color: #bfdbfe;
+            color: #1d4ed8;
+        }
+
+        .badge.finished {
+            background: #effcf4;
+            border-color: #b7e6c4;
+            color: #166534;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 0 16px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 34px;
+            padding: 0 11px;
+            border-radius: 999px;
+            background: var(--surface-alt);
+            border: 1px solid var(--line);
+            color: #334155;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .project ul {
+            margin: 0 0 18px;
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .project ul li + li {
+            margin-top: 4px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .info {
+            padding: 28px;
+        }
+
+        .info h3 {
+            margin: 0 0 12px;
+            font-size: 1.14rem;
+            letter-spacing: -0.02em;
+        }
+
+        .info p,
+        .info li {
+            color: var(--muted);
+        }
+
+        .info ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .contact-item {
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: var(--surface-alt);
+            border: 1px solid var(--line);
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--muted);
+            font-size: 0.79rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 700;
+        }
+
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 0.93em;
+            color: #1e293b;
+            word-break: break-word;
+        }
+
+        footer {
+            padding: 22px 0 50px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .footer-line {
+            padding-top: 20px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 860px) {
+            .hero-grid,
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 52px;
+            }
+
+            .portrait-wrap {
+                align-items: flex-start;
+            }
+
+            .portrait {
+                width: 160px;
+                height: 160px;
+            }
+
+            .portrait::after {
+                font-size: 2.5rem;
+            }
+
+            .project-top,
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .nav {
+                gap: 14px;
+            }
+
+            .container {
+                width: min(calc(100% - 22px), var(--max));
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<header class="hero">
-    <div class="container">
-        <h1>Robert Vokáč</h1>
-        <p class="subtitle">
-            C++ Backend & Systems Engineer<br>
-            Data Platforms • Infrastructure • Performance-Oriented Systems
-        </p>
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="brand">Robert Vokáč <span>· C++ Backend & Systems Engineer</span></div>
+        <nav class="nav" aria-label="Primary navigation">
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
     </div>
 </header>
 
-<section class="section">
-    <div class="container">
-        <h2>Professional Summary</h2>
-        <p>
-            Software engineer focused on modern C++ (C++20/23) backend and systems development.
-            I build infrastructure-level software including data servers, relational databases,
-            and cross-platform abstraction layers.
-        </p>
-        <p>
-            My work emphasizes modular architecture, performance optimization,
-            memory ownership models, and long-term maintainability.
-        </p>
-    </div>
-</section>
+<main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="portrait-wrap">
+                <div class="portrait">
+                    <img src="photo-of-robert-vokac.jpg" alt="Photo of Robert Vokáč"/>
+                </div>
+            </div>
 
-<section class="section alt">
-    <div class="container">
-        <h2>Mind-Net</h2>
-
-        <p class="project-tagline">
-            Advanced universal data server and storage platform built in C++23.
-        </p>
-
-        <p>
-            Modular backend platform combining custom ORM, automatic REST API generation,
-            authentication/authorization, scheduling, and plugin-based extensibility.
-        </p>
-
-        <ul>
-            <li>Modern C++23 backend (GCC 14)</li>
-            <li>SQLite with automatic migrations</li>
-            <li>Custom ORM & REST generator</li>
-            <li>Role-based permissions</li>
-            <li>Plugin architecture (Dictionary)</li>
-        </ul>
-
-        <a class="cta" href="https://github.com/robertvokac/mind-net" target="_blank">
-            View Repository
-        </a>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>Core SQL</h2>
-
-        <p class="project-tagline">
-            Relational database engine written in modern C++.
-        </p>
-
-        <p>
-            Experimental database project exploring storage engines,
-            indexing structures, and query execution pipelines.
-        </p>
-
-        <ul>
-            <li>C++20/23 codebase</li>
-            <li>B+Tree & indexing experiments</li>
-            <li>Custom storage engine exploration</li>
-            <li>Query parsing pipeline (in progress)</li>
-        </ul>
-
-        <a class="cta" href="https://github.com/robertvokac/core-sql" target="_blank">
-            View Repository
-        </a>
-    </div>
-</section>
-
-<section class="section alt">
-    <div class="container">
-        <h2>CNA</h2>
-
-        <p class="project-tagline">
-            C++ reimplementation of XNA 4.0 built on SDL3.
-        </p>
-
-        <p>
-            Cross-platform abstraction layer preserving XNA API structure,
-            replacing GC-based memory management with deterministic RAII.
-        </p>
-
-        <ul>
-            <li>API alignment with original XNA</li>
-            <li>SDL3 backend</li>
-            <li>Deterministic memory ownership</li>
-        </ul>
-
-        <a class="cta" href="https://github.com/openeggbert/cna" target="_blank">
-            View Repository
-        </a>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>C# → C++ Game Port</h2>
-
-        <p class="project-tagline">
-            Source-level migration from C# (XNA) to C++ (CNA).
-        </p>
-
-        <p>
-            Architectural and behavioral parity between managed
-            and unmanaged implementations.
-        </p>
-
-        <ul>
-            <li>GC → RAII migration</li>
-            <li>Ownership model refactoring</li>
-            <li>API compatibility validation</li>
-        </ul>
-
-        <a class="cta" href="https://github.com/openeggbert/mobile-eggbert" target="_blank">
-            View Repository
-        </a>
-    </div>
-</section>
-
-<section class="section alt">
-    <div class="container">
-        <h2>Open Source & Security</h2>
-
-        <p>All projects are publicly available on GitHub.</p>
-
-        <a class="cta" href="https://github.com/robertvokac" target="_blank">
-            View GitHub Profile
-        </a>
-
-        <div class="gpg">
-            <p><strong>GPG Key:</strong> 4096R/FB9CE8E20AADA55F</p>
-            <p><strong>Fingerprint:</strong> 255C 69CC 1D09 CA54 EF0C C9DF FB9C E8E2 0AAD A55F</p>
-            <p><strong>Email:</strong> robertvokac@robertvokac.com</p>
+            <div>
+                <div class="eyebrow">Modern C++ · Backend · Systems</div>
+                <h1>Robert Vokáč</h1>
+                <p class="subtitle">
+                    Focused on backend services, HTTP servers, and maintainable system design.
+                </p>
+                <p class="lead">
+                    I build modern C++ backend software with an emphasis on modular architecture, explicit ownership,
+                    and long-term maintainability.
+                </p>
+                <div class="hero-actions">
+                    <a class="button primary" href="https://github.com/robertvokac" target="_blank" rel="noreferrer">View
+                        GitHub</a>
+                    <a class="button" href="#projects">Selected Projects</a>
+                    <a class="button" href="mailto:robertvokac@robertvokac.com">Email me</a>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p>
+                    A selected set of projects that reflects my technical direction: backend infrastructure,
+                    server architecture, data platforms, and modern C++ systems engineering.
+                </p>
+            </div>
+
+            <div class="project-list">
+                <article class="card project">
+                    <div class="project-top">
+                        <div><h3>Core HTTP</h3></div>
+                        <span class="badge progress">In Progress</span>
+                    </div>
+                    <p class="project-summary">
+                        A modern C++ HTTP server built as a focused systems project for backend networking fundamentals.
+                        The goal is a clean, understandable architecture implemented from first principles, centered on
+                        protocol handling, request parsing, routing, connection lifecycle management, and maintainable
+                        server-side design.
+                    </p>
+                    <div class="meta">
+                        <span class="pill">C++23</span>
+                        <span class="pill">HTTP server</span>
+                        <span class="pill">Networking</span>
+                        <span class="pill">Systems design</span>
+                    </div>
+                    <ul>
+                        <li>HTTP/1.1 request parsing and response generation</li>
+                        <li>Routing and handler composition</li>
+                        <li>Static file serving and structured error responses</li>
+                        <li>Connection lifecycle, concurrency, and threading model exploration</li>
+                        <li>Logging, configuration, and operational observability</li>
+                    </ul>
+                    <a href="https://github.com/robertvokac/core-http" target="_blank" rel="noreferrer">View
+                        repository</a>
+                </article>
+
+                <article class="card project">
+                    <div class="project-top">
+                        <div><h3>Mind-Net</h3></div>
+                        <span class="badge finished">Finished</span>
+                    </div>
+                    <p class="project-summary">
+                        Universal data server and storage platform written in modern C++23. Mind-Net combines
+                        persistent storage, generated REST APIs, authentication and authorization, scheduling,
+                        and plugin-based extensibility in a modular backend architecture.
+                    </p>
+                    <div class="meta">
+                        <span class="pill">C++23</span>
+                        <span class="pill">GCC 14</span>
+                        <span class="pill">SQLite</span>
+                        <span class="pill">REST API generation</span>
+                        <span class="pill">Plugin architecture</span>
+                    </div>
+                    <ul>
+                        <li>Custom ORM with automatic database migrations</li>
+                        <li>Automatic REST API generation from model definitions</li>
+                        <li>Authentication, authorization, and role-based permissions</li>
+                        <li>Scheduling, validation, and extensible plugin support</li>
+                        <li>Reusable backend modules and generic UI generation</li>
+                    </ul>
+                    <a href="https://github.com/robertvokac/mind-net" target="_blank" rel="noreferrer">View
+                        repository</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About</h2>
+                <p>
+                    I am interested in the kind of software that sits underneath products: services, servers,
+                    protocols, storage, and the internal architecture that keeps systems understandable over time.
+                </p>
+            </div>
+
+            <div class="two-col">
+                <article class="card info">
+                    <h3>What I focus on</h3>
+                    <p>
+                        My work is centered on modern C++ backend and systems engineering, especially where correctness,
+                        explicit ownership, maintainability, and architectural clarity matter.
+                    </p>
+                    <p>
+                        I am most interested in projects that expose core engineering concerns directly: module
+                        boundaries,
+                        protocol handling, data flow, lifecycle management, and the practical trade-offs involved in
+                        building
+                        infrastructure software.
+                    </p>
+                </article>
+
+                <article class="card info">
+                    <h3>Technical interests</h3>
+                    <ul>
+                        <li>Modern C++20/23 backend development</li>
+                        <li>HTTP servers and systems networking</li>
+                        <li>Data platforms and persistent services</li>
+                        <li>Modular architecture and plugin systems</li>
+                        <li>Performance-oriented and maintainable software design</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <p>Public links and contact information.</p>
+            </div>
+
+            <div class="two-col">
+                <article class="card info">
+                    <h3>Links</h3>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <span class="label">GitHub</span>
+                            <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">Email</span>
+                            <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card info">
+                    <h3>GPG</h3>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <span class="label">Key ID</span>
+                            <code>4096R/FB9CE8E20AADA55F</code>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">Fingerprint</span>
+                            <code>255C 69CC 1D09 CA54 EF0C C9DF FB9C E8E2 0AAD A55F</code>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <div class="container">
-        <p>© 2024–2026 Robert Vokáč</p>
-        <p>C++ Backend • Systems Engineering • Data Infrastructure</p>
+    <div class="container footer-line">
+        <div>© 2024–2026 Robert Vokáč</div>
+        <div>C++ Backend · Systems Engineering · Infrastructure Software</div>
     </div>
 </footer>
-
 </body>
 </html>
