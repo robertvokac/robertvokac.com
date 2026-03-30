@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Robert Vokáč | C++ Backend & Systems Engineer</title>
+    <title>Bc. Robert Vokáč | C++ Backend & Systems Engineer</title>
     <meta name="description"
-          content="Robert Vokáč — C++ backend and systems engineer focused on modern C++, HTTP servers, backend architecture, and long-term technical growth."/>
+          content="Bc. Robert Vokáč — C++ backend and systems engineer focused on modern C++, HTTP servers, backend architecture, and long-term technical growth."/>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         :root {
@@ -53,6 +53,11 @@
         img {
             display: block;
             max-width: 100%;
+        }
+
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 0.94em;
         }
 
         .container {
@@ -226,6 +231,7 @@
             font-weight: 700;
             text-decoration: none;
             box-shadow: var(--shadow);
+            transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
         }
 
         .btn:hover {
@@ -508,6 +514,34 @@
             color: #7ac3ec;
         }
 
+        .professional-card {
+            grid-template-columns: 1fr;
+            padding: 42px 46px;
+        }
+
+        .professional-card .project-content {
+            max-width: 980px;
+        }
+
+        .experience-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .experience-tags span {
+            display: inline-flex;
+            align-items: center;
+            min-height: 36px;
+            padding: 0 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            color: #ffffff;
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
         .subsection-title {
             text-align: center;
             margin: 48px 0 24px;
@@ -529,60 +563,6 @@
             background: var(--navy);
         }
 
-        .footer {
-            margin-top: 18px;
-            border-top: 1px solid var(--line);
-            background: #ededed;
-            padding: 24px 0 36px;
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            gap: 22px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .footer-identity {
-            color: #63636d;
-            font-size: 0.98rem;
-            line-height: 1.7;
-            font-weight: 700;
-        }
-
-        .footer-identity a {
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .footer-pill {
-            min-width: 52px;
-            min-height: 52px;
-            padding: 0 16px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--navy);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1rem;
-            box-shadow: var(--shadow);
-        }
-
-        .footer-pill:hover {
-            color: #fff;
-            text-decoration: none;
-            background: var(--navy-2);
-        }
-
         .muted-note {
             color: #76767e;
             font-size: 0.94rem;
@@ -598,10 +578,88 @@
             break-inside: avoid;
         }
 
+        .footer {
+            margin-top: 18px;
+            border-top: 1px solid var(--line);
+            background: #ededed;
+            padding: 36px 0 28px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .footer-contact h3 {
+            margin: 0 0 12px;
+            font-size: 1.15rem;
+            color: #3d4350;
+        }
+
+        .footer-contact p {
+            margin: 0 0 8px;
+            color: #646b78;
+            font-size: 0.98rem;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .footer-contact a {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .footer-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .footer-pill {
+            min-width: 58px;
+            min-height: 52px;
+            padding: 0 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--navy);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: var(--shadow);
+            transition: background 0.15s ease, transform 0.15s ease;
+        }
+
+        .footer-pill:hover {
+            color: #fff;
+            text-decoration: none;
+            background: var(--navy-2);
+            transform: translateY(-1px);
+        }
+
+        .footer-gpg {
+            margin-top: 22px;
+            padding-top: 16px;
+            border-top: 1px solid #dddddf;
+            color: #727781;
+            font-size: 0.93rem;
+            display: grid;
+            gap: 6px;
+        }
+
+        .footer-gpg strong {
+            color: #505662;
+        }
+
         @media (max-width: 980px) {
             .about-grid,
             .project-card,
-            .tech-grid {
+            .tech-grid,
+            .footer-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -619,6 +677,14 @@
 
             .portrait-frame {
                 width: min(100%, 340px);
+            }
+
+            .footer-actions {
+                justify-content: flex-start;
+            }
+
+            .professional-card {
+                padding: 28px;
             }
         }
 
@@ -638,7 +704,9 @@
                 padding: 22px 14px;
             }
 
-            .tab-nav, .project-filter, .cta-row {
+            .tab-nav,
+            .project-filter,
+            .cta-row {
                 gap: 10px;
             }
 
@@ -653,6 +721,10 @@
             .book-columns {
                 columns: 1;
             }
+
+            .footer-pill {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -662,7 +734,7 @@
         <div class="brand-wrap">
             <div class="brand-badge">RV</div>
             <div class="brand-text">
-                <strong>Robert Vokáč</strong>
+                <strong>Bc. Robert Vokáč</strong>
                 <span>C++ Backend &amp; Systems Engineer</span>
             </div>
         </div>
@@ -694,12 +766,9 @@
                         <div><strong>Work type:</strong> Employee</div>
                         <div><strong>Work location:</strong> Prague · onsite only</div>
                         <div><strong>Technologies:</strong> Modern C++, SQL, Linux, CMake, Git</div>
-                        <div><strong>Current direction:</strong> C++ backend, networking, maintainable server
-                            architecture
-                        </div>
+                        <div><strong>Current direction:</strong> C++ backend, networking, maintainable server architecture</div>
                         <div><strong>Contact:</strong> <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a>
-                            · <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a>
-                        </div>
+                            · <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a></div>
                     </div>
 
                     <p>
@@ -709,15 +778,11 @@
                     </p>
                     <p>
                         I am most interested in the parts of software that sit underneath products: services, servers,
-                        protocols,
-                        storage, data modeling, and the internal architecture that keeps systems understandable over
-                        time.
+                        protocols, storage, data modeling, and the internal architecture that keeps systems understandable over time.
                     </p>
                     <p>
-                        My public portfolio is centered on personal projects built from scratch, technical depth, and
-                        visible long-term study.
-                        Current emphasis: HTTP servers, backend modularity, plugin systems, data platforms, and systems
-                        programming fundamentals.
+                        My public portfolio is centered on personal projects built from scratch, technical depth, and visible long-term study.
+                        Current emphasis: HTTP servers, backend modularity, plugin systems, data platforms, and systems programming fundamentals.
                     </p>
 
                     <div class="cta-row">
@@ -772,9 +837,7 @@
 
             <div class="tab-panel" id="free-time">
                 <ul class="bullets">
-                    <li>Building <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">CNA</a>,
-                        an XNA 4.0 style wrapper over SDL 3 in modern C++.
-                    </li>
+                    <li>Building <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">CNA</a>, an XNA 4.0 style wrapper over SDL 3 in modern C++.</li>
                     <li>Working on Mobile-Eggbert, an early C++ porting experiment built on top of CNA.</li>
                     <li>Collecting paper C++ books and building a long-term personal C++ library.</li>
                     <li>Studying C++ language, architecture, concurrency, templates, and performance in depth.</li>
@@ -797,21 +860,14 @@
 
             <div class="tab-panel" id="courses">
                 <ul class="course-list">
-                    <li>Self-directed long-term C++ curriculum based primarily on books, project implementation, and
-                        technical notes.
-                    </li>
-                    <li>Ongoing study areas: backend networking, HTTP servers, templates, concurrency, software design,
-                        and system-level architecture.
-                    </li>
-                    <li>Current learning model: theory from books + implementation in public projects + written internal
-                        documentation.
-                    </li>
+                    <li>Self-directed long-term C++ curriculum based primarily on books, project implementation, and technical notes.</li>
+                    <li>Ongoing study areas: backend networking, HTTP servers, templates, concurrency, software design, and system-level architecture.</li>
+                    <li>Current learning model: theory from books + implementation in public projects + written internal documentation.</li>
                 </ul>
             </div>
 
             <div class="tab-panel" id="books">
-                <p class="muted-note">This is the current paper C++ collection I own. It is not a list of books already
-                    fully read.</p>
+                <p class="muted-note">This is the current paper C++ collection I own. It is not a list of books already fully read.</p>
                 <ul class="book-list book-columns">
                     <li>The C++ standard library 2nd edition (N. Josuttis)</li>
                     <li>C++ bez předchozích znalostí</li>
@@ -884,9 +940,7 @@
                     <li>Deciphering Object-Oriented Programming with C++</li>
                     <li>The C++ Programmer's Mindset</li>
                     <li>Object-Oriented Software Design in C++</li>
-                    <li>The C++ Standard Library: What every professional C++ programmer should know about the C++
-                        standard library
-                    </li>
+                    <li>The C++ Standard Library: What every professional C++ programmer should know about the C++ standard library</li>
                     <li>C++: How To Talk To Your Compiler</li>
                     <li>Embracing Modern C++ Safely</li>
                     <li>C++ Core Guidelines Explained</li>
@@ -911,18 +965,15 @@
             <div class="tech-grid">
                 <article class="tech-card">
                     <h3>Domains</h3>
-                    <p>Backend services<br/>HTTP servers<br/>Systems networking<br/>Infrastructure software<br/>Data
-                        platforms</p>
+                    <p>Backend services<br/>HTTP servers<br/>Systems networking<br/>Infrastructure software<br/>Data platforms</p>
                 </article>
                 <article class="tech-card">
                     <h3>Back-end</h3>
-                    <p>Modern C++20/23<br/>SQL<br/>REST concepts<br/>Routing &amp; request handling<br/>Plugin
-                        architecture</p>
+                    <p>Modern C++20/23<br/>SQL<br/>REST concepts<br/>Routing &amp; request handling<br/>Plugin architecture</p>
                 </article>
                 <article class="tech-card">
                     <h3>Systems</h3>
-                    <p>Linux<br/>Concurrency basics<br/>Ownership &amp; lifecycle<br/>Low-level design<br/>Maintainable
-                        architecture</p>
+                    <p>Linux<br/>Concurrency basics<br/>Ownership &amp; lifecycle<br/>Low-level design<br/>Maintainable architecture</p>
                 </article>
                 <article class="tech-card">
                     <h3>Tooling</h3>
@@ -930,13 +981,11 @@
                 </article>
                 <article class="tech-card">
                     <h3>Data &amp; Storage</h3>
-                    <p>SQLite<br/>Data modeling<br/>Database migrations<br/>ORM concepts<br/>Persistent backend services
-                    </p>
+                    <p>SQLite<br/>Data modeling<br/>Database migrations<br/>ORM concepts<br/>Persistent backend services</p>
                 </article>
                 <article class="tech-card">
                     <h3>Quality</h3>
-                    <p>Testing mindset<br/>Readable APIs<br/>Modular design<br/>Performance awareness<br/>Long-term
-                        maintainability</p>
+                    <p>Testing mindset<br/>Readable APIs<br/>Modular design<br/>Performance awareness<br/>Long-term maintainability</p>
                 </article>
             </div>
         </div>
@@ -945,8 +994,7 @@
     <section id="projects">
         <div class="container">
             <div class="section-title"><h2>Projects</h2></div>
-            <p class="projects-quote">"Public projects that show where the technical direction is going — modern C++,
-                systems, backend, and architecture."</p>
+            <p class="projects-quote">"Public projects that show where the technical direction is going — modern C++, systems, backend, and architecture."</p>
 
             <div class="project-filter" role="tablist" aria-label="Project filters">
                 <button class="filter-button active" type="button" data-filter="all">All</button>
@@ -961,18 +1009,11 @@
                     <div class="project-content">
                         <h3>Core HTTP</h3>
                         <p class="project-role">Personal modern C++ HTTP server · in progress</p>
-                        <p class="project-meta">Role: designer and implementer · Status: in progress · Stack: C++23,
-                            networking, server architecture</p>
+                        <p class="project-meta">Role: designer and implementer · Status: in progress · Stack: C++23, networking, server architecture</p>
                         <ul>
-                            <li>Focused systems project built around HTTP/1.1 request parsing, response generation,
-                                routing, and connection handling.
-                            </li>
-                            <li>Used as a practical platform for learning backend networking fundamentals and
-                                server-side architecture from first principles.
-                            </li>
-                            <li>Emphasis on modular structure, explicit ownership, concurrency exploration, and
-                                maintainable internal design.
-                            </li>
+                            <li>Focused systems project built around HTTP/1.1 request parsing, response generation, routing, and connection handling.</li>
+                            <li>Used as a practical platform for learning backend networking fundamentals and server-side architecture from first principles.</li>
+                            <li>Emphasis on modular structure, explicit ownership, concurrency exploration, and maintainable internal design.</li>
                         </ul>
                         <div class="project-actions">
                             <a href="https://github.com/robertvokac/core-http" target="_blank" rel="noreferrer">Repository</a>
@@ -985,17 +1026,11 @@
                     <div class="project-content">
                         <h3>Mind-Net</h3>
                         <p class="project-role">Personal modular C++ backend platform · archived learning project</p>
-                        <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/mind-net"
-                                                           target="_blank" rel="noreferrer">github.com/robertvokac/mind-net</a>
-                            · Stack: C++23, SQLite, plugin architecture</p>
+                        <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/mind-net" target="_blank" rel="noreferrer">github.com/robertvokac/mind-net</a> · Stack: C++23, SQLite, plugin architecture</p>
                         <ul>
                             <li>Designed and implemented a modular backend platform in modern C++ from scratch.</li>
-                            <li>Included custom data modeling, automatic REST API generation, role-based authentication
-                                and authorization, and plugin-based extensibility.
-                            </li>
-                            <li>Reached a stable archived state after becoming a serious personal learning and
-                                architecture project.
-                            </li>
+                            <li>Included custom data modeling, automatic REST API generation, role-based authentication and authorization, and plugin-based extensibility.</li>
+                            <li>Reached a stable archived state after becoming a serious personal learning and architecture project.</li>
                         </ul>
                         <div class="project-actions">
                             <a href="https://github.com/robertvokac/mind-net" target="_blank" rel="noreferrer">Repository</a>
@@ -1008,15 +1043,10 @@
                     <div class="project-content">
                         <h3>CNA</h3>
                         <p class="project-role">Personal XNA 4.0 style wrapper over SDL 3 · in progress</p>
-                        <p class="project-meta">Goal: revive older game code in modern C++ while preserving a familiar
-                            XNA-style API</p>
+                        <p class="project-meta">Goal: revive older game code in modern C++ while preserving a familiar XNA-style API</p>
                         <ul>
-                            <li>Experimental wrapper project intended to reproduce an XNA-like development model on top
-                                of SDL 3.
-                            </li>
-                            <li>Useful as a learning vehicle for API design, platform abstraction, rendering loops, and
-                                practical cross-project reuse.
-                            </li>
+                            <li>Experimental wrapper project intended to reproduce an XNA-like development model on top of SDL 3.</li>
+                            <li>Useful as a learning vehicle for API design, platform abstraction, rendering loops, and practical cross-project reuse.</li>
                             <li>Still in progress and not yet presented as production-ready software.</li>
                         </ul>
                         <div class="project-actions">
@@ -1029,22 +1059,22 @@
             <div class="subsection-title"><h3>Professional background</h3></div>
 
             <div class="project-list">
-                <article class="project-card" data-category="professional">
-                    <div class="project-media">9 YRS<br/>DEV</div>
+                <article class="project-card professional-card" data-category="professional">
                     <div class="project-content">
+                        <div class="experience-tags">
+                            <span>9 years experience</span>
+                            <span>Employee</span>
+                            <span>Prague onsite only</span>
+                        </div>
                         <h3>Professional software development experience</h3>
-                        <p class="project-role">Employee · Prague onsite only</p>
-                        <p class="project-meta">9 years of professional software development and backend experience.
-                            Public portfolio intentionally focused on current C++ direction rather than older stack
-                            branding.</p>
+                        <p class="project-meta">
+                            9 years of professional software development and backend experience.
+                            Public portfolio intentionally focused on current C++ direction rather than older stack branding.
+                        </p>
                         <ul>
                             <li>Developed and maintained production backend systems.</li>
-                            <li>Worked on data flow, database structure, backend maintainability, and team workflows
-                                using Git and Agile processes.
-                            </li>
-                            <li>Current public portfolio is designed to make the C++ direction visible through concrete
-                                personal projects rather than broad claims alone.
-                            </li>
+                            <li>Worked on data flow, database structure, backend maintainability, and team workflows using Git and Agile processes.</li>
+                            <li>Current public portfolio is designed to make the C++ direction visible through concrete personal projects rather than broad claims alone.</li>
                         </ul>
                     </div>
                 </article>
@@ -1054,26 +1084,27 @@
 </main>
 
 <footer class="footer" id="contact">
-    <div class="container footer-inner">
-        <div class="footer-identity">
-            Bc. Robert Vokáč<br/>
-            Prague · Czech Republic<br/>
-            Email: <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a><br/>
-            GitHub: <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a><br/>
-            LinkedIn: <a href="https://cz.linkedin.com/in/robert-vok%C3%A1%C4%8D-081170381/" target="_blank"
-                         rel="noreferrer">www.linkedin.com/in/robert-vokáč-081170381</a><br/>
-          <span style="font-size:75%">
-            GPG Key ID: <code>4096R/FB9CE8E20AADA55F</code><br>
-            GPG Fingerprint: <code>255C 69CC 1D09 CA54 EF0C C9DF FB9C E8E2 0AAD A55F</code>
-            </span>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-contact">
+                <h3>Bc. Robert Vokáč</h3>
+                <p>Prague · Czech Republic</p>
+                <p>Email: <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a></p>
+                <p>GitHub: <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a></p>
+                <p>LinkedIn: <a href="https://cz.linkedin.com/in/robert-vok%C3%A1%C4%8D-081170381/" target="_blank" rel="noreferrer">LinkedIn profile</a></p>
+            </div>
+
+            <div class="footer-actions">
+                <a class="footer-pill" href="https://github.com/robertvokac" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="footer-pill" href="mailto:robertvokac@robertvokac.com">Email</a>
+                <a class="footer-pill" href="https://cz.linkedin.com/in/robert-vok%C3%A1%C4%8D-081170381/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a class="footer-pill" href="robert-vokac-cv-2026.pdf" download>CV</a>
+            </div>
         </div>
 
-        <div class="footer-links">
-            <a class="footer-pill" href="https://github.com/robertvokac" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="footer-pill" href="mailto:robertvokac@robertvokac.com">Email</a>
-            <a class="footer-pill" href="https://cz.linkedin.com/in/robert-vok%C3%A1%C4%8D-081170381/" target="_blank"
-               rel="noreferrer">LinkedIn</a>
-            <a class="footer-pill" href="robert-vokac-cv-2026.pdf" download>CV</a>
+        <div class="footer-gpg">
+            <span><strong>GPG Key ID:</strong> <code>4096R/FB9CE8E20AADA55F</code></span>
+            <span><strong>GPG Fingerprint:</strong> <code>255C 69CC 1D09 CA54 EF0C C9DF FB9C E8E2 0AAD A55F</code></span>
         </div>
     </div>
 </footer>
