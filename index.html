@@ -134,23 +134,23 @@
             background: #ececec;
             border-bottom: 1px solid #e1e1e1;
             text-align: center;
-            padding: 28px 16px;
+            padding: 24px 16px;
         }
 
         .quote-strip p {
             margin: 0;
-            font-size: clamp(1.3rem, 2.8vw, 2rem);
-            line-height: 1.3;
+            font-size: clamp(1.15rem, 2.2vw, 1.8rem);
+            line-height: 1.35;
             font-weight: 700;
             color: #22252a;
         }
 
         main {
-            padding-bottom: 28px;
+            padding-bottom: 24px;
         }
 
         section {
-            padding: 30px 0 52px;
+            padding: 28px 0 48px;
         }
 
         .section-title {
@@ -231,7 +231,7 @@
             font-weight: 700;
             text-decoration: none;
             box-shadow: var(--shadow);
-            transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+            transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
         }
 
         .btn:hover {
@@ -258,11 +258,11 @@
         }
 
         .portrait-frame {
-            width: min(100%, 300px);
-            min-height: 300px;
+            width: min(100%, 292px);
+            min-height: 292px;
             background: #fff;
             border: 1px solid var(--line);
-            padding: 24px;
+            padding: 26px;
             box-shadow: var(--shadow);
             display: flex;
             align-items: center;
@@ -271,8 +271,8 @@
 
         .portrait-frame img {
             width: auto;
-            max-width: 78%;
-            max-height: 220px;
+            max-width: 74%;
+            max-height: 208px;
             object-fit: contain;
             background: #f5f5f5;
         }
@@ -368,7 +368,7 @@
         .tech-quote,
         .projects-quote {
             text-align: center;
-            margin: -8px auto 32px;
+            margin: -8px auto 28px;
             max-width: 980px;
             font-size: clamp(1.2rem, 2.2vw, 1.85rem);
             font-weight: 700;
@@ -379,20 +379,20 @@
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 22px;
+            gap: 20px;
         }
 
         .tech-card {
             background: #fafafa;
             border: 1px solid var(--line);
-            min-height: 200px;
-            padding: 26px 24px;
+            min-height: 176px;
+            padding: 22px 22px;
             text-align: center;
             box-shadow: var(--shadow);
         }
 
         .tech-card h3 {
-            margin: 0 0 20px;
+            margin: 0 0 16px;
             font-size: 1.15rem;
             letter-spacing: -0.02em;
         }
@@ -400,8 +400,8 @@
         .tech-card p {
             margin: 0;
             color: var(--accent);
-            font-size: 1rem;
-            line-height: 1.9;
+            font-size: 0.98rem;
+            line-height: 1.85;
         }
 
         .project-filter {
@@ -431,17 +431,17 @@
 
         .project-list {
             display: grid;
-            gap: 26px;
+            gap: 24px;
         }
 
         .project-card {
             background: var(--navy);
             color: #fff;
             border: 1px solid var(--line-dark);
-            padding: 32px;
+            padding: 28px;
             display: grid;
-            grid-template-columns: 230px 1fr;
-            gap: 32px;
+            grid-template-columns: 190px 1fr;
+            gap: 28px;
             align-items: start;
             box-shadow: var(--shadow);
         }
@@ -451,17 +451,19 @@
         }
 
         .project-media {
+            width: 190px;
+            min-height: 128px;
             background: #f6f6f6;
-            min-height: 148px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #10253a;
             font-weight: 800;
-            font-size: 2.1rem;
+            font-size: 1.7rem;
+            line-height: 1.22;
             letter-spacing: -0.04em;
             text-align: center;
-            padding: 18px;
+            padding: 16px;
         }
 
         .project-content h3 {
@@ -516,7 +518,7 @@
 
         .professional-card {
             grid-template-columns: 1fr;
-            padding: 42px 46px;
+            padding: 38px 42px;
         }
 
         .professional-card .project-content {
@@ -571,7 +573,7 @@
 
         .book-columns {
             columns: 2;
-            column-gap: 36px;
+            column-gap: 34px;
         }
 
         .book-columns li {
@@ -582,14 +584,14 @@
             margin-top: 18px;
             border-top: 1px solid var(--line);
             background: #ededed;
-            padding: 36px 0 28px;
+            padding: 34px 0 26px;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr auto;
             gap: 28px;
-            align-items: center;
+            align-items: start;
         }
 
         .footer-contact h3 {
@@ -655,6 +657,14 @@
             color: #505662;
         }
 
+        .footer-gpg code {
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            letter-spacing: 0;
+            word-spacing: 0;
+        }
+
         @media (max-width: 980px) {
             .about-grid,
             .project-card,
@@ -668,7 +678,9 @@
             }
 
             .project-media {
-                min-height: 120px;
+                width: 100%;
+                min-height: 112px;
+                font-size: 1.55rem;
             }
 
             .about-side {
@@ -701,7 +713,7 @@
             }
 
             .quote-strip {
-                padding: 22px 14px;
+                padding: 20px 14px;
             }
 
             .tab-nav,
@@ -734,7 +746,7 @@
         <div class="brand-wrap">
             <div class="brand-badge">RV</div>
             <div class="brand-text">
-                <strong>Bc. Robert Vokáč</strong>
+                <strong>Robert Vokáč</strong>
                 <span>C++ Backend &amp; Systems Engineer</span>
             </div>
         </div>
@@ -767,8 +779,10 @@
                         <div><strong>Work location:</strong> Prague · onsite only</div>
                         <div><strong>Technologies:</strong> Modern C++, SQL, Linux, CMake, Git</div>
                         <div><strong>Current direction:</strong> C++ backend, networking, maintainable server architecture</div>
-                        <div><strong>Contact:</strong> <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a>
-                            · <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a></div>
+                        <div><strong>Contact:</strong>
+                            <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a> ·
+                            <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a>
+                        </div>
                     </div>
 
                     <p>
@@ -795,7 +809,7 @@
 
                 <aside class="about-side">
                     <div class="portrait-frame">
-                        <img src="photo-of-robert-vokac.jpg" alt="Photo of Bc. Robert Vokáč"/>
+                        <img src="photo-of-robert-vokac.jpg" alt="Photo of Robert Vokáč"/>
                     </div>
                     <div class="side-card">
                         <h4>Primary focus</h4>
@@ -838,7 +852,7 @@
             <div class="tab-panel" id="free-time">
                 <ul class="bullets">
                     <li>Building <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">CNA</a>, an XNA 4.0 style wrapper over SDL 3 in modern C++.</li>
-                    <li>Working on Mobile-Eggbert, an early C++ porting experiment built on top of CNA.</li>
+                    <li>Working on Mobile-Eggbert, an early porting experiment built on top of CNA.</li>
                     <li>Collecting paper C++ books and building a long-term personal C++ library.</li>
                     <li>Studying C++ language, architecture, concurrency, templates, and performance in depth.</li>
                     <li>Maintaining technical notes and long-term knowledge structure for C++ and systems topics.</li>
@@ -867,7 +881,12 @@
             </div>
 
             <div class="tab-panel" id="books">
-                <p class="muted-note">This is the current paper C++ collection I own. It is not a list of books already fully read.</p>
+                <div class="books-meta">
+                    <span>C++ collection I own</span>
+                    <span>Personal paper library</span>
+                    <span>Not a completed reading list</span>
+                </div>
+                <p class="muted-note">This section shows the current paper C++ collection I own. It is included as evidence of long-term study commitment, not as a claim that every listed title has already been fully read.</p>
                 <ul class="book-list book-columns">
                     <li>The C++ standard library 2nd edition (N. Josuttis)</li>
                     <li>C++ bez předchozích znalostí</li>
