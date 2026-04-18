@@ -776,12 +776,13 @@
                     <div class="facts">
                         <div><strong>Experience:</strong> 9 years of professional software development experience</div>
                         <div><strong>Work type:</strong> Employee</div>
-                        <div><strong>Work location:</strong> Prague · onsite only</div>
+                        <div><strong>Work location:</strong> Prague · onsite or remote</div>
                         <div><strong>Technologies:</strong> Modern C++, SQL, Linux, CMake, Git, SDL 3</div>
                         <div><strong>Current direction:</strong> modern C++, systems design, framework development, and graphics learning through CNA</div>
                         <div><strong>Contact:</strong>
                             <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a> ·
-                            <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a>
+                            <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a> ·
+                            <a href="https://github.com/openeggbert" target="_blank" rel="noreferrer">github.com/openeggbert</a>
                         </div>
                     </div>
 
@@ -822,7 +823,7 @@
                     </div>
                     <div class="side-card">
                         <h4>Work preference</h4>
-                        <p>Employee · Prague · onsite only</p>
+                        <p>Employee · Prague · onsite or remote</p>
                     </div>
                     <div class="side-card">
                         <h4>English</h4>
@@ -1018,22 +1019,38 @@
 
             <div class="project-filter" role="tablist" aria-label="Project filters">
                 <button class="filter-button active" type="button" data-filter="all">All</button>
-                <button class="filter-button" type="button" data-filter="personal">Personal</button>
-                <button class="filter-button" type="button" data-filter="experimental">Experimental</button>
+                <button class="filter-button" type="button" data-filter="core">Core projects</button>
                 <button class="filter-button" type="button" data-filter="professional">Professional</button>
             </div>
 
             <div class="project-list">
-                <article class="project-card" data-category="personal experimental">
+                <article class="project-card" data-category="core">
+                    <div class="project-media">CNA<br/>SDL3</div>
+                    <div class="project-content">
+                        <h3>CNA</h3>
+                        <p class="project-role">Main visible personal project · XNA 4.0 style C++ reimplementation over SDL 3 · in progress</p>
+                        <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">github.com/openeggbert/cna</a> · Focus: framework design, rendering architecture, reusable engine-style abstractions</p>
+                        <ul>
+                            <li>Main personal C++ project used to study framework design, rendering architecture, and long-term graphics learning through real implementation.</li>
+                            <li>Reimplements an XNA 4.0 style API in C++ and serves as the technical foundation for related experiments and future higher-level projects.</li>
+                            <li>Presented honestly as work in progress: valuable as a visible engineering direction, not claimed as finished production-ready software.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">Repository</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="core">
                     <div class="project-media">MIND<br/>NET</div>
                     <div class="project-content">
                         <h3>Mind-Net</h3>
-                        <p class="project-role">Personal modular C++ backend platform · archived learning project</p>
+                        <p class="project-role">Modular C++ backend platform · architecture-focused learning project</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/mind-net" target="_blank" rel="noreferrer">github.com/robertvokac/mind-net</a> · Stack: C++23, SQLite, plugin architecture</p>
                         <ul>
                             <li>Designed and implemented a modular backend platform in modern C++ from scratch.</li>
                             <li>Included custom data modeling, automatic REST API generation, role-based authentication and authorization, and plugin-based extensibility.</li>
-                            <li>Reached a stable archived state after becoming a serious personal learning and architecture project.</li>
+                            <li>Shows earlier architecture work in modular backend design, extensibility, and practical C++ system structure.</li>
                         </ul>
                         <div class="project-actions">
                             <a href="https://github.com/robertvokac/mind-net" target="_blank" rel="noreferrer">Repository</a>
@@ -1041,19 +1058,70 @@
                     </div>
                 </article>
 
-                <article class="project-card" data-category="personal experimental">
-                    <div class="project-media">CNA<br/>SDL3</div>
+                <article class="project-card" data-category="core">
+                    <div class="project-media">EASY<br/>GL</div>
                     <div class="project-content">
-                        <h3>CNA</h3>
-                        <p class="project-role">Main visible personal project · XNA 4.0 style reimplementation over SDL 3 · in progress</p>
-                        <p class="project-meta">Current state: functional proof of concept for rendering and framework structure · still incomplete · input handling is not implemented yet</p>
+                        <h3>easy-gl</h3>
+                        <p class="project-role">Graphics support library related to practical rendering learning in modern C++</p>
+                        <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/easy-gl" target="_blank" rel="noreferrer">github.com/openeggbert/easy-gl</a> · Focus: practical graphics foundations and reusable rendering support</p>
                         <ul>
-                            <li>Main personal C++ project used to learn framework design, rendering architecture, and reusable engine-style abstractions.</li>
-                            <li>Already functional as a proof of concept and capable of demonstrating the intended development model, but still far from complete.</li>
-                            <li>Presented honestly as work in progress: useful for visible technical direction, not claimed as finished production-ready software.</li>
+                            <li>Supports hands-on graphics learning through real implementation rather than theory only.</li>
+                            <li>Explores reusable rendering support and low-level graphics concepts in a smaller, focused codebase.</li>
+                            <li>Fits the broader direction of learning graphics fundamentals step by step in public C++ projects.</li>
                         </ul>
                         <div class="project-actions">
-                            <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">Repository</a>
+                            <a href="https://github.com/openeggbert/easy-gl" target="_blank" rel="noreferrer">Repository</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="core">
+                    <div class="project-media">CPP<br/>.NET</div>
+                    <div class="project-content">
+                        <h3>CppDotNet</h3>
+                        <p class="project-role">Partial C++ reimplementation of selected .NET Base Class Library concepts and APIs</p>
+                        <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cpp-dotnet" target="_blank" rel="noreferrer">github.com/openeggbert/cpp-dotnet</a> · Focus: .NET-inspired foundation layer for native C++ projects</p>
+                        <ul>
+                            <li>Provides selected .NET-style building blocks such as exceptions, events, delegates, and basic system types.</li>
+                            <li>Keeps APIs familiar where useful while staying pragmatic, native, and oriented toward readable modern C++.</li>
+                            <li>Acts as a foundation layer for higher-level frameworks, especially projects related to CNA.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/openeggbert/cpp-dotnet" target="_blank" rel="noreferrer">Repository</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="other">
+                    <div class="project-media">LEXI<br/>CON</div>
+                    <div class="project-content">
+                        <h3>Lexicon</h3>
+                        <p class="project-role">Desktop knowledge dictionary for structured learning and technical note-taking</p>
+                        <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/lexicon" target="_blank" rel="noreferrer">github.com/robertvokac/lexicon</a> · Stack: C++23, Qt Widgets, SQLite</p>
+                        <ul>
+                            <li>Desktop knowledge dictionary designed for technical notes, maps, terms, metadata, and typed links between concepts.</li>
+                            <li>Includes Markdown content editing with live preview, filtering, pagination, sorting, and backlinks for concept navigation.</li>
+                            <li>Built as a practical local-first tool for structured learning with a single-file SQLite database.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/robertvokac/lexicon" target="_blank" rel="noreferrer">Repository</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="other">
+                    <div class="project-media">BIT<br/>BACKUP</div>
+                    <div class="project-content">
+                        <h3>bit-backup</h3>
+                        <p class="project-role">Command-line utility for long-term data integrity and bit rot detection</p>
+                        <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/bit-backup" target="_blank" rel="noreferrer">github.com/robertvokac/bit-backup</a> · Stack: C++23, SQLite, OpenSSL</p>
+                        <ul>
+                            <li>Stores and verifies SHA-512 checksums of files in a local SQLite database to detect silent corruption over time.</li>
+                            <li>Includes ignore patterns, reporting, database self-integrity verification, and CSV export for scanned files.</li>
+                            <li>Built as a practical command-line tool focused on reliability, local control, and long-term data integrity.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/robertvokac/bit-backup" target="_blank" rel="noreferrer">Repository</a>
                         </div>
                     </div>
                 </article>
@@ -1067,7 +1135,7 @@
                         <div class="experience-tags">
                             <span>9 years experience</span>
                             <span>Employee</span>
-                            <span>Prague onsite only</span>
+                            <span>Prague onsite or remote</span>
                         </div>
                         <h3>Professional software development experience</h3>
                         <p class="project-meta">
@@ -1092,13 +1160,13 @@
             <div class="footer-contact">
                 <h3>Bc. Robert Vokáč</h3>
                 <p>Prague · Czech Republic</p>
-                <p>Email: <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a></p>
-                <p>GitHub: <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a></p>
+                <p>Contact: <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a> · <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a> · <a href="https://github.com/openeggbert" target="_blank" rel="noreferrer">github.com/openeggbert</a></p>
                 <p>LinkedIn: <a href="https://cz.linkedin.com/in/robert-vok%C3%A1%C4%8D-081170381/" target="_blank" rel="noreferrer">LinkedIn profile</a></p>
             </div>
 
             <div class="footer-actions">
                 <a class="footer-pill" href="https://github.com/robertvokac" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="footer-pill" href="https://github.com/openeggbert" target="_blank" rel="noreferrer">OpenEggbert</a>
                 <a class="footer-pill" href="mailto:robertvokac@robertvokac.com">Email</a>
                 <a class="footer-pill" href="https://cz.linkedin.com/in/robert-vok%C3%A1%C4%8D-081170381/" target="_blank" rel="noreferrer">LinkedIn</a>
                 <a class="footer-pill" href="robert-vokac-cv-2026.pdf" download>CV</a>
