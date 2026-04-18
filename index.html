@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Robert Vokáč | C++ Systems & Framework Engineer</title>
+    <title>Robert Vokáč | C++ Developer</title>
     <meta name="description"
-          content="Robert Vokáč — C++ engineer focused on modern C++, systems programming fundamentals, and framework design through CNA, an XNA 4.0 style reimplementation in C++ over SDL 3."/>
+          content="Robert Vokáč — C++ developer focused on modern C++, framework design, rendering architecture, and systems-oriented software engineering through public projects such as CNA."/>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         :root {
-            --bg: #f3f3f3;
+            --bg: #f3f4f6;
             --surface: #ffffff;
-            --text: #2f2f35;
-            --muted: #6e6e75;
+            --surface-2: #f8fafc;
+            --text: #1f2937;
+            --muted: #6b7280;
             --navy: #0c2238;
             --navy-2: #102a45;
             --navy-3: #163556;
-            --line: #d8d8dd;
-            --line-dark: #314760;
+            --line: #d7dce3;
+            --line-dark: #2f455d;
             --accent: #2d8fcb;
             --accent-dark: #216d9a;
             --shadow: 0 14px 28px rgba(0, 0, 0, 0.05);
+            --shadow-strong: 0 22px 50px rgba(12, 34, 56, 0.12);
             --max: 1120px;
+            --radius: 18px;
         }
 
         * {
@@ -37,7 +40,7 @@
             font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             color: var(--text);
             background: var(--bg);
-            line-height: 1.55;
+            line-height: 1.6;
         }
 
         a {
@@ -68,10 +71,14 @@
         .site-header {
             background: var(--navy);
             color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
         }
 
         .header-inner {
-            min-height: 88px;
+            min-height: 84px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -101,25 +108,25 @@
 
         .brand-text strong {
             display: block;
-            font-size: 1.12rem;
+            font-size: 1.1rem;
             letter-spacing: -0.02em;
             margin-bottom: 2px;
         }
 
         .brand-text span {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 0.94rem;
         }
 
         .nav {
             display: flex;
-            gap: 34px;
+            gap: 28px;
             flex-wrap: wrap;
         }
 
         .nav a {
-            color: rgba(255, 255, 255, 0.82);
-            font-size: 0.94rem;
+            color: rgba(255, 255, 255, 0.84);
+            font-size: 0.93rem;
             font-weight: 700;
             letter-spacing: 0.03em;
             text-transform: uppercase;
@@ -130,105 +137,93 @@
             text-decoration: none;
         }
 
-        .quote-strip {
-            background: #ececec;
-            border-bottom: 1px solid #e1e1e1;
+        .hero {
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+            color: #fff;
+            padding: 64px 0 56px;
+        }
+
+        .hero-panel {
+            background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 28px;
+            padding: 42px 36px;
+            box-shadow: var(--shadow-strong);
             text-align: center;
-            padding: 24px 16px;
         }
 
-        .quote-strip p {
-            margin: 0;
-            font-size: clamp(1.15rem, 2.2vw, 1.8rem);
-            line-height: 1.35;
-            font-weight: 700;
-            color: #22252a;
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            min-height: 34px;
+            padding: 0 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.14);
+            color: #d9edf8;
+            font-size: 0.86rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
         }
 
-        main {
-            padding-bottom: 24px;
-        }
-
-        section {
-            padding: 28px 0 48px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 34px;
-        }
-
-        .section-title h2 {
-            margin: 0;
-            font-size: clamp(2.1rem, 4vw, 3.2rem);
-            line-height: 1.1;
-            letter-spacing: -0.04em;
-        }
-
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 180px;
-            max-width: 40vw;
-            height: 4px;
-            margin: 14px auto 0;
-            background: var(--navy);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.55fr;
-            gap: 54px;
-            align-items: start;
-        }
-
-        .about-main h3 {
-            margin: 0 0 18px;
-            font-size: 1.7rem;
-            line-height: 1.2;
-            letter-spacing: -0.03em;
-        }
-
-        .facts {
-            display: grid;
-            gap: 6px;
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            color: #4b4b53;
-        }
-
-        .facts strong {
-            color: #36363b;
-        }
-
-        .facts a {
-            word-break: break-word;
-        }
-
-        .about-main p {
+        .hero h1 {
             margin: 0 0 16px;
-            font-size: 1.05rem;
-            color: #4e4e56;
-            max-width: 760px;
+            font-size: clamp(2.3rem, 4.7vw, 4rem);
+            line-height: 1.08;
+            letter-spacing: -0.045em;
+        }
+
+        .hero p {
+            max-width: 780px;
+            margin: 0 auto 24px;
+            color: rgba(255,255,255,0.82);
+            font-size: 1.13rem;
+        }
+
+        .hero-highlights {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 0 28px;
+        }
+
+        .hero-highlights span {
+            display: inline-flex;
+            align-items: center;
+            min-height: 38px;
+            padding: 0 14px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.14);
+            color: #f7fbff;
+            font-size: 0.92rem;
+            font-weight: 700;
         }
 
         .cta-row {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
-            margin-top: 18px;
+        }
+
+        .hero .cta-row {
+            justify-content: center;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-height: 44px;
+            min-height: 46px;
             padding: 0 18px;
             border: 1px solid var(--line);
+            border-radius: 12px;
             background: #fff;
             color: var(--text);
-            font-weight: 700;
+            font-weight: 800;
             text-decoration: none;
             box-shadow: var(--shadow);
             transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
@@ -251,19 +246,113 @@
             color: #fff;
         }
 
+        .btn.dark {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255,255,255,0.22);
+            box-shadow: none;
+        }
+
+        .btn.dark:hover {
+            background: rgba(255,255,255,0.06);
+            color: #fff;
+        }
+
+        main {
+            padding-bottom: 24px;
+        }
+
+        section {
+            padding: 34px 0 52px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 34px;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 160px;
+            max-width: 40vw;
+            height: 4px;
+            margin: 14px auto 0;
+            background: var(--navy);
+        }
+
+        .intro-quote {
+            text-align: center;
+            margin: -6px auto 30px;
+            max-width: 900px;
+            font-size: clamp(1.05rem, 2vw, 1.5rem);
+            font-weight: 700;
+            color: #2a3340;
+            line-height: 1.35;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.6fr;
+            gap: 36px;
+            align-items: start;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .about-main {
+            padding: 28px;
+        }
+
+        .about-main h3 {
+            margin: 0 0 16px;
+            font-size: 1.55rem;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+        }
+
+        .facts {
+            display: grid;
+            gap: 8px;
+            margin-bottom: 18px;
+            font-size: 1rem;
+            color: #45505d;
+        }
+
+        .facts strong {
+            color: #2b3440;
+        }
+
+        .facts a {
+            word-break: break-word;
+        }
+
+        .about-main p {
+            margin: 0 0 14px;
+            font-size: 1.03rem;
+            color: #4a5563;
+            max-width: 760px;
+        }
+
         .about-side {
             display: grid;
             gap: 16px;
-            justify-items: center;
         }
 
         .portrait-frame {
-            width: min(100%, 292px);
-            min-height: 292px;
-            background: #fff;
-            border: 1px solid var(--line);
-            padding: 26px;
-            box-shadow: var(--shadow);
+            padding: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -271,23 +360,20 @@
 
         .portrait-frame img {
             width: auto;
-            max-width: 74%;
-            max-height: 208px;
+            max-width: 76%;
+            max-height: 210px;
             object-fit: contain;
             background: #f5f5f5;
+            border-radius: 12px;
         }
 
         .side-card {
-            width: 100%;
-            background: #fff;
-            border: 1px solid var(--line);
             padding: 18px 20px;
-            box-shadow: var(--shadow);
         }
 
         .side-card h4 {
             margin: 0 0 10px;
-            font-size: 0.86rem;
+            font-size: 0.84rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
             color: var(--muted);
@@ -297,7 +383,7 @@
             margin: 0;
             font-size: 1rem;
             font-weight: 700;
-            color: #262a30;
+            color: #232d39;
             line-height: 1.5;
         }
 
@@ -306,19 +392,19 @@
             gap: 10px;
             flex-wrap: wrap;
             border-bottom: 1px solid var(--line);
-            margin-top: 34px;
+            margin-top: 28px;
         }
 
         .tab-button {
             appearance: none;
             border: 0;
             background: transparent;
-            padding: 14px 22px 12px;
+            padding: 14px 18px 12px;
             margin: 0;
-            color: #7a7a81;
+            color: #7a7f88;
             font: inherit;
             font-size: 0.92rem;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.03em;
             text-transform: uppercase;
             border-bottom: 4px solid transparent;
@@ -326,7 +412,7 @@
         }
 
         .tab-button.active {
-            color: #2f2f35;
+            color: #242c36;
             border-bottom-color: var(--navy);
         }
 
@@ -344,9 +430,9 @@
         .edu-list,
         .course-list {
             margin: 0;
-            padding-left: 24px;
-            color: #52525b;
-            font-size: 1.04rem;
+            padding-left: 22px;
+            color: #4d5663;
+            font-size: 1rem;
         }
 
         .bullets li,
@@ -356,24 +442,35 @@
         }
 
         .edu-item {
-            margin-bottom: 26px;
-            font-size: 1.02rem;
-            color: #52525b;
+            margin-bottom: 24px;
+            font-size: 1rem;
+            color: #4d5663;
         }
 
         .edu-item strong {
-            color: #2f2f35;
+            color: #26303b;
         }
 
-        .tech-quote,
-        .projects-quote {
-            text-align: center;
-            margin: -8px auto 28px;
-            max-width: 980px;
-            font-size: clamp(1.2rem, 2.2vw, 1.85rem);
-            font-weight: 700;
-            color: #262a30;
-            line-height: 1.35;
+        .muted-note {
+            color: #707784;
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-weight: 800;
+            color: #273240;
+            margin-bottom: 14px;
+        }
+
+        .book-columns {
+            columns: 2;
+            column-gap: 34px;
+        }
+
+        .book-columns li {
+            break-inside: avoid;
         }
 
         .tech-grid {
@@ -383,17 +480,18 @@
         }
 
         .tech-card {
-            background: #fafafa;
+            background: var(--surface);
             border: 1px solid var(--line);
+            border-radius: var(--radius);
             min-height: 176px;
-            padding: 22px 22px;
+            padding: 22px;
             text-align: center;
             box-shadow: var(--shadow);
         }
 
         .tech-card h3 {
-            margin: 0 0 16px;
-            font-size: 1.15rem;
+            margin: 0 0 14px;
+            font-size: 1.12rem;
             letter-spacing: -0.02em;
         }
 
@@ -401,7 +499,7 @@
             margin: 0;
             color: var(--accent);
             font-size: 0.98rem;
-            line-height: 1.85;
+            line-height: 1.8;
         }
 
         .project-filter {
@@ -416,7 +514,7 @@
             appearance: none;
             border: 0;
             background: transparent;
-            color: #9a9aa1;
+            color: #8b9098;
             cursor: pointer;
             font: inherit;
             font-size: 1rem;
@@ -431,19 +529,20 @@
 
         .project-list {
             display: grid;
-            gap: 24px;
+            gap: 22px;
         }
 
         .project-card {
             background: var(--navy);
             color: #fff;
             border: 1px solid var(--line-dark);
+            border-radius: 24px;
             padding: 28px;
             display: grid;
             grid-template-columns: 190px 1fr;
             gap: 28px;
             align-items: start;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-strong);
         }
 
         .project-card[hidden] {
@@ -452,50 +551,69 @@
 
         .project-media {
             width: 190px;
-            min-height: 128px;
-            background: #f6f6f6;
+            min-height: 132px;
+            border-radius: 20px;
+            background: #f7fbff;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #10253a;
-            font-weight: 800;
+            font-weight: 900;
             font-size: 1.7rem;
-            line-height: 1.22;
-            letter-spacing: -0.04em;
+            line-height: 1.18;
+            letter-spacing: -0.05em;
             text-align: center;
             padding: 16px;
+            position: relative;
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+            padding: 0 9px;
+            border-radius: 999px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.74rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
 
         .project-content h3 {
             margin: 0 0 6px;
-            font-size: 1.55rem;
+            font-size: 1.58rem;
             letter-spacing: -0.03em;
         }
 
         .project-role {
-            margin: 0 0 12px;
-            color: rgba(255, 255, 255, 0.82);
+            margin: 0 0 10px;
+            color: rgba(255, 255, 255, 0.8);
             font-size: 1rem;
         }
 
         .project-meta {
-            margin: 0 0 18px;
+            margin: 0 0 16px;
             color: rgba(255, 255, 255, 0.86);
-            font-size: 1rem;
-            line-height: 1.7;
+            font-size: 0.98rem;
+            line-height: 1.65;
         }
 
         .project-content ul {
-            margin: 0 0 16px;
-            padding-left: 22px;
-            color: rgba(255, 255, 255, 0.88);
+            margin: 0 0 14px;
+            padding-left: 20px;
+            color: rgba(255, 255, 255, 0.9);
             font-size: 1rem;
-            line-height: 1.6;
+            line-height: 1.58;
         }
 
         .project-content p {
-            margin: 0 0 16px;
-            color: rgba(255, 255, 255, 0.86);
+            margin: 0 0 14px;
+            color: rgba(255, 255, 255, 0.88);
             font-size: 1rem;
         }
 
@@ -503,22 +621,22 @@
             display: flex;
             gap: 18px;
             flex-wrap: wrap;
-            margin-top: 8px;
+            margin-top: 6px;
         }
 
         .project-actions a {
-            color: #53afe2;
+            color: #7ac3ec;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .project-actions a:hover {
-            color: #7ac3ec;
+            color: #a9daf4;
         }
 
         .professional-card {
             grid-template-columns: 1fr;
-            padding: 38px 42px;
+            padding: 34px 38px;
         }
 
         .professional-card .project-content {
@@ -529,7 +647,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .experience-tags span {
@@ -542,48 +660,13 @@
             color: #ffffff;
             font-size: 0.92rem;
             font-weight: 700;
-        }
-
-        .subsection-title {
-            text-align: center;
-            margin: 48px 0 24px;
-        }
-
-        .subsection-title h3 {
-            margin: 0;
-            font-size: 2rem;
-            letter-spacing: -0.03em;
-        }
-
-        .subsection-title::after {
-            content: "";
-            display: block;
-            width: 180px;
-            max-width: 40vw;
-            height: 4px;
-            margin: 12px auto 0;
-            background: var(--navy);
-        }
-
-        .muted-note {
-            color: #76767e;
-            font-size: 0.94rem;
-            margin-bottom: 14px;
-        }
-
-        .book-columns {
-            columns: 2;
-            column-gap: 34px;
-        }
-
-        .book-columns li {
-            break-inside: avoid;
+            border-radius: 999px;
         }
 
         .footer {
             margin-top: 18px;
             border-top: 1px solid var(--line);
-            background: #ededed;
+            background: #eceff3;
             padding: 34px 0 26px;
         }
 
@@ -597,12 +680,12 @@
         .footer-contact h3 {
             margin: 0 0 12px;
             font-size: 1.15rem;
-            color: #3d4350;
+            color: #33404d;
         }
 
         .footer-contact p {
             margin: 0 0 8px;
-            color: #646b78;
+            color: #5f6875;
             font-size: 0.98rem;
             font-weight: 700;
             line-height: 1.6;
@@ -622,7 +705,7 @@
 
         .footer-pill {
             min-width: 58px;
-            min-height: 52px;
+            min-height: 50px;
             padding: 0 18px;
             display: inline-flex;
             align-items: center;
@@ -632,6 +715,7 @@
             text-decoration: none;
             font-weight: 800;
             font-size: 1rem;
+            border-radius: 12px;
             box-shadow: var(--shadow);
             transition: background 0.15s ease, transform 0.15s ease;
         }
@@ -646,23 +730,21 @@
         .footer-gpg {
             margin-top: 22px;
             padding-top: 16px;
-            border-top: 1px solid #dddddf;
-            color: #727781;
+            border-top: 1px solid #d8dde5;
+            color: #6d7480;
             font-size: 0.93rem;
             display: grid;
             gap: 6px;
         }
 
         .footer-gpg strong {
-            color: #505662;
+            color: #4b5563;
         }
 
         .footer-gpg code {
             font-family: inherit;
             font-size: inherit;
             color: inherit;
-            letter-spacing: 0;
-            word-spacing: 0;
         }
 
         @media (max-width: 980px) {
@@ -679,16 +761,8 @@
 
             .project-media {
                 width: 100%;
-                min-height: 112px;
+                min-height: 110px;
                 font-size: 1.55rem;
-            }
-
-            .about-side {
-                justify-items: start;
-            }
-
-            .portrait-frame {
-                width: min(100%, 340px);
             }
 
             .footer-actions {
@@ -712,8 +786,13 @@
                 gap: 16px;
             }
 
-            .quote-strip {
-                padding: 20px 14px;
+            .hero {
+                padding: 42px 0 38px;
+            }
+
+            .hero-panel,
+            .about-main {
+                padding: 24px 20px;
             }
 
             .tab-nav,
@@ -747,7 +826,7 @@
             <div class="brand-badge">RV</div>
             <div class="brand-text">
                 <strong>Robert Vokáč</strong>
-                <span>C++ Systems &amp; Framework Engineer</span>
+                <span>C++ Developer</span>
             </div>
         </div>
 
@@ -760,25 +839,46 @@
     </div>
 </header>
 
-<div class="quote-strip">
-    <p>"Build from first principles. Keep the design understandable."</p>
-</div>
+<section class="hero">
+    <div class="container">
+        <div class="hero-panel">
+            <div class="hero-kicker">Modern C++ · Frameworks · Systems</div>
+            <h1>C++ developer building frameworks and systems from first principles</h1>
+            <p>
+                Focused on modern C++, rendering architecture, reusable engine-style design,
+                and practical systems work through public projects such as CNA.
+            </p>
+            <div class="hero-highlights">
+                <span>9 years software development experience</span>
+                <span>Prague · onsite or remote</span>
+                <span>Main project: CNA</span>
+            </div>
+            <div class="cta-row">
+                <a class="btn primary" href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">View CNA</a>
+                <a class="btn" href="https://github.com/robertvokac" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn" href="#projects">See projects</a>
+                <a class="btn dark" href="mailto:robertvokac@robertvokac.com">Contact</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <main>
     <section id="about">
         <div class="container">
-            <div class="section-title"><h2>About me</h2></div>
+            <div class="section-title"><h2>About</h2></div>
+            <p class="intro-quote">Focused on modern C++, framework design, and long-term technical depth through real implementation.</p>
 
             <div class="about-grid">
-                <div class="about-main">
-                    <h3>C++ engineer focused on systems programming fundamentals, framework design, and long-term technical growth.</h3>
+                <div class="about-main card">
+                    <h3>C++-focused engineer building visible technical direction through public projects.</h3>
 
                     <div class="facts">
                         <div><strong>Experience:</strong> 9 years of professional software development experience</div>
                         <div><strong>Work type:</strong> Employee</div>
                         <div><strong>Work location:</strong> Prague · onsite or remote</div>
-                        <div><strong>Technologies:</strong> Modern C++, SQL, Linux, CMake, Git, SDL 3</div>
-                        <div><strong>Current direction:</strong> modern C++, systems design, framework development, and graphics learning through CNA</div>
+                        <div><strong>Core stack:</strong> Modern C++, Linux, CMake, Git, SDL 3, SQLite</div>
+                        <div><strong>Current direction:</strong> framework design, rendering architecture, reusable libraries, graphics fundamentals</div>
                         <div><strong>Contact:</strong>
                             <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a> ·
                             <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a> ·
@@ -787,193 +887,194 @@
                     </div>
 
                     <p>
-                        Software engineer focused on modern C++, system-level thinking, and understandable internal design.
-                        I have 9 years of professional software development experience and I am intentionally building a visible long-term direction in modern C++.
+                        Software engineer with 9 years of experience, currently focused on modern C++,
+                        systems design, and framework-level development.
                     </p>
+
                     <p>
-                        My current personal focus is CNA, an XNA 4.0 style reimplementation in C++ over SDL 3, used as a practical project for framework design, rendering architecture, and long-term graphics learning.
+                        Building CNA — a C++ reimplementation of XNA 4.0 over SDL 3 — as a long-term
+                        project for rendering architecture, engine design, and practical graphics learning.
                     </p>
+
                     <p>
-                        I am currently learning graphics foundations. OpenGL is a short-term study topic for understanding the basics, and Vulkan is the long-term graphics direction I want to grow into through practical work rather than broad claims.
+                        Currently learning graphics fundamentals through real implementation,
+                        with OpenGL as a study step and Vulkan as a longer-term direction.
                     </p>
 
                     <div class="cta-row">
                         <a class="btn primary" href="mailto:robertvokac@robertvokac.com">Email me</a>
                         <a class="btn" href="https://github.com/robertvokac" target="_blank" rel="noreferrer">GitHub</a>
+                        <a class="btn" href="https://github.com/openeggbert" target="_blank" rel="noreferrer">OpenEggbert GitHub</a>
                         <a class="btn" href="robert-vokac-cv-2026.pdf" download>Download CV</a>
-                        <a class="btn" href="#projects">See projects</a>
+                    </div>
+
+                    <div class="tab-nav" role="tablist" aria-label="About details tabs">
+                        <button class="tab-button active" data-tab="characteristics" type="button">Characteristics</button>
+                        <button class="tab-button" data-tab="free-time" type="button">Current focus</button>
+                        <button class="tab-button" data-tab="education" type="button">Education</button>
+                        <button class="tab-button" data-tab="courses" type="button">Learning</button>
+                        <button class="tab-button" data-tab="books" type="button">Books</button>
+                    </div>
+
+                    <div class="tab-panel active" id="characteristics">
+                        <ul class="bullets">
+                            <li>Modern C++ learning tied directly to real code and public projects.</li>
+                            <li>Strong preference for explicit design, maintainable internals, and reusable abstractions.</li>
+                            <li>Systems-oriented thinking: ownership, lifecycle, modularity, and technical depth.</li>
+                            <li>Interested in framework and engine-style development rather than UI-only work.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-panel" id="free-time">
+                        <ul class="bullets">
+                            <li>Building <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">CNA</a> as the main public C++ project.</li>
+                            <li>Working on supporting libraries such as <a href="https://github.com/openeggbert/easy-gl" target="_blank" rel="noreferrer">easy-gl</a> and <a href="https://github.com/openeggbert/cpp-dotnet" target="_blank" rel="noreferrer">CppDotNet</a>.</li>
+                            <li>Studying graphics, architecture, performance, and library design through implementation.</li>
+                            <li>Maintaining long-term technical notes and a large personal C++ book collection.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-panel" id="education">
+                        <div class="edu-list">
+                            <div class="edu-item">
+                                <strong>Czech University of Life Sciences Prague</strong><br/>
+                                BSc in Computer Science (2014–2017)
+                            </div>
+                            <div class="edu-item">
+                                <strong>Secondary Technical School Hořovice</strong><br/>
+                                Informatics in Economics (2008–2012)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="courses">
+                        <ul class="course-list">
+                            <li>Self-directed long-term C++ curriculum built around books, implementation, and technical notes.</li>
+                            <li>Current study areas: modern C++, software design, framework design, graphics fundamentals, and system-level architecture.</li>
+                            <li>Learning model: theory from books + real implementation in public repositories.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-panel" id="books">
+                        <p class="muted-note">
+                            I maintain a large personal C++ book collection as part of long-term study.
+                        </p>
+                        <details>
+                            <summary>Show full book list</summary>
+                            <ul class="book-list book-columns">
+                                <li>The C++ standard library 2nd edition (N. Josuttis)</li>
+                                <li>C++ bez předchozích znalostí</li>
+                                <li>Programování v C++ od základů k profesionálnímu použití</li>
+                                <li>Mistrovství v C++ 4. aktualizované vydání (C++ Primer Plus)</li>
+                                <li>Kniha C++ Výukový kurz</li>
+                                <li>Exploring C++20</li>
+                                <li>Clang Compiler Frontend</li>
+                                <li>C++ Software Design</li>
+                                <li>Software Architecture with C++</li>
+                                <li>API Design for C++</li>
+                                <li>Test-Driven Development with C++</li>
+                                <li>C++20 - The Complete Guide</li>
+                                <li>Effective Modern C++</li>
+                                <li>C++ High Performance</li>
+                                <li>C++ Templates, The Complete Guide. Second Edition</li>
+                                <li>Functional Programming in C++</li>
+                                <li>C++ Concurrency in Action, 2E</li>
+                                <li>A Tour of C++ Third Edition</li>
+                                <li>Professional C++, 6th Edition</li>
+                                <li>Design and Evolution of C++</li>
+                                <li>C++ Crash Course</li>
+                                <li>Clean C++20</li>
+                                <li>C++ Lambda Story</li>
+                                <li>The C++ Programming Language</li>
+                                <li>Effective C++</li>
+                                <li>C++: The Complete Reference</li>
+                                <li>Exceptional C++</li>
+                                <li>Exceptional C++ Style</li>
+                                <li>C++ Memory Management</li>
+                                <li>Advanced Metaprogramming in Classic C++</li>
+                                <li>Modern C++ Design</li>
+                                <li>C++ Template Metaprogramming</li>
+                                <li>Using the C++ Standard Template Libraries</li>
+                                <li>Template Metaprogramming with C++</li>
+                                <li>C++ Primer</li>
+                                <li>Design Patterns in Modern C++20</li>
+                                <li>C++ Coding Standards</li>
+                                <li>More Effective C++</li>
+                                <li>Effective STL</li>
+                                <li>1001 tipů a triků pro C++</li>
+                                <li>C++ Move Semantics - The Complete Guide</li>
+                                <li>Concurrency with Modern C++</li>
+                                <li>C++ Initialization Story</li>
+                                <li>Mastering Modern C++23 Second Edition</li>
+                                <li>Large-Scale C++ Software Design</li>
+                                <li>Inside the C++ Object Model</li>
+                                <li>Elements of Programming</li>
+                                <li>Beautiful C++</li>
+                                <li>The Annotated C++ Reference Manual</li>
+                                <li>Generic Programming and the STL</li>
+                                <li>Advanced C++ Programming Styles and Idioms</li>
+                                <li>Multi-Paradigm Design for C++</li>
+                                <li>Modern C++ Programming Cookbook</li>
+                                <li>C++ Concurrency and Multithreading</li>
+                                <li>Mastering C++ Lambdas and Functional Programming</li>
+                                <li>Accelerated C++</li>
+                                <li>Optimized C++</li>
+                                <li>Understanding and Using C Pointers</li>
+                                <li>More Exceptional C++</li>
+                                <li>C++ Reactive Programming</li>
+                                <li>C++20 for Programmers</li>
+                                <li>Practical C++ STL Programming</li>
+                                <li>C++20: Get the Details</li>
+                                <li>C++ 101 programovacích technik</li>
+                                <li>Algoritmy v jazyku C a C++</li>
+                                <li>Programovací jazyk C++ pro zelenáče</li>
+                                <li>Pasti a propasti jazyka C++</li>
+                                <li>Myslíme v jazyku C++</li>
+                                <li>Deciphering Object-Oriented Programming with C++</li>
+                                <li>The C++ Programmer's Mindset</li>
+                                <li>Object-Oriented Software Design in C++</li>
+                                <li>The C++ Standard Library: What every professional C++ programmer should know about the C++ standard library</li>
+                                <li>C++: How To Talk To Your Compiler</li>
+                                <li>Embracing Modern C++ Safely</li>
+                                <li>C++ Core Guidelines Explained</li>
+                                <li>Programming with C++20</li>
+                                <li>The Art of Writing Efficient Programs</li>
+                                <li>Large-Scale C++: Process and Architecture, Volume 1</li>
+                                <li>Programming: Principles and Practice Using C++</li>
+                                <li>C++ Best Practices</li>
+                                <li>Ruminations on C++</li>
+                                <li>C++ Gotchas</li>
+                                <li>Discovering Modern C++</li>
+                            </ul>
+                        </details>
                     </div>
                 </div>
 
                 <aside class="about-side">
-                    <div class="portrait-frame">
+                    <div class="portrait-frame card">
                         <img src="photo-of-robert-vokac.jpg" alt="Photo of Robert Vokáč"/>
                     </div>
-                    <div class="side-card">
+                    <div class="side-card card">
                         <h4>Primary focus</h4>
-                        <p>Modern C++ systems and framework engineering</p>
+                        <p>Modern C++ framework and systems development</p>
                     </div>
-                    <div class="side-card">
-                        <h4>Primary project</h4>
+                    <div class="side-card card">
+                        <h4>Main project</h4>
                         <p>CNA — XNA 4.0 style C++ reimplementation over SDL 3</p>
                     </div>
-                    <div class="side-card">
-                        <h4>Current graphics stage</h4>
-                        <p>Learning fundamentals before moving deeper into Vulkan</p>
+                    <div class="side-card card">
+                        <h4>Graphics direction</h4>
+                        <p>OpenGL fundamentals now, Vulkan later</p>
                     </div>
-                    <div class="side-card">
+                    <div class="side-card card">
                         <h4>Work preference</h4>
                         <p>Employee · Prague · onsite or remote</p>
                     </div>
-                    <div class="side-card">
+                    <div class="side-card card">
                         <h4>English</h4>
                         <p>B2 — technical documentation and team communication</p>
                     </div>
                 </aside>
-            </div>
-
-            <div class="tab-nav" role="tablist" aria-label="About details tabs">
-                <button class="tab-button active" data-tab="characteristics" type="button">Characteristics</button>
-                <button class="tab-button" data-tab="free-time" type="button">Free time</button>
-                <button class="tab-button" data-tab="education" type="button">Education</button>
-                <button class="tab-button" data-tab="courses" type="button">Courses</button>
-                <button class="tab-button" data-tab="books" type="button">Books</button>
-            </div>
-
-            <div class="tab-panel active" id="characteristics">
-                <ul class="bullets">
-                    <li>Long-term deep study of modern C++ with visible, project-based application.</li>
-                    <li>Interest in architecture from first principles rather than framework-only work.</li>
-                    <li>Strong preference for maintainability, explicit design, and understandable internals.</li>
-                    <li>Systems-oriented mindset: ownership, lifecycle, modularity, and technical depth.</li>
-                    <li>Building public C++ projects to make technical direction obvious.</li>
-                    <li>Discipline in reading, note-taking, and sustained engineering growth over years.</li>
-                </ul>
-            </div>
-
-            <div class="tab-panel" id="free-time">
-                <ul class="bullets">
-                    <li>Building <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">CNA</a>, an XNA 4.0 style reimplementation over SDL 3 in modern C++.</li>
-                    <li>Working on Mobile-Eggbert, an early porting experiment built on top of CNA.</li>
-                    <li>Collecting paper C++ books and building a long-term personal C++ library.</li>
-                    <li>Studying C++ language, architecture, concurrency, templates, and performance in depth.</li>
-                    <li>Learning graphics fundamentals step by step, with OpenGL basics first and Vulkan as the long-term direction.</li>
-                </ul>
-            </div>
-
-            <div class="tab-panel" id="education">
-                <div class="edu-list">
-                    <div class="edu-item">
-                        <strong>Czech University of Life Sciences Prague</strong><br/>
-                        BSc in Computer Science (2014–2017)
-                    </div>
-                    <div class="edu-item">
-                        <strong>Secondary Technical School Hořovice</strong><br/>
-                        Informatics in Economics (2008–2012)
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-panel" id="courses">
-                <ul class="course-list">
-                    <li>Self-directed long-term C++ curriculum based primarily on books, project implementation, and technical notes.</li>
-                    <li>Ongoing study areas: modern C++, software design, framework design, graphics fundamentals, and system-level architecture.</li>
-                    <li>Current learning model: theory from books + implementation in public projects + written internal documentation.</li>
-                </ul>
-            </div>
-
-            <div class="tab-panel" id="books">
-                <div class="books-meta">
-                    <span>C++ collection I own</span>
-                    <span>Personal paper library</span>
-                    <span>Not a completed reading list</span>
-                </div>
-                <p class="muted-note">This section shows the current paper C++ collection I own. It is included as evidence of long-term study commitment, not as a claim that every listed title has already been fully read.</p>
-                <ul class="book-list book-columns">
-                    <li>The C++ standard library 2nd edition (N. Josuttis)</li>
-                    <li>C++ bez předchozích znalostí</li>
-                    <li>Programování v C++ od základů k profesionálnímu použití</li>
-                    <li>Mistrovství v C++ 4. aktualizované vydání (C++ Primer Plus)</li>
-                    <li>Kniha C++ Výukový kurz</li>
-                    <li>Exploring C++20</li>
-                    <li>Clang Compiler Frontend</li>
-                    <li>C++ Software Design</li>
-                    <li>Software Architecture with C++</li>
-                    <li>API Design for C++</li>
-                    <li>Test-Driven Development with C++</li>
-                    <li>C++20 - The Complete Guide</li>
-                    <li>Effective Modern C++</li>
-                    <li>C++ High Performance</li>
-                    <li>C++ Templates, The Complete Guide. Second Edition</li>
-                    <li>Functional Programming in C++</li>
-                    <li>C++ Concurrency in Action, 2E</li>
-                    <li>A Tour of C++ Third Edition</li>
-                    <li>Professional C++, 6th Edition</li>
-                    <li>Design and Evolution of C++</li>
-                    <li>C++ Crash Course</li>
-                    <li>Clean C++20</li>
-                    <li>C++ Lambda Story</li>
-                    <li>The C++ Programming Language</li>
-                    <li>Effective C++</li>
-                    <li>C++: The Complete Reference</li>
-                    <li>Exceptional C++</li>
-                    <li>Exceptional C++ Style</li>
-                    <li>C++ Memory Management</li>
-                    <li>Advanced Metaprogramming in Classic C++</li>
-                    <li>Modern C++ Design</li>
-                    <li>C++ Template Metaprogramming</li>
-                    <li>Using the C++ Standard Template Libraries</li>
-                    <li>Template Metaprogramming with C++</li>
-                    <li>C++ Primer</li>
-                    <li>Design Patterns in Modern C++20</li>
-                    <li>C++ Coding Standards</li>
-                    <li>More Effective C++</li>
-                    <li>Effective STL</li>
-                    <li>1001 tipů a triků pro C++</li>
-                    <li>C++ Move Semantics - The Complete Guide</li>
-                    <li>Concurrency with Modern C++</li>
-                    <li>C++ Initialization Story</li>
-                    <li>Mastering Modern C++23 Second Edition</li>
-                    <li>Large-Scale C++ Software Design</li>
-                    <li>Inside the C++ Object Model</li>
-                    <li>Elements of Programming</li>
-                    <li>Beautiful C++</li>
-                    <li>The Annotated C++ Reference Manual</li>
-                    <li>Generic Programming and the STL</li>
-                    <li>Advanced C++ Programming Styles and Idioms</li>
-                    <li>Multi-Paradigm Design for C++</li>
-                    <li>Modern C++ Programming Cookbook</li>
-                    <li>C++ Concurrency and Multithreading</li>
-                    <li>Mastering C++ Lambdas and Functional Programming</li>
-                    <li>Accelerated C++</li>
-                    <li>Optimized C++</li>
-                    <li>Understanding and Using C Pointers</li>
-                    <li>More Exceptional C++</li>
-                    <li>C++ Reactive Programming</li>
-                    <li>C++20 for Programmers</li>
-                    <li>Practical C++ STL Programming</li>
-                    <li>C++20: Get the Details</li>
-                    <li>C++ 101 programovacích technik</li>
-                    <li>Algoritmy v jazyku C a C++</li>
-                    <li>Programovací jazyk C++ pro zelenáče</li>
-                    <li>Pasti a propasti jazyka C++</li>
-                    <li>Myslíme v jazyku C++</li>
-                    <li>Deciphering Object-Oriented Programming with C++</li>
-                    <li>The C++ Programmer's Mindset</li>
-                    <li>Object-Oriented Software Design in C++</li>
-                    <li>The C++ Standard Library: What every professional C++ programmer should know about the C++ standard library</li>
-                    <li>C++: How To Talk To Your Compiler</li>
-                    <li>Embracing Modern C++ Safely</li>
-                    <li>C++ Core Guidelines Explained</li>
-                    <li>Programming with C++20</li>
-                    <li>The Art of Writing Efficient Programs</li>
-                    <li>Large-Scale C++: Process and Architecture, Volume 1</li>
-                    <li>Programming: Principles and Practice Using C++</li>
-                    <li>C++ Best Practices</li>
-                    <li>Ruminations on C++</li>
-                    <li>C++ Gotchas</li>
-                    <li>Discovering Modern C++</li>
-                </ul>
             </div>
         </div>
     </section>
@@ -981,32 +1082,32 @@
     <section id="technologies">
         <div class="container">
             <div class="section-title"><h2>Technologies</h2></div>
-            <p class="tech-quote">"Modern C++ first, with framework design and graphics learning visible through CNA."</p>
+            <p class="intro-quote">Modern C++ first, with framework design and graphics learning made visible through real code.</p>
 
             <div class="tech-grid">
                 <article class="tech-card">
                     <h3>Domains</h3>
-                    <p>Modern C++<br/>Systems design<br/>Framework design<br/>Graphics fundamentals<br/>Reusable libraries</p>
+                    <p>Modern C++<br/>Systems design<br/>Framework design<br/>Rendering architecture<br/>Reusable libraries</p>
                 </article>
                 <article class="tech-card">
                     <h3>C++</h3>
-                    <p>Modern C++20/23<br/>API design<br/>Ownership &amp; lifecycle<br/>Modular architecture<br/>Maintainable code</p>
+                    <p>C++20/23<br/>API design<br/>Ownership &amp; lifecycle<br/>Modular architecture<br/>Maintainable code</p>
                 </article>
                 <article class="tech-card">
                     <h3>Graphics</h3>
-                    <p>SDL 3<br/>Rendering loops<br/>OpenGL basics (learning)<br/>Vulkan (future direction)<br/>2D/3D framework concepts</p>
+                    <p>SDL 3<br/>Rendering loops<br/>OpenGL fundamentals<br/>Vulkan direction<br/>2D/3D concepts</p>
                 </article>
                 <article class="tech-card">
                     <h3>Tooling</h3>
-                    <p>CMake<br/>Git<br/>GCC 14<br/>Clang tooling<br/>Bash</p>
+                    <p>CMake<br/>Git<br/>Linux<br/>GCC / Clang<br/>Bash</p>
                 </article>
                 <article class="tech-card">
                     <h3>Data &amp; Storage</h3>
-                    <p>SQLite<br/>Data modeling<br/>Database migrations<br/>Schema design<br/>Practical persistence</p>
+                    <p>SQLite<br/>Schema design<br/>Migrations<br/>Local-first tools<br/>Practical persistence</p>
                 </article>
                 <article class="tech-card">
-                    <h3>Quality</h3>
-                    <p>Testing mindset<br/>Readable APIs<br/>Modular design<br/>Performance awareness<br/>Long-term maintainability</p>
+                    <h3>Engineering style</h3>
+                    <p>Readable APIs<br/>Explicit design<br/>Performance awareness<br/>Testing mindset<br/>Long-term maintainability</p>
                 </article>
             </div>
         </div>
@@ -1015,7 +1116,7 @@
     <section id="projects">
         <div class="container">
             <div class="section-title"><h2>Projects</h2></div>
-            <p class="projects-quote">"Public projects that show the current direction clearly: modern C++ learning through real implementation, with CNA as the main visible project."</p>
+            <p class="intro-quote">Public projects showing current C++ direction through real implementation.</p>
 
             <div class="project-filter" role="tablist" aria-label="Project filters">
                 <button class="filter-button active" type="button" data-filter="all">All</button>
@@ -1025,15 +1126,17 @@
 
             <div class="project-list">
                 <article class="project-card" data-category="core">
-                    <div class="project-media">CNA<br/>SDL3</div>
+                    <div class="project-media">
+                        <span class="project-badge">Main</span>
+                        CNA<br/>SDL3
+                    </div>
                     <div class="project-content">
                         <h3>CNA</h3>
-                        <p class="project-role">Main visible personal project · XNA 4.0 style C++ reimplementation over SDL 3 · in progress</p>
+                        <p class="project-role">Main public C++ project · XNA 4.0 style reimplementation over SDL 3</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">github.com/openeggbert/cna</a> · Focus: framework design, rendering architecture, reusable engine-style abstractions</p>
                         <ul>
-                            <li>Main personal C++ project used to study framework design, rendering architecture, and long-term graphics learning through real implementation.</li>
-                            <li>Reimplements an XNA 4.0 style API in C++ and serves as the technical foundation for related experiments and future higher-level projects.</li>
-                            <li>Presented honestly as work in progress: valuable as a visible engineering direction, not claimed as finished production-ready software.</li>
+                            <li>C++ reimplementation of an XNA 4.0 style API focused on rendering architecture and framework design.</li>
+                            <li>Used as the main long-term project for graphics, engine-style abstractions, and reusable library work.</li>
                         </ul>
                         <div class="project-actions">
                             <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">Repository</a>
@@ -1045,12 +1148,11 @@
                     <div class="project-media">MIND<br/>NET</div>
                     <div class="project-content">
                         <h3>Mind-Net</h3>
-                        <p class="project-role">Modular C++ backend platform · architecture-focused learning project</p>
+                        <p class="project-role">Modular C++ backend platform</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/mind-net" target="_blank" rel="noreferrer">github.com/robertvokac/mind-net</a> · Stack: C++23, SQLite, plugin architecture</p>
                         <ul>
                             <li>Designed and implemented a modular backend platform in modern C++ from scratch.</li>
-                            <li>Included custom data modeling, automatic REST API generation, role-based authentication and authorization, and plugin-based extensibility.</li>
-                            <li>Shows earlier architecture work in modular backend design, extensibility, and practical C++ system structure.</li>
+                            <li>Shows architecture work in extensibility, data modeling, and practical C++ system structure.</li>
                         </ul>
                         <div class="project-actions">
                             <a href="https://github.com/robertvokac/mind-net" target="_blank" rel="noreferrer">Repository</a>
@@ -1062,12 +1164,11 @@
                     <div class="project-media">EASY<br/>GL</div>
                     <div class="project-content">
                         <h3>easy-gl</h3>
-                        <p class="project-role">Graphics support library related to practical rendering learning in modern C++</p>
-                        <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/easy-gl" target="_blank" rel="noreferrer">github.com/openeggbert/easy-gl</a> · Focus: practical graphics foundations and reusable rendering support</p>
+                        <p class="project-role">Graphics support library for practical rendering learning</p>
+                        <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/easy-gl" target="_blank" rel="noreferrer">github.com/openeggbert/easy-gl</a> · Focus: graphics fundamentals and reusable rendering support</p>
                         <ul>
-                            <li>Supports hands-on graphics learning through real implementation rather than theory only.</li>
-                            <li>Explores reusable rendering support and low-level graphics concepts in a smaller, focused codebase.</li>
-                            <li>Fits the broader direction of learning graphics fundamentals step by step in public C++ projects.</li>
+                            <li>Smaller graphics-focused codebase used to study low-level rendering concepts through implementation.</li>
+                            <li>Supports the broader direction of learning graphics fundamentals step by step in public C++ projects.</li>
                         </ul>
                         <div class="project-actions">
                             <a href="https://github.com/openeggbert/easy-gl" target="_blank" rel="noreferrer">Repository</a>
@@ -1079,12 +1180,11 @@
                     <div class="project-media">CPP<br/>.NET</div>
                     <div class="project-content">
                         <h3>CppDotNet</h3>
-                        <p class="project-role">Partial C++ reimplementation of selected .NET Base Class Library concepts and APIs</p>
+                        <p class="project-role">Partial C++ reimplementation of selected .NET BCL concepts</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cpp-dotnet" target="_blank" rel="noreferrer">github.com/openeggbert/cpp-dotnet</a> · Focus: .NET-inspired foundation layer for native C++ projects</p>
                         <ul>
-                            <li>Provides selected .NET-style building blocks such as exceptions, events, delegates, and basic system types.</li>
-                            <li>Keeps APIs familiar where useful while staying pragmatic, native, and oriented toward readable modern C++.</li>
-                            <li>Acts as a foundation layer for higher-level frameworks, especially projects related to CNA.</li>
+                            <li>Provides .NET-style building blocks such as exceptions, events, delegates, and basic system types.</li>
+                            <li>Acts as a reusable foundation layer for higher-level C++ frameworks, especially CNA-related work.</li>
                         </ul>
                         <div class="project-actions">
                             <a href="https://github.com/openeggbert/cpp-dotnet" target="_blank" rel="noreferrer">Repository</a>
@@ -1096,12 +1196,11 @@
                     <div class="project-media">LEXI<br/>CON</div>
                     <div class="project-content">
                         <h3>Lexicon</h3>
-                        <p class="project-role">Desktop knowledge dictionary for structured learning and technical note-taking</p>
+                        <p class="project-role">Desktop knowledge dictionary for structured learning and technical notes</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/lexicon" target="_blank" rel="noreferrer">github.com/robertvokac/lexicon</a> · Stack: C++23, Qt Widgets, SQLite</p>
                         <ul>
-                            <li>Desktop knowledge dictionary designed for technical notes, maps, terms, metadata, and typed links between concepts.</li>
-                            <li>Includes Markdown content editing with live preview, filtering, pagination, sorting, and backlinks for concept navigation.</li>
-                            <li>Built as a practical local-first tool for structured learning with a single-file SQLite database.</li>
+                            <li>Local-first desktop tool for maps, terms, metadata, backlinks, and Markdown-based technical notes.</li>
+                            <li>Built around practical search, filtering, pagination, and structured learning workflows.</li>
                         </ul>
                         <div class="project-actions">
                             <a href="https://github.com/robertvokac/lexicon" target="_blank" rel="noreferrer">Repository</a>
@@ -1116,9 +1215,8 @@
                         <p class="project-role">Command-line utility for long-term data integrity and bit rot detection</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/bit-backup" target="_blank" rel="noreferrer">github.com/robertvokac/bit-backup</a> · Stack: C++23, SQLite, OpenSSL</p>
                         <ul>
-                            <li>Stores and verifies SHA-512 checksums of files in a local SQLite database to detect silent corruption over time.</li>
-                            <li>Includes ignore patterns, reporting, database self-integrity verification, and CSV export for scanned files.</li>
-                            <li>Built as a practical command-line tool focused on reliability, local control, and long-term data integrity.</li>
+                            <li>Stores and verifies SHA-512 checksums in a local SQLite database to detect silent corruption over time.</li>
+                            <li>Focused on reliability, local control, and practical long-term data integrity.</li>
                         </ul>
                         <div class="project-actions">
                             <a href="https://github.com/robertvokac/bit-backup" target="_blank" rel="noreferrer">Repository</a>
@@ -1127,25 +1225,22 @@
                 </article>
             </div>
 
-            <div class="subsection-title"><h3>Professional background</h3></div>
-
-            <div class="project-list">
+            <div class="project-list" style="margin-top: 34px;">
                 <article class="project-card professional-card" data-category="professional">
                     <div class="project-content">
                         <div class="experience-tags">
                             <span>9 years experience</span>
                             <span>Employee</span>
-                            <span>Prague onsite or remote</span>
+                            <span>Prague · onsite or remote</span>
                         </div>
                         <h3>Professional software development experience</h3>
                         <p class="project-meta">
                             9 years of professional software development experience.
-                            Public portfolio intentionally focused on current C++ direction, with CNA as the main visible personal signal.
+                            Public portfolio intentionally focused on current C++ direction and engineering work.
                         </p>
                         <ul>
                             <li>Developed and maintained production software systems.</li>
-                            <li>Worked on data flow, database structure, maintainability, and team workflows using Git and Agile processes.</li>
-                            <li>Current public portfolio is designed to make the C++ direction visible through concrete personal projects rather than broad claims alone.</li>
+                            <li>Worked on maintainability, data flow, database structure, version control, and team workflows.</li>
                         </ul>
                     </div>
                 </article>
@@ -1160,13 +1255,13 @@
             <div class="footer-contact">
                 <h3>Bc. Robert Vokáč</h3>
                 <p>Prague · Czech Republic</p>
-                <p>Contact: <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a> · <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a> · <a href="https://github.com/openeggbert" target="_blank" rel="noreferrer">github.com/openeggbert</a></p>
+                <p>Contact: <a href="mailto:robertvokac@robertvokac.com">robertvokac@robertvokac.com</a> · <a href="https://github.com/robertvokac" target="_blank" rel="noreferrer">github.com/robertvokac</a> (primary) · <a href="https://github.com/openeggbert" target="_blank" rel="noreferrer">github.com/openeggbert</a> (secondary)</p>
                 <p>LinkedIn: <a href="https://cz.linkedin.com/in/robert-vok%C3%A1%C4%8D-081170381/" target="_blank" rel="noreferrer">LinkedIn profile</a></p>
             </div>
 
             <div class="footer-actions">
                 <a class="footer-pill" href="https://github.com/robertvokac" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="footer-pill" href="https://github.com/openeggbert" target="_blank" rel="noreferrer">OpenEggbert</a>
+                <a class="footer-pill" href="https://github.com/openeggbert" target="_blank" rel="noreferrer">OpenEggbert GitHub</a>
                 <a class="footer-pill" href="mailto:robertvokac@robertvokac.com">Email</a>
                 <a class="footer-pill" href="https://cz.linkedin.com/in/robert-vok%C3%A1%C4%8D-081170381/" target="_blank" rel="noreferrer">LinkedIn</a>
                 <a class="footer-pill" href="robert-vokac-cv-2026.pdf" download>CV</a>
