@@ -848,23 +848,23 @@
     <div class="container">
         <div class="hero-panel">
             <div class="hero-kicker">Modern C++ · Systems · Frameworks</div>
-            <h1>C++ systems engineer focused on backend architecture, framework design, and engine-level development</h1>
-            <p>
-                Focused on modern C++, system-level engineering, backend architecture, and framework design
-                through real-world implementations.
-            </p>
-            <p>
-                Looking for C++ systems engineering roles focused on backend architecture, frameworks,
-                or engine-level development.
-            </p>
-            <div class="hero-highlights">
-                <span>9 years software engineering experience · current focus: modern C++ systems</span>
-                <span>Prague · onsite or remote</span>
-                <span>Main project: Mind-Net</span>
-            </div>
+<h1>C++ systems engineer building runtime systems and compatibility layers</h1>
+
+<p>
+Designed and implemented custom C++ runtimes replacing XNA, DirectX 3, and WinAPI,
+capable of running real-world games without original dependencies.
+</p>
+
+<div class="hero-highlights">
+    <span>Runs real games on custom runtime (C++ / SDL3)</span>
+    <span>XNA → C++ port (Speedy Blupi 2013)</span>
+    <span>DirectX 3 / WinAPI compatibility layers</span>
+</div>
             <div class="cta-row">
-                <a class="btn primary" href="https://github.com/robertvokac/mind-net" target="_blank" rel="noreferrer">View Mind-Net</a>
-                <a class="btn" href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">View CNA</a>
+                <a class="btn primary" href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">View CNA</a>
+                
+<a class="btn" href="https://github.com/openeggbert/free-direct">Free Direct</a>
+<a class="btn" href="https://github.com/openeggbert/free-api">Free API</a>
                 <a class="btn" href="https://github.com/robertvokac" target="_blank" rel="noreferrer">GitHub</a>
                 <a class="btn dark" href="mailto:robertvokac@robertvokac.com">Contact</a>
             </div>
@@ -877,6 +877,12 @@
         <div class="container">
             <div class="section-title"><h2>About</h2></div>
             <p class="intro-quote">Focused on modern C++, systems design, modular architecture, and long-term technical depth through real implementation.</p>
+
+<p>
+I build C++ runtime systems that replace existing platforms and APIs.
+My work includes reimplementations of XNA, DirectX 3, and WinAPI layers,
+used to run real-world games on top of SDL3 without original dependencies.
+</p>
 
             <div class="about-grid">
                 <div class="about-main card">
@@ -1173,10 +1179,11 @@
                 <article class="project-card" data-category="core">
                     <div class="project-media">
                         <span class="project-badge">Main</span>
-                        MIND<br/>NET
+                        HIVE
                     </div>
                     <div class="project-content">
-                        <h3>Mind-Net</h3>
+                        <h3>Hive (archived)</h3>
+                        <p>40k+ LOC backend platform (no longer actively developed)</p>
                         <p class="project-role">Modular C++ backend platform for metadata-driven architecture, generated APIs, and runtime extensibility</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/mind-net" target="_blank" rel="noreferrer">github.com/robertvokac/mind-net</a> · Stack: C++23, Crow, SQLite, custom ORM/model layer, plugin architecture</p>
                         <ul>
@@ -1199,6 +1206,18 @@
                     </div>
                     <div class="project-content">
                         <h3>CNA</h3>
+                        <ul>
+<li>Reimplementation of XNA 4.0 runtime in modern C++</li>
+<li>Custom game runtime with rendering, input, and resource lifecycle</li>
+<li>Backend abstraction over SDL3, OpenGL, bgfx</li>
+</ul>
+
+<p><strong>Real-world usage:</strong></p>
+<ul>
+<li>Runs Speedy Blupi (2013) ported from C# / XNA to C++</li>
+<li>Behavior matches original version</li>
+<li>No observable performance issues</li>
+</ul>
                         <p class="project-role">Real-time rendering engine and cross-platform C++ framework</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" target="_blank" rel="noreferrer">github.com/openeggbert/cna</a> · Focus: real-time rendering, framework architecture, backend abstraction, API compatibility, native runtime design</p>
                         <ul>
@@ -1211,6 +1230,53 @@
                         </div>
                     </div>
                 </article>
+<article class="project-card" data-category="core">
+<div class="project-media">DX3<br/>CPP</div>
+<div class="project-content">
+<h3>Free Direct</h3>
+
+<p class="project-role">
+DirectX 3 (2D) compatibility layer implemented in modern C++
+</p>
+
+<ul>
+<li>Reimplements DirectDraw and DirectSound subset over SDL3</li>
+<li>CPU surface model, blitting, color keys, palette support</li>
+<li>No dependency on original DirectX SDK</li>
+</ul>
+
+<p><strong>Real-world usage:</strong></p>
+<ul>
+<li>Runs Speedy Blupi (1998/2001)</li>
+<li>Used for legacy game compatibility</li>
+</ul>
+
+</div>
+</article>
+<article class="project-card" data-category="core">
+<div class="project-media">WIN<br/>API</div>
+<div class="project-content">
+<h3>Free API</h3>
+
+<p class="project-role">
+WinAPI (~1998) compatibility layer implemented in C++
+</p>
+
+<ul>
+<li>Windowing, message loop, input, timers, MIDI/MCI</li>
+<li>SDL3-backed implementation</li>
+<li>Cross-platform replacement for WinAPI</li>
+</ul>
+
+<p><strong>Real-world usage:</strong></p>
+<ul>
+<li>Used together with Free Direct to run legacy games</li>
+<li>Planet Blupi partially working (ongoing debugging)</li>
+</ul>
+
+</div>
+</article>
+
 
                 <article class="project-card" data-category="core">
                     <div class="project-media">EASY<br/>GL</div>
