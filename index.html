@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Robert Vokáč | C++ Systems Engineer</title>
     <meta name="description"
-          content="Robert Vokáč — C++ systems engineer building modern C++ runtime systems and compatibility layers, including CNA, Free Direct, and Free API over SDL3."/>
+          content="Robert Vokáč — C++ systems engineer building cross-platform C++ runtime systems and compatibility layers. Speedy Blupi runs on Windows, Linux, Web, and Android through CNA."/>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         :root {
@@ -897,11 +897,11 @@
             <h1>C++ systems engineer building runtime systems and compatibility layers</h1>
             <p>
                 Designed and implemented custom C++ runtimes replacing XNA, DirectX 3, and WinAPI,
-                capable of running real-world games without original dependencies.
+                with real games running without original dependencies across Windows, Linux, Web, and Android.
             </p>
             <div class="hero-highlights">
-                <span>Runs real games on custom runtime (C++ / SDL3)</span>
-                <span>XNA → C++ port (Speedy Blupi 2013)</span>
+                <span>Speedy Blupi 2013 runs on Windows · Linux · Web · Android</span>
+                <span>XNA / C# → native C++ / SDL3 runtime</span>
                 <span>DirectX 3 / WinAPI compatibility layers</span>
             </div>
             <div class="hero-video">
@@ -932,7 +932,7 @@
         <div class="container">
             <div class="section-title"><h2>About</h2></div>
             <p class="intro-quote">Focused on modern C++, runtime architecture, compatibility layers, and cross-platform
-                native systems validated through real games.</p>
+                native/Web systems validated through real games.</p>
             <div class="about-grid">
                 <div class="about-main card">
                     <h3>C++-focused engineer building runtime systems, compatibility layers, and native frameworks
@@ -958,13 +958,13 @@
                         I build C++ runtime systems that replace existing platforms and APIs. My work includes
                         reimplementations of XNA,
                         DirectX 3, and WinAPI layers used to run real-world games on top of SDL3 without original
-                        dependencies.
+                        dependencies across Windows, Linux, Web, and Android.
                     </p>
                     <p>
                         My strongest public work is CNA, a C++ reimplementation of the XNA 4.0 programming model used to
                         run Speedy Blupi
-                        (2013) ported from C# / XNA to C++, and Free Direct + Free API, compatibility layers for legacy
-                        DirectX 3 / WinAPI games.
+                        (2013) ported from C# / XNA to C++ on Windows, Linux, Web, and Android, and Free Direct + Free API,
+                        compatibility layers for legacy DirectX 3 / WinAPI games.
                     </p>
                     <p>
                         I am looking for C++ roles in systems engineering, runtime/framework development, compatibility
@@ -1005,8 +1005,8 @@
                     <div class="tab-panel" id="current-focus">
                         <ul class="bullets">
                             <li>Developing <a href="https://github.com/openeggbert/cna" target="_blank"
-                                              rel="noreferrer">CNA</a> as a C++ runtime that reimplements the XNA 4.0
-                                programming model.
+                                              rel="noreferrer">CNA</a> as a cross-platform C++ runtime that reimplements the XNA 4.0
+                                programming model and runs Speedy Blupi 2013 on Windows, Linux, Web, and Android.
                             </li>
                             <li>Developing <a href="https://github.com/openeggbert/free-direct" target="_blank"
                                               rel="noreferrer">Free Direct</a> and <a
@@ -1144,7 +1144,7 @@
                     <div class="side-card card"><h4>Main focus</h4>
                         <p>C++ runtime systems and compatibility layers</p></div>
                     <div class="side-card card"><h4>Key result</h4>
-                        <p>Runs real games on custom runtime (CNA / Free Direct / Free API)</p></div>
+                        <p>Speedy Blupi 2013 runs on Windows, Linux, Web, and Android through CNA</p></div>
                     <div class="side-card card"><h4>Primary project</h4>
                         <p>CNA — XNA runtime in C++</p></div>
                     <div class="side-card card"><h4>Supporting projects</h4>
@@ -1201,20 +1201,21 @@
                     <div class="project-media"><span class="project-badge">Main</span>CNA<br/>SDL3</div>
                     <div class="project-content">
                         <h3>CNA</h3>
-                        <p class="project-role">C++ runtime reimplementing the XNA 4.0 programming model</p>
+                        <p class="project-role">Cross-platform C++ runtime reimplementing the XNA 4.0 programming model</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" target="_blank"
                                                            rel="noreferrer">github.com/openeggbert/cna</a> · Stack:
-                            C++23, SDL3, CMake, OpenGL/easy-gl, bgfx, native runtime design</p>
+                            C++23, SDL3, CMake, OpenGL/easy-gl, bgfx, native runtime design, Windows/Linux/Web/Android</p>
                         <ul>
                             <li>XNA-style API in native C++ under <code>Microsoft::Xna::Framework</code>.</li>
-                            <li>Custom game runtime with rendering, input, audio surfaces, resource lifecycle, and
+                            <li>Custom multi-platform game runtime with rendering, input, audio surfaces, resource lifecycle, and
                                 backend abstraction.
                             </li>
                             <li>Backend abstraction over SDL3, OpenGL/easy-gl, bgfx, and Vulkan scaffolding.</li>
                         </ul>
                         <p><strong>Real-world usage:</strong></p>
                         <ul>
-                            <li>Runs Speedy Blupi (2013) ported from C# / XNA 4.0 to C++, with a public playable web build.</li>
+                            <li>Runs Speedy Blupi (2013) ported from C# / XNA 4.0 to C++ on Windows, Linux, Web, and Android.</li>
+                            <li>Public playable web build available; desktop and Android builds run the same C++/CNA codebase.</li>
                             <li>Behavior matches the original version.</li>
                             <li>No observable lag in the current runtime path.</li>
                         </ul>
