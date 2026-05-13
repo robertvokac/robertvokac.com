@@ -896,13 +896,14 @@
             <div class="hero-kicker">Modern C++ · Runtime Systems · Compatibility Layers</div>
             <h1>C++ systems engineer building runtime systems and compatibility layers</h1>
             <p>
-                Designed and implemented custom C++ runtimes replacing XNA, DirectX 3, and WinAPI,
-                with real games running without original dependencies across Windows, Linux, Web, and Android.
+                Designed and implemented custom replacements for XNA, DirectX 3, and WinAPI-style APIs,
+                enabling real-world legacy games to run across Windows, Linux, Web, and Android without original runtime dependencies.
             </p>
             <div class="hero-highlights">
-                <span>Speedy Blupi 2013 runs on Windows · Linux · Web · Android</span>
-                <span>XNA / C# → native C++ / SDL3 runtime</span>
-                <span>DirectX 3 / WinAPI compatibility layers</span>
+                <span>Ported XNA game from C# to native C++</span>
+                <span>Runs on Windows · Linux · Web · Android</span>
+                <span>Replaced XNA / MonoGame / DirectX dependencies</span>
+                <span>Built compatibility layers over SDL3</span>
             </div>
             <div class="hero-video">
                 <div class="video-frame">
@@ -931,8 +932,7 @@
     <section id="about">
         <div class="container">
             <div class="section-title"><h2>About</h2></div>
-            <p class="intro-quote">Focused on modern C++, runtime architecture, compatibility layers, and cross-platform
-                native/Web systems validated through real games.</p>
+            <p class="intro-quote">Focused on modern C++, runtime architecture, compatibility layers, and cross-platform native/Web systems validated through real games.</p>
             <div class="about-grid">
                 <div class="about-main card">
                     <h3>C++-focused engineer building runtime systems, compatibility layers, and native frameworks
@@ -955,21 +955,13 @@
                         </div>
                     </div>
                     <p>
-                        I build C++ runtime systems that replace existing platforms and APIs. My work includes
-                        reimplementations of XNA,
-                        DirectX 3, and WinAPI layers used to run real-world games on top of SDL3 without original
-                        dependencies across Windows, Linux, Web, and Android.
+                        I build native C++ runtimes, platform layers, and compatibility frameworks. My work includes reimplementations of XNA, DirectX 3, and WinAPI-style APIs used to run real-world legacy games on top of SDL3 without original runtime dependencies across Windows, Linux, Web, and Android.
                     </p>
                     <p>
-                        My strongest public work is CNA, a C++ reimplementation of the XNA 4.0 programming model used to
-                        run Speedy Blupi
-                        (2013) ported from C# / XNA to C++ on Windows, Linux, Web, and Android, and Free Direct + Free API,
-                        compatibility layers for legacy DirectX 3 / WinAPI games.
+                        My strongest public work is CNA, a native C++ reimplementation of the XNA 4.0 programming model used to run Speedy Blupi (2013) ported from C# / XNA to C++ on Windows, Linux, Web, and Android. I also build Free Direct + Free API, SDL3-backed compatibility layers for legacy DirectX 3 / WinAPI games.
                     </p>
                     <p>
-                        I am looking for C++ roles in systems engineering, runtime/framework development, compatibility
-                        layers, game technology,
-                        tooling, or backend/platform architecture.
+                        I am looking for C++ roles in systems engineering, runtime/framework development, compatibility layers, game technology, tooling, or backend/platform architecture.
                     </p>
                     <div class="cta-row">
                         <a class="btn primary" href="mailto:robertvokac@robertvokac.com">Email me</a>
@@ -1044,8 +1036,7 @@
                         </ul>
                     </div>
                     <div class="tab-panel" id="books">
-                        <p class="muted-note">I maintain a large personal C++ book collection as part of long-term
-                            study.</p>
+                        <p class="muted-note">Selected books from my long-term C++ and software architecture study.</p>
                         <details>
                             <summary>Show full book list</summary>
                             <ul class="book-list book-columns">
@@ -1162,17 +1153,15 @@
     <section id="technologies">
         <div class="container">
             <div class="section-title"><h2>Technologies</h2></div>
-            <p class="intro-quote">Modern C++ first, with runtime architecture, compatibility engineering, systems
-                thinking, and framework design made visible through real code.</p>
+            <p class="intro-quote">Modern C++ first, with runtime architecture, compatibility engineering, systems thinking, and framework design made visible through real code.</p>
             <div class="tech-grid">
                 <article class="tech-card"><h3>Domains</h3>
-                    <p>Modern C++<br/>Runtime systems<br/>Compatibility layers<br/>Framework design<br/>Engine-level
-                        development</p></article>
+                    <p>Modern C++<br/>Runtime architecture<br/>Compatibility layers<br/>Framework design<br/>Engine-level development</p></article>
                 <article class="tech-card"><h3>C++</h3>
                     <p>C++20/23<br/>API design<br/>Ownership &amp; lifecycle<br/>Modular architecture<br/>Maintainable
                         code</p></article>
                 <article class="tech-card"><h3>Systems</h3>
-                    <p>Basic concurrency (learning)<br/>Rendering infrastructure<br/>Backend platforms<br/>Cross-platform
+                    <p>Concurrency fundamentals<br/>Rendering infrastructure<br/>Backend platforms<br/>Cross-platform
                         native development<br/>Performance awareness</p></article>
                 <article class="tech-card"><h3>Tooling</h3>
                     <p>CMake<br/>Git<br/>Linux<br/>GCC / Clang<br/>Bash</p></article>
@@ -1188,8 +1177,7 @@
     <section id="projects">
         <div class="container">
             <div class="section-title"><h2>Projects</h2></div>
-            <p class="intro-quote">Public projects showing runtime systems, compatibility layers, and C++ architecture
-                validated on real applications.</p>
+            <p class="intro-quote">Public projects showing runtime architecture, compatibility layers, and C++ systems design validated on real applications.</p>
             <div class="project-filter" role="tablist" aria-label="Project filters">
                 <button class="filter-button active" type="button" data-filter="all">All</button>
                 <button class="filter-button" type="button" data-filter="core">Core projects</button>
@@ -1204,20 +1192,21 @@
                         <p class="project-role">Cross-platform C++ runtime reimplementing the XNA 4.0 programming model</p>
                         <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" target="_blank"
                                                            rel="noreferrer">github.com/openeggbert/cna</a> · Stack:
-                            C++23, SDL3, CMake, OpenGL/easy-gl, bgfx, native runtime design, Windows/Linux/Web/Android</p>
+                            C++20, SDL3, CMake, OpenGL/easy-gl, bgfx, native runtime design, Windows/Linux/Web/Android</p>
                         <ul>
                             <li>XNA-style API in native C++ under <code>Microsoft::Xna::Framework</code>.</li>
                             <li>Custom multi-platform game runtime with rendering, input, audio surfaces, resource lifecycle, and
                                 backend abstraction.
                             </li>
-                            <li>Backend abstraction over SDL3, OpenGL/easy-gl, bgfx, and Vulkan scaffolding.</li>
+                            <li>Backend abstraction over SDL3, OpenGL/easy-gl, and bgfx.</li>
                         </ul>
                         <p><strong>Real-world usage:</strong></p>
                         <ul>
+                            <li>Native C++ runtime replacing XNA / MonoGame dependencies.</li>
                             <li>Runs Speedy Blupi (2013) ported from C# / XNA 4.0 to C++ on Windows, Linux, Web, and Android.</li>
                             <li>Public playable web build available; desktop and Android builds run the same C++/CNA codebase.</li>
-                            <li>Behavior matches the original version.</li>
-                            <li>No observable lag in the current runtime path.</li>
+                            <li>Gameplay behavior closely matches the original version.</li>
+                            <li>Current builds run smoothly across supported platforms.</li>
                         </ul>
                         <div class="project-video">
                             <div class="video-frame">
@@ -1434,9 +1423,7 @@
                         <div class="experience-tags"><span>9 years experience</span><span>Employee</span><span>Prague · onsite or remote</span>
                         </div>
                         <h3>Professional software development experience</h3>
-                        <p class="project-meta">9 years of professional software development experience. Public
-                            portfolio intentionally focused on current C++ direction, runtime systems, compatibility
-                            layers, framework design, and systems engineering work.</p>
+                        <p class="project-meta">9 years of professional software development experience. Public portfolio intentionally focused on current C++ direction, runtime/framework development, compatibility layers, and systems engineering work.</p>
                         <ul>
                             <li>Worked on long-lived production backend systems with focus on maintainability and system
                                 stability.
