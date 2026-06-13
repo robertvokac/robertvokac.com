@@ -903,7 +903,9 @@
 </div>
 
 <div class="cta-row"><a class="btn primary" href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">View CNA</a>
+<a class="btn" href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a>
 <a class="btn" href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">Nova3D</a>
+<a class="btn" href="https://libnova3d.com" rel="noreferrer" target="_blank">libnova3d.com</a>
 <a class="btn" href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">Free Direct</a>
 <a class="btn" href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">Free API</a>
 <a class="btn" href="https://github.com/robertvokac" rel="noreferrer" target="_blank">GitHub</a>
@@ -963,9 +965,10 @@
 <div class="tab-panel" id="current-focus">
 <ul class="bullets">
 <li>Developing <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">CNA</a> as a cross-platform C++ framework implementing an XNA-style programming model for Windows, Linux, WebAssembly, and Android.</li>
-<li>Developing <a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">Nova3D</a> as an experimental higher-level 3D runtime layer built on top of CNA.</li>
+<li>Developing <a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">Nova3D</a> as a 3D engine built on Urho3D source with CNA replacing native graphics backends.</li>
 <li>Developing <a href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">Free Direct</a> and <a href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">Free API</a> as SDL3-backed compatibility layers for legacy DirectX 3 / WinAPI applications.</li>
-<li>Supporting framework work with <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">easy-gl</a> and <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">sharp-runtime</a>.</li>
+<li>Supporting framework work with <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">easy-gl</a>, <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">meta-gl</a>, and <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">sharp-runtime</a> (broad C#/.NET subset in native C++).</li>
+<li>Building <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">Galaxy Eggbert</a> (3D game) and <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Mesh Craft</a> (3D modeler) as real applications validating the CNA/Nova3D stack.</li>
 <li>Hive is retained as an archived C++ backend/platform architecture showcase.</li>
 </ul>
 </div>
@@ -1020,7 +1023,7 @@
 <div class="side-card card"><h4>Primary project</h4>
 <p>CNA — XNA-compatible C++ framework</p></div>
 <div class="side-card card"><h4>Supporting projects</h4>
-<p>Nova3D · Free Direct · Free API · easy-gl · sharp-runtime</p></div>
+<p>Nova3D · Free Direct · Free API · easy-gl · meta-gl · sharp-runtime · Galaxy Eggbert · Mesh Craft</p></div>
 <div class="side-card card"><h4>Target roles</h4>
 <p>C++ systems, cross-platform development, tooling, and framework engineering</p></div>
 <div class="side-card card"><h4>English</h4>
@@ -1068,7 +1071,7 @@
 <div class="project-content">
 <h3>CNA</h3>
 <p class="project-role">Cross-platform C++ framework implementing an XNA-style API</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, bgfx, Windows/Linux/WebAssembly/Android</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Website: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, bgfx, Windows/Linux/WebAssembly/Android</p>
 <ul>
 <li>XNA-style API in native C++ under <code>Microsoft::Xna::Framework</code>.</li>
 <li>Custom multi-platform cross-platform framework with rendering, input, audio surfaces, resource lifecycle, and
@@ -1081,7 +1084,8 @@
 
 <div class="project-actions">
 <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">Repository</a>
-<a href="https://speedyblupi.com/SpeedyBlupi2013/" rel="noreferrer" target="_blank">WebAssembly demo</a>
+<a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a>
+<a href="https://speedyblupi.com/SpeedyBlupi2013/" rel="noreferrer" target="_blank">WebAssembly demo (2D)</a>
 <a href="https://www.youtube.com/watch?v=TScL1L-dbHE" rel="noreferrer" target="_blank">Technical video demo</a>
 </div>
 </div>
@@ -1090,15 +1094,17 @@
 <div class="project-media">Nova<br/>3D</div>
 <div class="project-content">
 <h3>Nova3D</h3>
-<p class="project-role">Experimental higher-level 3D runtime layer built on top of CNA</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">github.com/openeggbert/nova-3d</a> · Stack: C++20/23, CNA, SDL3, OpenGL/easy-gl, 3D runtime architecture</p>
+<p class="project-role">3D engine — Urho3D source base with CNA replacing native graphics backends</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">github.com/openeggbert/nova-3d</a> · Website: <a href="https://libnova3d.com" rel="noreferrer" target="_blank">libnova3d.com</a> · Stack: C++20/23, CNA, SDL3, OpenGL/easy-gl, Urho3D scene/resource/math</p>
 <ul>
-<li>Urho3D-inspired API layer over a custom C++ runtime stack.</li>
-<li>Basic scene structure, camera handling, mesh rendering, and demo logic.</li>
-<li>Shows the next step from 2D runtime compatibility toward 3D engine/runtime architecture.</li>
+<li>Modified Urho3D engine: reuses Urho3D source (math, containers, scene graph, resource system) and replaces its native OpenGL/Direct3D backends with CNA.</li>
+<li>Public API is <code>namespace Urho3D</code> — game code written against Urho3D compiles against Nova3D with minimal changes.</li>
+<li>Architecture: Game code → Nova3D public API → scene/renderer → CNA (SDL3 / OpenGL / OpenGL ES).</li>
 </ul>
-<p><strong>Status:</strong> Experimental; included as a focused extension of CNA rather than the main portfolio project.</p>
-<div class="project-actions"><a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">Repository</a></div>
+<div class="project-actions">
+<a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://libnova3d.com" rel="noreferrer" target="_blank">libnova3d.com</a>
+</div>
 </div>
 </article>
 <article class="project-card" data-category="core">
@@ -1170,13 +1176,16 @@
 <div class="project-content">
 <h3>Hive (archived)</h3>
 <p class="status-note">Archived architecture showcase</p>
-<p class="project-role">40k+ LOC C++ backend platform formerly developed as Mind-Net</p>
+<p class="project-role">~44k LOC C++ universal data server and backend platform</p>
 <p class="project-meta">GitHub: <a href="https://github.com/robertvokac/hive" rel="noreferrer" target="_blank">github.com/robertvokac/hive</a> · Stack:
-                            C++23, Crow, SQLite, custom ORM/model layer, plugin architecture</p>
+                            C++23, Crow, SQLite, nlohmann/json, GoogleTest · Frontend: Vanilla JS</p>
 <ul>
-<li>40k+ LOC C++ backend platform.</li>
-<li>Metadata-driven architecture, custom ORM, migrations, and generated REST APIs.</li>
-<li>Plugin system, scheduler, triggers, validators, jobs, and queries.</li>
+<li>Metadata-driven architecture: one model definition drives storage, auto-generated REST API (<code>/api/v1/&lt;model&gt;</code>), validation, and dynamic Vanilla JS frontend UI.</li>
+<li>Custom model/ORM layer with strongly-typed entities, column metadata, repository abstraction, and transactional migration integrity checks (checksums/chain hashes).</li>
+<li>Plugin system: plugins contribute models, migrations, validators, triggers (Before/After/InsteadOf), cron jobs, and custom SQL queries — domain behavior stays local to each plugin.</li>
+<li>Token-based authentication lifecycle: login, logout, refresh token, register, change password; hashed token storage with revocation and session tracking.</li>
+<li>Domain plugins: Slipbox (knowledge management — notes, maps, links, tags, HTML export), Repetition (spaced repetition — sessions, reviews, scheduling), Dictionary (lexicon — terms, aliases, fulltext search).</li>
+<li>Cron scheduler with job registry sync and persisted run history; trigger pipeline and event-driven behavior per CRUD operation.</li>
 </ul>
 <p><strong>Status:</strong> Archived; retained as a backend/platform architecture showcase.</p>
 <div class="project-actions"><a href="https://github.com/robertvokac/hive" rel="noreferrer" target="_blank">Repository</a></div>
@@ -1186,37 +1195,76 @@
 <div class="project-media">EASY<br/>GL</div>
 <div class="project-content">
 <h3>easy-gl</h3>
-<p class="project-role">Graphics support library for rendering infrastructure and reusable
-                            native abstractions</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">github.com/openeggbert/easy-gl</a> · Focus:
-                            rendering support, graphics abstraction, OpenGL-oriented infrastructure</p>
+<p class="project-role">Toolkit-independent C++20 OpenGL/OpenGL ES wrapper used by CNA as graphics backend</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">github.com/openeggbert/easy-gl</a> · Stack:
+                            C++20, OpenGL/OpenGL ES, CMake · No windowing lock-in; host owns GL context lifecycle</p>
 <ul>
-<li>Focused graphics infrastructure library used to isolate and validate rendering
-                                abstractions.
-                            </li>
-<li>Supports the broader engine/framework direction by isolating graphics infrastructure
-                                concerns into a reusable library.
-                            </li>
+<li>Toolkit-independent wrapper over OpenGL and OpenGL ES — no windowing or context creation in the library.</li>
+<li>Host application owns window, GL context, and swap; easy-gl owns all OpenGL interaction.</li>
+<li>Built on top of meta-gl (low-level type-safe function loader) and used by CNA as its OpenGL rendering backend.</li>
 </ul>
 <div class="project-actions"><a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">Repository</a></div>
+</div>
+</article>
+<article class="project-card" data-category="core">
+<div class="project-media">META<br/>GL</div>
+<div class="project-content">
+<h3>meta-gl</h3>
+<p class="project-role">Low-level, type-safe C++23 OpenGL ES 2.0+ function loader and wrapper</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">github.com/openeggbert/meta-gl</a> · Stack:
+                            C++23, OpenGL ES 2.0+, CMake · Foundation layer used by easy-gl</p>
+<ul>
+<li>Runtime OpenGL function loading via a host-supplied <code>GetProcAddress</code> callback — no windowing, no context creation.</li>
+<li>Type-safe <code>enum class</code> wrappers for all OpenGL constants (buffer targets, shader types, texture formats, etc.).</li>
+<li>Thin inline-style wrapper functions in the <code>metagl</code> namespace; foundation layer consumed by easy-gl and the broader CNA rendering stack.</li>
+</ul>
+<div class="project-actions"><a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">Repository</a></div>
 </div>
 </article>
 <article class="project-card" data-category="core">
 <div class="project-media">CPP<br/>.NET</div>
 <div class="project-content">
 <h3>Sharp Runtime</h3>
-<p class="project-role">Foundation library for reusable system-level building blocks</p>
+<p class="project-role">C++ reimplementation of a broad C#/.NET runtime subset — <code>System::*</code> API in native C++</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">github.com/openeggbert/sharp-runtime</a>
-                            · Focus: exceptions, events, delegates, utility types, framework foundations</p>
+                            · Stack: C++20/23, CMake · Broad .NET coverage: System::* namespaces, events, delegates, exceptions, collections</p>
 <ul>
-<li>Provides reusable foundation-layer building blocks such as exceptions, events,
-                                delegates, and utility abstractions.
-                            </li>
-<li>Acts as a lower-level support library for higher-level native C++ runtime and framework
-                                work.
-                            </li>
+<li>Implements a broad subset of .NET/C# types under <code>System::*</code> namespaces in idiomatic, modern C++ — familiar API design for C# developers.</li>
+<li>Covers exceptions, events, delegates, collections, and other system-level building blocks; tracks implementation status per class (Todo / Stub / Partial / Implemented / Verified).</li>
+<li>Foundation layer for CNA, Nova3D, Mesh Craft, and Galaxy Eggbert; not a CLR — a practical native subset designed for real cross-platform use.</li>
 </ul>
 <div class="project-actions"><a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">Repository</a></div>
+</div>
+</article>
+<article class="project-card" data-category="core">
+<div class="project-media">GALAXY<br/>EGGBERT</div>
+<div class="project-content">
+<h3>Galaxy Eggbert</h3>
+<p class="project-role">3D remake of Speedy Blupi built on the CNA + Nova3D engine stack</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">github.com/openeggbert/galaxy-eggbert</a>
+                            · Stack: C++23, CNA, Nova3D, SDL3, easy-gl, bgfx · Targets: Linux, Windows, WebAssembly, Android</p>
+<ul>
+<li>3D game built on the full CNA + Nova3D stack — validates the framework as a real cross-platform game runtime.</li>
+<li>Targets Linux, Windows, WebAssembly, and Android from a single C++ codebase; multiple rendering backends: SDL_RENDERER, easy-gl, bgfx.</li>
+<li>Custom world format and game content pipeline.</li>
+</ul>
+<div class="project-actions"><a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">Repository</a></div>
+</div>
+</article>
+<article class="project-card" data-category="core">
+<div class="project-media">MESH<br/>CRAFT</div>
+<div class="project-content">
+<h3>Mesh Craft</h3>
+<p class="project-role">3D modeling and editing application for creating game-ready models</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a>
+                            · Stack: C++23, CNA, Nova3D, sharp-runtime · Native <code>.mc3</code> format compiled to glTF/GLB</p>
+<ul>
+<li>3D modeler inspired by Ray Dream Studio and Google SketchUp — primitive shapes (box, sphere, cylinder, cone, plane), CSG operations (union, difference, intersection), materials, textures, and hierarchical groups.</li>
+<li>Native <code>.mc3</code> format: human-readable YAML-based editable source compiled to glTF/GLB for use in games and real-time applications.</li>
+<li>Built on CNA + Nova3D + sharp-runtime; exercises the full C++ engine stack as a real editor application.</li>
+</ul>
+<p><strong>Status:</strong> Early prototype — project structure and core class skeletons in place.</p>
+<div class="project-actions"><a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Repository</a></div>
 </div>
 </article>
 <article class="project-card" data-category="other">
