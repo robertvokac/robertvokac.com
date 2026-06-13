@@ -1112,7 +1112,7 @@
 <div class="project-content">
 <h3>Free Direct</h3>
 <p class="project-role">DirectX 3 / DirectDraw compatibility layer implemented in modern C++</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">github.com/openeggbert/free-direct</a>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">github.com/openeggbert/free-direct</a> · Website: <a href="https://freedirect.openeggbert.com" rel="noreferrer" target="_blank">freedirect.openeggbert.com</a>
                             · Stack: C++20, SDL3, DirectDraw subset, DirectSound subset</p>
 <ul>
 <li>Reimplements a narrow DirectDraw / DirectSound subset over SDL3.</li>
@@ -1129,6 +1129,7 @@
 
 <div class="project-actions">
 <a href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://freedirect.openeggbert.com" rel="noreferrer" target="_blank">freedirect.openeggbert.com</a>
 <a href="https://speedyblupi.com/SpeedyEggbert2/" rel="noreferrer" target="_blank">WebAssembly compatibility demo</a>
 <a href="https://speedyblupi.com/PlanetBlupi/" rel="noreferrer" target="_blank">Additional compatibility demo</a>
 <a href="https://www.youtube.com/watch?v=Tl3vNrqgtbo" rel="noreferrer" target="_blank">Technical video demo</a>
@@ -1141,7 +1142,7 @@
 <div class="project-content">
 <h3>Free API</h3>
 <p class="project-role">WinAPI-style compatibility layer implemented in C++</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">github.com/openeggbert/free-api</a>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">github.com/openeggbert/free-api</a> · Website: <a href="https://freeapi.openeggbert.com" rel="noreferrer" target="_blank">freeapi.openeggbert.com</a>
                             · Stack: C++20, SDL3, WinAPI-style headers, message loop, timers, MCI/MIDI</p>
 <ul>
 <li>Implements WinAPI-like windowing, message loop, input translation, timers, and selected
@@ -1165,6 +1166,7 @@
 <!--                                <code>VIDEO_ID_FREE_API_DEMO</code> or remove this block.</p></div>-->
 <div class="project-actions">
 <a href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://freeapi.openeggbert.com" rel="noreferrer" target="_blank">freeapi.openeggbert.com</a>
 <a href="https://speedyblupi.com/SpeedyEggbert2/" rel="noreferrer" target="_blank">WebAssembly compatibility demo</a>
 <a href="https://speedyblupi.com/PlanetBlupi/" rel="noreferrer" target="_blank">Additional compatibility demo</a>
 <a href="https://www.youtube.com/watch?v=Tl3vNrqgtbo" rel="noreferrer" target="_blank">Technical video demo</a>
@@ -1196,14 +1198,15 @@
 <div class="project-content">
 <h3>easy-gl</h3>
 <p class="project-role">Toolkit-independent C++20 OpenGL/OpenGL ES wrapper used by CNA as graphics backend</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">github.com/openeggbert/easy-gl</a> · Stack:
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">github.com/openeggbert/easy-gl</a> · Website: <a href="https://easygl.openeggbert.com" rel="noreferrer" target="_blank">easygl.openeggbert.com</a> · Stack:
                             C++20, OpenGL/OpenGL ES, CMake · No windowing lock-in; host owns GL context lifecycle</p>
 <ul>
 <li>Toolkit-independent wrapper over OpenGL and OpenGL ES — no windowing or context creation in the library.</li>
 <li>Host application owns window, GL context, and swap; easy-gl owns all OpenGL interaction.</li>
 <li>Built on top of meta-gl (low-level type-safe function loader) and used by CNA as its OpenGL rendering backend.</li>
 </ul>
-<div class="project-actions"><a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">Repository</a></div>
+<div class="project-actions"><a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://easygl.openeggbert.com" rel="noreferrer" target="_blank">easygl.openeggbert.com</a></div>
 </div>
 </article>
 <article class="project-card" data-category="core">
@@ -1211,14 +1214,15 @@
 <div class="project-content">
 <h3>meta-gl</h3>
 <p class="project-role">Low-level, type-safe C++23 OpenGL ES 2.0+ function loader and wrapper</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">github.com/openeggbert/meta-gl</a> · Stack:
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">github.com/openeggbert/meta-gl</a> · Website: <a href="https://metagl.openeggbert.com" rel="noreferrer" target="_blank">metagl.openeggbert.com</a> · Stack:
                             C++23, OpenGL ES 2.0+, CMake · Foundation layer used by easy-gl</p>
 <ul>
 <li>Runtime OpenGL function loading via a host-supplied <code>GetProcAddress</code> callback — no windowing, no context creation.</li>
 <li>Type-safe <code>enum class</code> wrappers for all OpenGL constants (buffer targets, shader types, texture formats, etc.).</li>
 <li>Thin inline-style wrapper functions in the <code>metagl</code> namespace; foundation layer consumed by easy-gl and the broader CNA rendering stack.</li>
 </ul>
-<div class="project-actions"><a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">Repository</a></div>
+<div class="project-actions"><a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://metagl.openeggbert.com" rel="noreferrer" target="_blank">metagl.openeggbert.com</a></div>
 </div>
 </article>
 <article class="project-card" data-category="core">
@@ -1226,14 +1230,15 @@
 <div class="project-content">
 <h3>Sharp Runtime</h3>
 <p class="project-role">C++ reimplementation of a broad C#/.NET runtime subset — <code>System::*</code> API in native C++</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">github.com/openeggbert/sharp-runtime</a>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">github.com/openeggbert/sharp-runtime</a> · Website: <a href="https://sharpruntime.openeggbert.com" rel="noreferrer" target="_blank">sharpruntime.openeggbert.com</a>
                             · Stack: C++20/23, CMake · Broad .NET coverage: System::* namespaces, events, delegates, exceptions, collections</p>
 <ul>
 <li>Implements a broad subset of .NET/C# types under <code>System::*</code> namespaces in idiomatic, modern C++ — familiar API design for C# developers.</li>
 <li>Covers exceptions, events, delegates, collections, and other system-level building blocks; tracks implementation status per class (Todo / Stub / Partial / Implemented / Verified).</li>
 <li>Foundation layer for CNA, Nova3D, Mesh Craft, and Galaxy Eggbert; not a CLR — a practical native subset designed for real cross-platform use.</li>
 </ul>
-<div class="project-actions"><a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">Repository</a></div>
+<div class="project-actions"><a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://sharpruntime.openeggbert.com" rel="noreferrer" target="_blank">sharpruntime.openeggbert.com</a></div>
 </div>
 </article>
 <article class="project-card" data-category="core">
@@ -1241,14 +1246,15 @@
 <div class="project-content">
 <h3>Galaxy Eggbert</h3>
 <p class="project-role">3D remake of Speedy Blupi built on the CNA + Nova3D engine stack</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">github.com/openeggbert/galaxy-eggbert</a>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">github.com/openeggbert/galaxy-eggbert</a> · Website: <a href="https://galaxyeggbert.openeggbert.com" rel="noreferrer" target="_blank">galaxyeggbert.openeggbert.com</a>
                             · Stack: C++23, CNA, Nova3D, SDL3, easy-gl, bgfx · Targets: Linux, Windows, WebAssembly, Android</p>
 <ul>
 <li>3D game built on the full CNA + Nova3D stack — validates the framework as a real cross-platform game runtime.</li>
 <li>Targets Linux, Windows, WebAssembly, and Android from a single C++ codebase; multiple rendering backends: SDL_RENDERER, easy-gl, bgfx.</li>
 <li>Custom world format and game content pipeline.</li>
 </ul>
-<div class="project-actions"><a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">Repository</a></div>
+<div class="project-actions"><a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://galaxyeggbert.openeggbert.com" rel="noreferrer" target="_blank">galaxyeggbert.openeggbert.com</a></div>
 </div>
 </article>
 <article class="project-card" data-category="core">
@@ -1256,7 +1262,7 @@
 <div class="project-content">
 <h3>Mesh Craft</h3>
 <p class="project-role">3D modeling and editing application for creating game-ready models</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Website: <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a>
                             · Stack: C++23, CNA, Nova3D, sharp-runtime · Native <code>.mc3</code> format compiled to glTF/GLB</p>
 <ul>
 <li>3D modeler inspired by Ray Dream Studio and Google SketchUp — primitive shapes (box, sphere, cylinder, cone, plane), CSG operations (union, difference, intersection), materials, textures, and hierarchical groups.</li>
@@ -1264,7 +1270,8 @@
 <li>Built on CNA + Nova3D + sharp-runtime; exercises the full C++ engine stack as a real editor application.</li>
 </ul>
 <p><strong>Status:</strong> Early prototype — project structure and core class skeletons in place.</p>
-<div class="project-actions"><a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Repository</a></div>
+<div class="project-actions"><a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a></div>
 </div>
 </article>
 <article class="project-card" data-category="other">
