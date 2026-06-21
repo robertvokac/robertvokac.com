@@ -906,6 +906,8 @@
 <a class="btn" href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a>
 <a class="btn" href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">Nova3D</a>
 <a class="btn" href="https://libnova3d.com" rel="noreferrer" target="_blank">libnova3d.com</a>
+<a class="btn" href="https://github.com/openeggbert/simple-3d" rel="noreferrer" target="_blank">simple-3d</a>
+<a class="btn" href="https://libsimple3d.com" rel="noreferrer" target="_blank">libsimple3d.com</a>
 <a class="btn" href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">Free Direct</a>
 <a class="btn" href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">Free API</a>
 <a class="btn" href="https://github.com/robertvokac" rel="noreferrer" target="_blank">GitHub</a>
@@ -966,6 +968,7 @@
 <ul class="bullets">
 <li>Developing <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">CNA</a> as a cross-platform C++ framework implementing an XNA-style programming model for Windows, Linux, WebAssembly, and Android.</li>
 <li>Developing <a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">Nova3D</a> as a 3D engine built on Urho3D source with CNA replacing native graphics backends.</li>
+<li>Developing <a href="https://github.com/openeggbert/simple-3d" rel="noreferrer" target="_blank">simple-3d</a> (<a href="https://libsimple3d.com" rel="noreferrer" target="_blank">libsimple3d.com</a>) as a clean, minimalistic C++/Lua game framework layered on top of Nova3D.</li>
 <li>Developing <a href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">Free Direct</a> and <a href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">Free API</a> as SDL3-backed compatibility layers for legacy DirectX 3 / WinAPI applications.</li>
 <li>Supporting framework work with <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">easy-gl</a>, <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">meta-gl</a>, and <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">sharp-runtime</a> (broad C#/.NET subset in native C++).</li>
 <li>Building <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">Galaxy Eggbert</a> (3D game) and <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Mesh Craft</a> (3D modeler) as real applications validating the CNA/Nova3D stack.</li>
@@ -1023,7 +1026,7 @@
 <div class="side-card card"><h4>Primary project</h4>
 <p>CNA — XNA-compatible C++ framework</p></div>
 <div class="side-card card"><h4>Supporting projects</h4>
-<p>Nova3D · Free Direct · Free API · easy-gl · meta-gl · sharp-runtime · Galaxy Eggbert · Mesh Craft</p></div>
+<p>Nova3D · simple-3d · Free Direct · Free API · easy-gl · meta-gl · sharp-runtime · Galaxy Eggbert · Mesh Craft</p></div>
 <div class="side-card card"><h4>Target roles</h4>
 <p>C++ systems, cross-platform development, tooling, and framework engineering</p></div>
 <div class="side-card card"><h4>English</h4>
@@ -1104,6 +1107,23 @@
 <div class="project-actions">
 <a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">Repository</a>
 <a href="https://libnova3d.com" rel="noreferrer" target="_blank">libnova3d.com</a>
+</div>
+</div>
+</article>
+<article class="project-card" data-category="core">
+<div class="project-media">SIMPLE<br/>3D</div>
+<div class="project-content">
+<h3>simple-3d</h3>
+<p class="project-role">Clean, minimalistic 3D/2D game framework for C++ and Lua built on top of Nova3D</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/simple-3d" rel="noreferrer" target="_blank">github.com/openeggbert/simple-3d</a> · Website: <a href="https://libsimple3d.com" rel="noreferrer" target="_blank">libsimple3d.com</a> · Stack: C++20/23, Lua, Nova3D, CNA, SDL3, OpenGL/Vulkan/bgfx</p>
+<ul>
+<li>Thin, high-level wrapper over a Nova3D / Urho3D fork — exposes nothing from Urho3D in its public API except math primitives as <code>Simple3D::</code> type aliases.</li>
+<li>Supports both C++ and Lua game code; architecture: Game → simple-3d API → Urho3D fork → CNA/Nova3D → Vulkan/GLES/bgfx → SDL3.</li>
+<li>Designed for clean, ergonomic game development on top of the full CNA + Nova3D stack.</li>
+</ul>
+<div class="project-actions">
+<a href="https://github.com/openeggbert/simple-3d" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://libsimple3d.com" rel="noreferrer" target="_blank">libsimple3d.com</a>
 </div>
 </div>
 </article>
