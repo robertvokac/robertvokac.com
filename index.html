@@ -908,6 +908,8 @@
 <a class="btn" href="https://libnova3d.com" rel="noreferrer" target="_blank">libnova3d.com</a>
 <a class="btn" href="https://github.com/openeggbert/simple-3d" rel="noreferrer" target="_blank">simple-3d</a>
 <a class="btn" href="https://libsimple3d.com" rel="noreferrer" target="_blank">libsimple3d.com</a>
+<a class="btn" href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a>
+<a class="btn" href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a>
 <a class="btn" href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">Free Direct</a>
 <a class="btn" href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">Free API</a>
 <a class="btn" href="https://github.com/robertvokac" rel="noreferrer" target="_blank">GitHub</a>
@@ -939,7 +941,7 @@
 </div>
 </div>
 <p>I build native C++ frameworks, platform layers, and compatibility systems. My work includes XNA-style, DirectDraw-style, and WinAPI-style API layers implemented over SDL3/OpenGL to run legacy applications without original dependencies.</p>
-<p>My strongest public work is CNA, a C++ implementation of an XNA-style programming model used to port a real C# / XNA application to native C++ across Windows, Linux, WebAssembly, and Android. Nova3D extends this direction into an experimental higher-level 3D runtime layer built on top of CNA. I also build Free Direct + Free API, SDL3-backed compatibility layers for legacy DirectX 3 / WinAPI applications.</p>
+<p>My strongest public work is CNA, a C++ implementation of an XNA-style programming model used to port a real C# / XNA application to native C++ across Windows, Linux, WebAssembly, and Android. Nova3D extends this into a higher-level 3D runtime layer built on CNA. Mesh Craft is a 3D scene editor for the MC3 format; Mesh World is a procedural 3D world generator built on the Mesh Craft ecosystem. I also build Free Direct + Free API, SDL3-backed compatibility layers for legacy DirectX 3 / WinAPI applications.</p>
 <p>I am looking for C++ roles focused on systems programming, cross-platform software, framework engineering, tooling, platform abstraction, or compatibility-layer development.</p>
 <div class="cta-row">
 <a class="btn primary" href="mailto:robertvokac@robertvokac.com">Email me</a>
@@ -971,7 +973,7 @@
 <li>Developing <a href="https://github.com/openeggbert/simple-3d" rel="noreferrer" target="_blank">simple-3d</a> (<a href="https://libsimple3d.com" rel="noreferrer" target="_blank">libsimple3d.com</a>) as a clean, minimalistic C++/Lua game framework layered on top of Nova3D.</li>
 <li>Developing <a href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">Free Direct</a> and <a href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">Free API</a> as SDL3-backed compatibility layers for legacy DirectX 3 / WinAPI applications.</li>
 <li>Supporting framework work with <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">easy-gl</a>, <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">meta-gl</a>, and <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">sharp-runtime</a> (broad C#/.NET subset in native C++).</li>
-<li>Building <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">Galaxy Eggbert</a> (3D game) and <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Mesh Craft</a> (3D modeler) as real applications validating the CNA/Nova3D stack.</li>
+<li>Building <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">Galaxy Eggbert</a> (3D game), <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Mesh Craft</a> (<a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a>) (3D modeler), and <a href="https://github.com/openeggbert/mesh-world" rel="noreferrer" target="_blank">Mesh World</a> (<a href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a>) (procedural world generator) as real applications validating the CNA/Nova3D stack.</li>
 <li>Hive is retained as an archived C++ backend/platform architecture showcase.</li>
 </ul>
 </div>
@@ -1026,7 +1028,7 @@
 <div class="side-card card"><h4>Primary project</h4>
 <p>CNA — XNA-compatible C++ framework</p></div>
 <div class="side-card card"><h4>Supporting projects</h4>
-<p>Nova3D · simple-3d · Free Direct · Free API · easy-gl · meta-gl · sharp-runtime · Galaxy Eggbert · Mesh Craft</p></div>
+<p>Nova3D · simple-3d · Free Direct · Free API · easy-gl · meta-gl · sharp-runtime · Galaxy Eggbert · Mesh Craft · Mesh World</p></div>
 <div class="side-card card"><h4>Target roles</h4>
 <p>C++ systems, cross-platform development, tooling, and framework engineering</p></div>
 <div class="side-card card"><h4>English</h4>
@@ -1070,11 +1072,51 @@
 </div>
 <div class="project-list">
 <article class="project-card" data-category="core">
+<div class="project-media" style="overflow:hidden;padding:0;height:160px;"><span class="project-badge">Editor</span><img src="mesh_craft_screenshot.png" alt="Mesh Craft screenshot" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:20px;"></div>
+<div class="project-content">
+<h3>Mesh Craft</h3>
+<p class="project-role">3D scene editor and modeling application for the MC3 format</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Website: <a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a> · <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a> · Stack: C++23, CNA, Nova3D, sharp-runtime, Dear ImGui · Native <code>.mc3.xml</code> format compiled to glTF/GLB</p>
+<ul>
+<li>3D modeler with primitive shapes (box, sphere, cylinder, cone, plane, torus, capsule, disk), CSG boolean operations (union, difference, intersection via Manifold), materials, PBR textures, and hierarchical groups.</li>
+<li>Animation support: position, rotation, scale, visibility, material color, and deform channels; reusable prefab/instance definitions, layers, tags, collision hints, fog and environment settings.</li>
+<li>Native <code>.mc3.xml</code> format: human-readable XML-based editable source compiled to glTF/GLB or binary MCB via included CLI tools (<code>mc3togltf</code>, <code>mc3tomcb</code>).</li>
+<li>Built on CNA + Nova3D + sharp-runtime; exercises the full C++ engine stack as a real editor application.</li>
+</ul>
+<p><strong>Status:</strong> Early prototype — project structure, core class skeletons, and MC3 library in place.</p>
+<div class="project-actions">
+<a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a>
+<a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a>
+</div>
+</div>
+</article>
+<article class="project-card" data-category="core">
+<div class="project-media">MESH<br/>WORLD</div>
+<div class="project-content">
+<h3>Mesh World</h3>
+<p class="project-role">Procedural 3D world generator and real-time explorer built on the Mesh Craft ecosystem</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-world" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-world</a> · Website: <a href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a> · <a href="https://meshworld.openeggbert.com" rel="noreferrer" target="_blank">meshworld.openeggbert.com</a> · Stack: C++23, Mesh Craft, CNA, sol2/Lua 5.4, SQLite</p>
+<ul>
+<li>Generates infinite 3D city and landscape chunks from a simple JSON config — 20 C++ chunk generators and 17 Lua object generators covering parks, roads, buildings, and terrain.</li>
+<li>Lua scripting sandbox (sol2 + Lua 5.4) for content modding: add new generators by dropping a Lua file into the generators directory; auto-discovered at startup.</li>
+<li>SQLite content packs: taxonomy registry, material registry, and generator bundles packed into portable <code>.sqlite</code> files for distribution.</li>
+<li>Real-time 3D explorer (MeshWorldApp): streams and renders chunks around the player using Mesh Craft + CNA (SDL3/OpenGL).</li>
+</ul>
+<p><strong>Status:</strong> 119 tests passing, zero warnings, CI on every push. Core chunk generation pipeline and Lua scripting complete.</p>
+<div class="project-actions">
+<a href="https://github.com/openeggbert/mesh-world" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a>
+<a href="https://meshworld.openeggbert.com" rel="noreferrer" target="_blank">meshworld.openeggbert.com</a>
+</div>
+</div>
+</article>
+<article class="project-card" data-category="core">
 <div class="project-media"><span class="project-badge">Main</span>CNA<br/>SDL3</div>
 <div class="project-content">
 <h3>CNA</h3>
 <p class="project-role">Cross-platform C++ framework implementing an XNA-style API</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Website: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, bgfx, Windows/Linux/WebAssembly/Android</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Website: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · <a href="https://cna.openeggbert.com" rel="noreferrer" target="_blank">cna.openeggbert.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, bgfx, Windows/Linux/WebAssembly/Android</p>
 <ul>
 <li>XNA-style API in native C++ under <code>Microsoft::Xna::Framework</code>.</li>
 <li>Custom multi-platform cross-platform framework with rendering, input, audio surfaces, resource lifecycle, and
@@ -1098,7 +1140,7 @@
 <div class="project-content">
 <h3>Nova3D</h3>
 <p class="project-role">3D engine — Urho3D source base with CNA replacing native graphics backends</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">github.com/openeggbert/nova-3d</a> · Website: <a href="https://libnova3d.com" rel="noreferrer" target="_blank">libnova3d.com</a> · Stack: C++20/23, CNA, SDL3, OpenGL/easy-gl, Urho3D scene/resource/math</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">github.com/openeggbert/nova-3d</a> · Website: <a href="https://libnova3d.com" rel="noreferrer" target="_blank">libnova3d.com</a> · <a href="https://nova3d.openeggbert.com" rel="noreferrer" target="_blank">nova3d.openeggbert.com</a> · Stack: C++20/23, CNA, SDL3, OpenGL/easy-gl, Urho3D scene/resource/math</p>
 <ul>
 <li>Modified Urho3D engine: reuses Urho3D source (math, containers, scene graph, resource system) and replaces its native OpenGL/Direct3D backends with CNA.</li>
 <li>Public API is <code>namespace Urho3D</code> — game code written against Urho3D compiles against Nova3D with minimal changes.</li>
@@ -1107,6 +1149,7 @@
 <div class="project-actions">
 <a href="https://github.com/openeggbert/nova-3d" rel="noreferrer" target="_blank">Repository</a>
 <a href="https://libnova3d.com" rel="noreferrer" target="_blank">libnova3d.com</a>
+<a href="https://nova3d.openeggbert.com" rel="noreferrer" target="_blank">nova3d.openeggbert.com</a>
 </div>
 </div>
 </article>
@@ -1115,7 +1158,7 @@
 <div class="project-content">
 <h3>simple-3d</h3>
 <p class="project-role">Clean, minimalistic 3D/2D game framework for C++ and Lua built on top of Nova3D</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/simple-3d" rel="noreferrer" target="_blank">github.com/openeggbert/simple-3d</a> · Website: <a href="https://libsimple3d.com" rel="noreferrer" target="_blank">libsimple3d.com</a> · Stack: C++20/23, Lua, Nova3D, CNA, SDL3, OpenGL/Vulkan/bgfx</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/simple-3d" rel="noreferrer" target="_blank">github.com/openeggbert/simple-3d</a> · Website: <a href="https://libsimple3d.com" rel="noreferrer" target="_blank">libsimple3d.com</a> · <a href="https://simple3d.openeggbert.com" rel="noreferrer" target="_blank">simple3d.openeggbert.com</a> · Stack: C++20/23, Lua, Nova3D, CNA, SDL3, OpenGL/Vulkan/bgfx</p>
 <ul>
 <li>Thin, high-level wrapper over a Nova3D / Urho3D fork — exposes nothing from Urho3D in its public API except math primitives as <code>Simple3D::</code> type aliases.</li>
 <li>Supports both C++ and Lua game code; architecture: Game → simple-3d API → Urho3D fork → CNA/Nova3D → Vulkan/GLES/bgfx → SDL3.</li>
@@ -1124,6 +1167,7 @@
 <div class="project-actions">
 <a href="https://github.com/openeggbert/simple-3d" rel="noreferrer" target="_blank">Repository</a>
 <a href="https://libsimple3d.com" rel="noreferrer" target="_blank">libsimple3d.com</a>
+<a href="https://simple3d.openeggbert.com" rel="noreferrer" target="_blank">simple3d.openeggbert.com</a>
 </div>
 </div>
 </article>
@@ -1275,23 +1319,6 @@
 </ul>
 <div class="project-actions"><a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">Repository</a>
 <a href="https://galaxyeggbert.openeggbert.com" rel="noreferrer" target="_blank">galaxyeggbert.openeggbert.com</a></div>
-</div>
-</article>
-<article class="project-card" data-category="core">
-<div class="project-media">MESH<br/>CRAFT</div>
-<div class="project-content">
-<h3>Mesh Craft</h3>
-<p class="project-role">3D modeling and editing application for creating game-ready models</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Website: <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a>
-                            · Stack: C++23, CNA, Nova3D, sharp-runtime · Native <code>.mc3</code> format compiled to glTF/GLB</p>
-<ul>
-<li>3D modeler inspired by Ray Dream Studio and Google SketchUp — primitive shapes (box, sphere, cylinder, cone, plane), CSG operations (union, difference, intersection), materials, textures, and hierarchical groups.</li>
-<li>Native <code>.mc3</code> format: human-readable YAML-based editable source compiled to glTF/GLB for use in games and real-time applications.</li>
-<li>Built on CNA + Nova3D + sharp-runtime; exercises the full C++ engine stack as a real editor application.</li>
-</ul>
-<p><strong>Status:</strong> Early prototype — project structure and core class skeletons in place.</p>
-<div class="project-actions"><a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Repository</a>
-<a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a></div>
 </div>
 </article>
 <article class="project-card" data-category="other">
