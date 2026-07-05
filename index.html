@@ -145,6 +145,32 @@
             text-decoration: none;
         }
 
+        .lang-flags {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-flags a,
+        .lang-flags .active {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .lang-flags a {
+            opacity: 0.4;
+            transition: opacity 0.15s ease;
+        }
+
+        .lang-flags a:hover {
+            opacity: 1;
+        }
+
+        .lang-flags svg {
+            display: block;
+            border-radius: 2px;
+        }
+
         .hero {
             background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
             color: #fff;
@@ -896,7 +922,7 @@
 <a href="#technologies">Technologies</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
-<a aria-label="Česká verze" href="indexcz.html" hreflang="cs" lang="cs" onclick="document.cookie='lang=cz;path=/;max-age=31536000'" style="display:inline-flex;align-items:center" title="Česká verze"><svg height="15" style="border-radius:2px;display:block" viewbox="0 0 6 4" width="22" xmlns="http://www.w3.org/2000/svg"><rect fill="#fff" height="2" width="6"/><rect fill="#d7141a" height="2" width="6" y="2"/><path d="M0 0l3 2-3 2z" fill="#11457e"/></svg></a>
+<span class="lang-flags"><span class="active" title="English"><svg height="15" viewbox="0 0 60 30" width="30" xmlns="http://www.w3.org/2000/svg"><clippath id="ukclip"><path d="M0,0 v30 h60 v-30 z"/></clippath><g clip-path="url(#ukclip)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span><a aria-label="Česká verze" href="indexcz.html" hreflang="cs" lang="cs" onclick="document.cookie='lang=cz;path=/;max-age=31536000'" title="Česká verze"><svg height="15" viewbox="0 0 6 4" width="22" xmlns="http://www.w3.org/2000/svg"><rect fill="#fff" height="2" width="6"/><rect fill="#d7141a" height="2" width="6" y="2"/><path d="M0 0l3 2-3 2z" fill="#11457e"/></svg></a></span>
 </nav>
 </div>
 </header>
