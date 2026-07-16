@@ -931,7 +931,7 @@
 <div class="hero-panel">
 <div class="hero-kicker">Modern C++ · Cross-Platform Systems · Compatibility Layers</div>
 <h1>C++ software engineer building cross-platform systems and compatibility layers</h1>
-<p>I design and implement 3D tools, C++ frameworks, platform abstraction layers, and compatibility systems that reproduce legacy API behavior without original dependencies. My work includes the Mesh Craft 3D scene editor, the Mesh World procedural generator, and XNA-style, DirectDraw-style, and WinAPI-style layers over SDL3, OpenGL, and related technologies — ≈363k lines of C++ in public repositories.</p>
+<p>I design and implement 3D tools, C++ frameworks, platform abstraction layers, and compatibility systems that reproduce legacy API behavior without original dependencies. My work includes the Mesh Craft 3D scene editor, the Mesh World procedural generator, and XNA-style, DirectDraw-style, and WinAPI-style layers over SDL3, OpenGL, and related technologies — ≈447k lines of C++ in public repositories.</p>
 <div class="hero-highlights">
 <span>Modern C++20/23 systems development</span>
 <span>Windows · Linux · WebAssembly · Android</span>
@@ -1109,7 +1109,7 @@
 <div class="project-content">
 <h3>Mesh Craft</h3>
 <p class="project-role">3D scene editor and modeling application for the MC3 format</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Website: <a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a> · <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a> · Stack: C++23, CNA, sharp-runtime, Dear ImGui · Native <code>.mc3.xml</code> format compiled to glTF/GLB · ≈24.9k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Website: <a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a> · <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a> · Stack: C++23, CNA, sharp-runtime, Dear ImGui · Native <code>.mc3.xml</code> format compiled to glTF/GLB · ≈28.0k LOC</p>
 <ul>
 <li>3D modeler with primitive shapes (box, sphere, cylinder, cone, plane, torus, capsule, disk), CSG boolean operations (union, difference, intersection via Manifold), materials, PBR textures, and hierarchical groups.</li>
 <li>Animation support: position, rotation, scale, visibility, material color, and deform channels; reusable prefab/instance definitions, layers, tags, collision hints, fog and environment settings.</li>
@@ -1129,14 +1129,15 @@
 <div class="project-content">
 <h3>Mesh World</h3>
 <p class="project-role">Procedural 3D world generator and real-time explorer built on the Mesh Craft ecosystem</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-world" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-world</a> · Website: <a href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a> · <a href="https://meshworld.openeggbert.com" rel="noreferrer" target="_blank">meshworld.openeggbert.com</a> · Stack: C++23, Mesh Craft, CNA, sol2/Lua 5.4, SQLite · ≈12.7k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-world" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-world</a> · Website: <a href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a> · <a href="https://meshworld.openeggbert.com" rel="noreferrer" target="_blank">meshworld.openeggbert.com</a> · Stack: C++23, Mesh Craft, CNA, sol2/Lua 5.4, SQLite · ≈16.6k LOC</p>
 <ul>
-<li>Generates infinite 3D city and landscape chunks from a simple JSON config — 20 C++ chunk generators and 17 Lua object generators covering parks, roads, buildings, and terrain.</li>
+<li>Generates infinite 3D city and landscape chunks from a simple JSON config — 20 C++ chunk generators and 11 Lua object generators covering parks, roads, buildings, and terrain.</li>
 <li>Lua scripting sandbox (sol2 + Lua 5.4) for content modding: add new generators by dropping a Lua file into the generators directory; auto-discovered at startup.</li>
+<li>Planetary map subsystem: quadtree LOD 0–18, 52-biome classification, and hydrology/mountain-range terrain algorithms.</li>
 <li>SQLite content packs: taxonomy registry, material registry, and generator bundles packed into portable <code>.sqlite</code> files for distribution.</li>
 <li>Real-time 3D explorer (MeshWorldApp): streams and renders chunks around the player using Mesh Craft + CNA (SDL3/OpenGL).</li>
 </ul>
-<p><strong>Status:</strong> 119 tests passing, zero warnings, CI on every push. Core chunk generation pipeline and Lua scripting complete.</p>
+<p><strong>Status:</strong> 1176 tests passing, zero warnings, CI on every push. Core chunk generation pipeline and Lua scripting complete.</p>
 <div class="project-actions">
 <a href="https://github.com/openeggbert/mesh-world" rel="noreferrer" target="_blank">Repository</a>
 <a href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a>
@@ -1149,13 +1150,13 @@
 <div class="project-content">
 <h3>CNA</h3>
 <p class="project-role">Cross-platform C++ framework implementing an XNA-style API</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Website: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · <a href="https://cna.openeggbert.com" rel="noreferrer" target="_blank">cna.openeggbert.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, Vulkan, bgfx, Windows/Linux/WebAssembly/Android · ≈76.9k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Website: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · <a href="https://cna.openeggbert.com" rel="noreferrer" target="_blank">cna.openeggbert.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, Direct3D 9/11/12, Windows/Linux/WebAssembly/Android · ≈138.0k LOC</p>
 <ul>
 <li>XNA-style API in native C++ under <code>Microsoft::Xna::Framework</code>.</li>
 <li>Custom multi-platform cross-platform framework with rendering, input, audio surfaces, resource lifecycle, and
                                 backend abstraction.
                             </li>
-<li>Backend abstraction over SDL3, OpenGL/easy-gl, Vulkan, and bgfx.</li>
+<li>11 pluggable rendering backends: SDL_Renderer, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, native Direct3D 9/11/12 (Wine/DXVK-verified), HTML Canvas, ASCII, and DX3 (a DirectDraw-shaped backend fronting Free Direct).</li>
 </ul>
 
 <ul><li>Native C++/SDL3 implementation replacing XNA / MonoGame dependencies.</li><li>Used to port a real C# / XNA application to C++.</li><li>Same C++ codebase builds for desktop, WebAssembly, and Android targets.</li></ul>
@@ -1187,11 +1188,11 @@
 <div class="project-content">
 <h3>CNA Craft</h3>
 <p class="project-role">Minecraft-like first-person voxel-world prototype built on CNA</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna-craft" rel="noreferrer" target="_blank">github.com/openeggbert/cna-craft</a> · Stack: C++23, CNA, SQLite, CMake · ≈4.0k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna-craft" rel="noreferrer" target="_blank">github.com/openeggbert/cna-craft</a> · Stack: C++23, CNA, SQLite, CMake · ≈6.3k LOC</p>
 <ul>
-<li>Unbounded chunk-streamed block terrain with noise-based procedural generation, hidden-face-culled cube meshing, and a block texture atlas.</li>
-<li>DDA voxel raycast for block breaking and placing; SQLite delta-based world persistence.</li>
-<li>Runs on CNA's OpenGL, Vulkan, and bgfx backends — a voxel showcase exercising the framework's 3D path.</li>
+<li>A faithful C++ port of fogleman/Craft: unbounded chunk-streamed block terrain with baked ambient occlusion, a 54-block roster, world-editing commands, and signs.</li>
+<li>DDA voxel raycast for block breaking and placing; SQLite delta-based world persistence; multiplayer against its own server.</li>
+<li>Runs on CNA's OpenGL, Vulkan, and bgfx backends, and is playable in the browser via WebAssembly/WebGL2 — a voxel showcase exercising the framework's 3D path.</li>
 </ul>
 <p><strong>Status:</strong> In development — early prototype.</p>
 <div class="project-actions"><a href="https://github.com/openeggbert/cna-craft" rel="noreferrer" target="_blank">Repository</a></div>
@@ -1203,7 +1204,7 @@
 <h3>Sharp Runtime</h3>
 <p class="project-role">C++ reimplementation of a broad C#/.NET runtime subset — <code>System::*</code> API in native C++</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">github.com/openeggbert/sharp-runtime</a> · Website: <a href="https://sharpruntime.openeggbert.com" rel="noreferrer" target="_blank">sharpruntime.openeggbert.com</a>
-                            · Stack: C++20/23, CMake · Broad .NET coverage: System::* namespaces, events, delegates, exceptions, collections · ≈64.6k LOC</p>
+                            · Stack: C++20/23, CMake · Broad .NET coverage: System::* namespaces, events, delegates, exceptions, collections · ≈70.7k LOC</p>
 <ul>
 <li>Implements a broad subset of .NET/C# types under <code>System::*</code> namespaces in idiomatic, modern C++ — familiar API design for C# developers.</li>
 <li>Covers exceptions, events, delegates, collections, and other system-level building blocks; tracks implementation status per class (Todo / Stub / Partial / Implemented / Verified).</li>
@@ -1322,7 +1323,7 @@
 <h3>Galaxy Eggbert</h3>
 <p class="project-role">3D remake of Speedy Blupi built on the CNA engine stack</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">github.com/openeggbert/galaxy-eggbert</a> · Website: <a href="https://galaxyeggbert.openeggbert.com" rel="noreferrer" target="_blank">galaxyeggbert.openeggbert.com</a>
-                            · Stack: C++23, CNA, SDL3, easy-gl, bgfx · Targets: Linux, Windows, WebAssembly, Android · ≈8.5k LOC</p>
+                            · Stack: C++23, CNA, SDL3, easy-gl, bgfx · Targets: Linux, Windows, WebAssembly, Android · ≈14.3k LOC</p>
 <ul>
 <li>3D game built on the full CNA stack — validates the framework as a real cross-platform game runtime.</li>
 <li>Targets Linux, Windows, WebAssembly, and Android from a single C++ codebase; multiple rendering backends: SDL_RENDERER, easy-gl, bgfx.</li>
@@ -1410,7 +1411,7 @@
 <div class="project-content">
 <h3>Sprite Utils</h3>
 <p class="project-role">Small C++23 sprite utility library and assets</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sprite-utils" rel="noreferrer" target="_blank">github.com/openeggbert/sprite-utils</a> · Stack: C++23, CMake · ≈1.2k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sprite-utils" rel="noreferrer" target="_blank">github.com/openeggbert/sprite-utils</a> · Stack: C++23, CMake · ≈2.2k LOC</p>
 <ul>
 <li>Sprite utilities and assets (number spritesheets, web component) supporting the game projects.</li>
 </ul>
@@ -1422,7 +1423,7 @@
 <div class="project-content">
 <h3>YouTube Frontend</h3>
 <p class="project-role">C++23 static HTML index generator for ArchiveBox video archives</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/youtube-frontend" rel="noreferrer" target="_blank">github.com/openeggbert/youtube-frontend</a> · Website: <a href="https://youtube.openeggbert.com" rel="noreferrer" target="_blank">youtube.openeggbert.com</a> · Stack: C++23, OpenCV, FFmpeg, libcurl · ≈1.4k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/youtube-frontend" rel="noreferrer" target="_blank">github.com/openeggbert/youtube-frontend</a> · Website: <a href="https://youtube.openeggbert.com" rel="noreferrer" target="_blank">youtube.openeggbert.com</a> · Stack: C++23, OpenCV, FFmpeg, libcurl · ≈2.3k LOC</p>
 <ul>
 <li>Generates static HTML index pages for ArchiveBox video archives.</li>
 <li>Uses OpenCV, FFmpeg libraries, and libcurl.</li>
@@ -1506,7 +1507,7 @@
 </div>
 </article>
 </div>
-<p style="margin-top:20px;color:#707784;font-size:0.9rem;text-align:center;">LOC measured with cloc (July 2026): C++ sources and headers (<code>.cpp</code>/<code>.hpp</code>/<code>.h</code>), <code>src/</code> and <code>include/</code> directories only, excluding tests, vendored, and third-party code. Portfolio total: ≈363k lines of C++.</p>
+<p style="margin-top:20px;color:#707784;font-size:0.9rem;text-align:center;">LOC measured with cloc (July 2026): C++ sources and headers (<code>.cpp</code>/<code>.hpp</code>/<code>.h</code>), <code>src/</code> and <code>include/</code> directories only, excluding tests, vendored, and third-party code. Portfolio total: ≈447k lines of C++.</p>
 </div>
 </section>
 </main>

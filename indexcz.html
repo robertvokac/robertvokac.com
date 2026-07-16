@@ -923,7 +923,7 @@
 <div class="hero-panel">
 <div class="hero-kicker">Moderní C++ · Multiplatformní systémy · Kompatibilní vrstvy</div>
 <h1>C++ softwarový inženýr budující multiplatformní systémy a kompatibilní vrstvy</h1>
-<p>Navrhuji a implementuji 3D nástroje, C++ frameworky, vrstvy platformní abstrakce a kompatibilní systémy reprodukující chování starších API bez původních závislostí. Moje práce zahrnuje 3D editor scén Mesh Craft, procedurální generátor Mesh World a vrstvy ve stylu XNA, DirectDraw a WinAPI nad SDL3, OpenGL a příbuznými technologiemi — ≈363 tisíc řádků C++ ve veřejných repozitářích.</p>
+<p>Navrhuji a implementuji 3D nástroje, C++ frameworky, vrstvy platformní abstrakce a kompatibilní systémy reprodukující chování starších API bez původních závislostí. Moje práce zahrnuje 3D editor scén Mesh Craft, procedurální generátor Mesh World a vrstvy ve stylu XNA, DirectDraw a WinAPI nad SDL3, OpenGL a příbuznými technologiemi — ≈447 tisíc řádků C++ ve veřejných repozitářích.</p>
 <div class="hero-highlights">
 <span>Vývoj systémů v moderním C++20/23</span>
 <span>Windows · Linux · WebAssembly · Android</span>
@@ -1101,7 +1101,7 @@
 <div class="project-content">
 <h3>Mesh Craft</h3>
 <p class="project-role">3D editor scén a modelovací aplikace pro formát MC3</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Web: <a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a> · <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a> · Stack: C++23, CNA, sharp-runtime, Dear ImGui · Nativní formát <code>.mc3.xml</code> kompilovaný do glTF/GLB · ≈24,9k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Web: <a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a> · <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a> · Stack: C++23, CNA, sharp-runtime, Dear ImGui · Nativní formát <code>.mc3.xml</code> kompilovaný do glTF/GLB · ≈28,0k LOC</p>
 <ul>
 <li>3D modelář s primitivy (kvádr, koule, válec, kužel, rovina, torus, kapsle, disk), CSG booleovskými operacemi (sjednocení, rozdíl, průnik přes Manifold), materiály, PBR texturami a hierarchickými skupinami.</li>
 <li>Podpora animací: pozice, rotace, měřítko, viditelnost, barva materiálu a deformační kanály; znovupoužitelné definice prefabů/instancí, vrstvy, tagy, kolizní hinty, mlha a nastavení prostředí.</li>
@@ -1121,14 +1121,15 @@
 <div class="project-content">
 <h3>Mesh World</h3>
 <p class="project-role">Procedurální generátor 3D světů a průzkumník v reálném čase postavený na ekosystému Mesh Craft</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-world" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-world</a> · Web: <a href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a> · <a href="https://meshworld.openeggbert.com" rel="noreferrer" target="_blank">meshworld.openeggbert.com</a> · Stack: C++23, Mesh Craft, CNA, sol2/Lua 5.4, SQLite · ≈12,7k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-world" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-world</a> · Web: <a href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a> · <a href="https://meshworld.openeggbert.com" rel="noreferrer" target="_blank">meshworld.openeggbert.com</a> · Stack: C++23, Mesh Craft, CNA, sol2/Lua 5.4, SQLite · ≈16,6k LOC</p>
 <ul>
-<li>Generuje nekonečné 3D městské a krajinné chunky z jednoduché JSON konfigurace — 20 C++ generátorů chunků a 17 Lua generátorů objektů pokrývajících parky, silnice, budovy a terén.</li>
+<li>Generuje nekonečné 3D městské a krajinné chunky z jednoduché JSON konfigurace — 20 C++ generátorů chunků a 11 Lua generátorů objektů pokrývajících parky, silnice, budovy a terén.</li>
 <li>Skriptovací sandbox Lua (sol2 + Lua 5.4) pro modding obsahu: nový generátor přidáte vložením Lua souboru do adresáře generátorů; automaticky se načte při startu.</li>
+<li>Planetární mapový subsystém: quadtree LOD 0–18, klasifikace do 52 biomů a algoritmy hydrologie a horských pásem.</li>
 <li>SQLite balíčky obsahu: registr taxonomií, registr materiálů a sady generátorů zabalené do přenosných <code>.sqlite</code> souborů pro distribuci.</li>
 <li>3D průzkumník v reálném čase (MeshWorldApp): streamuje a vykresluje chunky kolem hráče pomocí Mesh Craft + CNA (SDL3/OpenGL).</li>
 </ul>
-<p><strong>Stav:</strong> 119 procházejících testů, nula varování, CI při každém pushi. Základní pipeline generování chunků a Lua skriptování hotové.</p>
+<p><strong>Stav:</strong> 1176 procházejících testů, nula varování, CI při každém pushi. Základní pipeline generování chunků a Lua skriptování hotové.</p>
 <div class="project-actions">
 <a href="https://github.com/openeggbert/mesh-world" rel="noreferrer" target="_blank">Repozitář</a>
 <a href="https://meshworld3d.com" rel="noreferrer" target="_blank">meshworld3d.com</a>
@@ -1141,13 +1142,13 @@
 <div class="project-content">
 <h3>CNA</h3>
 <p class="project-role">Multiplatformní C++ framework implementující API ve stylu XNA</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Web: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · <a href="https://cna.openeggbert.com" rel="noreferrer" target="_blank">cna.openeggbert.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, Vulkan, bgfx, Windows/Linux/WebAssembly/Android · ≈76,9k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Web: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · <a href="https://cna.openeggbert.com" rel="noreferrer" target="_blank">cna.openeggbert.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, Direct3D 9/11/12, Windows/Linux/WebAssembly/Android · ≈138,0k LOC</p>
 <ul>
 <li>API ve stylu XNA v nativním C++ pod <code>Microsoft::Xna::Framework</code>.</li>
 <li>Vlastní multiplatformní framework s vykreslováním, vstupem, zvukem, životním cyklem prostředků a
                                 abstrakcí backendů.
                             </li>
-<li>Abstrakce backendů nad SDL3, OpenGL/easy-gl, Vulkanem a bgfx.</li>
+<li>11 zaměnitelných vykreslovacích backendů: SDL_Renderer, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, nativní Direct3D 9/11/12 (ověřeno přes Wine/DXVK), HTML Canvas, ASCII a DX3 (DirectDraw backend postavený nad Free Direct).</li>
 </ul>
 
 <ul><li>Nativní C++/SDL3 implementace nahrazující závislosti na XNA / MonoGame.</li><li>Použito k portu skutečné C# / XNA aplikace do C++.</li><li>Stejná C++ kódová základna se sestavuje pro desktop, WebAssembly i Android.</li></ul>
@@ -1179,11 +1180,11 @@
 <div class="project-content">
 <h3>CNA Craft</h3>
 <p class="project-role">Minecraftu podobný first-person prototyp voxelového světa postavený na CNA</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna-craft" rel="noreferrer" target="_blank">github.com/openeggbert/cna-craft</a> · Stack: C++23, CNA, SQLite, CMake · ≈4,0k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna-craft" rel="noreferrer" target="_blank">github.com/openeggbert/cna-craft</a> · Stack: C++23, CNA, SQLite, CMake · ≈6,3k LOC</p>
 <ul>
-<li>Neomezený blokový terén streamovaný po chuncích s procedurálním generováním na bázi šumu, meshování krychlí s ořezem skrytých stěn a atlas textur bloků.</li>
-<li>DDA voxelový raycasting pro těžbu a pokládání bloků; delta perzistence světa v SQLite.</li>
-<li>Běží na backendech CNA OpenGL, Vulkan a bgfx — voxelová ukázka prověřující 3D cestu frameworku.</li>
+<li>Věrný C++ port fogleman/Craft: neomezený blokový terén streamovaný po chuncích s pečeným ambient occlusion, 54 typy bloků, příkazy pro editaci světa a cedule.</li>
+<li>DDA voxelový raycasting pro těžbu a pokládání bloků; delta perzistence světa v SQLite; multiplayer proti vlastnímu serveru.</li>
+<li>Běží na backendech CNA OpenGL, Vulkan a bgfx a je hratelný v prohlížeči přes WebAssembly/WebGL2 — voxelová ukázka prověřující 3D cestu frameworku.</li>
 </ul>
 <p><strong>Stav:</strong> Ve vývoji — raný prototyp.</p>
 <div class="project-actions"><a href="https://github.com/openeggbert/cna-craft" rel="noreferrer" target="_blank">Repozitář</a></div>
@@ -1195,7 +1196,7 @@
 <h3>Sharp Runtime</h3>
 <p class="project-role">C++ reimplementace široké podmnožiny běhového prostředí C#/.NET — API <code>System::*</code> v nativním C++</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">github.com/openeggbert/sharp-runtime</a> · Web: <a href="https://sharpruntime.openeggbert.com" rel="noreferrer" target="_blank">sharpruntime.openeggbert.com</a>
-                            · Stack: C++20/23, CMake · Široké pokrytí .NET: jmenné prostory System::*, události, delegáti, výjimky, kolekce · ≈64,6k LOC</p>
+                            · Stack: C++20/23, CMake · Široké pokrytí .NET: jmenné prostory System::*, události, delegáti, výjimky, kolekce · ≈70,7k LOC</p>
 <ul>
 <li>Implementuje širokou podmnožinu typů .NET/C# pod jmennými prostory <code>System::*</code> v idiomatickém moderním C++ — povědomý návrh API pro C# vývojáře.</li>
 <li>Pokrývá výjimky, události, delegáty, kolekce a další systémové stavební bloky; stav implementace se sleduje po třídách (Todo / Stub / Partial / Implemented / Verified).</li>
@@ -1314,7 +1315,7 @@
 <h3>Galaxy Eggbert</h3>
 <p class="project-role">3D remake hry Speedy Blupi postavený na engine stacku CNA</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">github.com/openeggbert/galaxy-eggbert</a> · Web: <a href="https://galaxyeggbert.openeggbert.com" rel="noreferrer" target="_blank">galaxyeggbert.openeggbert.com</a>
-                            · Stack: C++23, CNA, SDL3, easy-gl, bgfx · Cíle: Linux, Windows, WebAssembly, Android · ≈8,5k LOC</p>
+                            · Stack: C++23, CNA, SDL3, easy-gl, bgfx · Cíle: Linux, Windows, WebAssembly, Android · ≈14,3k LOC</p>
 <ul>
 <li>3D hra postavená na celém stacku CNA — ověřuje framework jako skutečný multiplatformní herní runtime.</li>
 <li>Z jedné C++ kódové základny cílí na Linux, Windows, WebAssembly a Android; více vykreslovacích backendů: SDL_RENDERER, easy-gl, bgfx.</li>
@@ -1402,7 +1403,7 @@
 <div class="project-content">
 <h3>Sprite Utils</h3>
 <p class="project-role">Malá C++23 knihovna utilit a assetů pro sprity</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sprite-utils" rel="noreferrer" target="_blank">github.com/openeggbert/sprite-utils</a> · Stack: C++23, CMake · ≈1,2k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sprite-utils" rel="noreferrer" target="_blank">github.com/openeggbert/sprite-utils</a> · Stack: C++23, CMake · ≈2,2k LOC</p>
 <ul>
 <li>Utility a assety pro sprity (číselné spritesheety, webová komponenta) podporující herní projekty.</li>
 </ul>
@@ -1414,7 +1415,7 @@
 <div class="project-content">
 <h3>YouTube Frontend</h3>
 <p class="project-role">C++23 generátor statických HTML indexů pro videoarchivy ArchiveBox</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/youtube-frontend" rel="noreferrer" target="_blank">github.com/openeggbert/youtube-frontend</a> · Web: <a href="https://youtube.openeggbert.com" rel="noreferrer" target="_blank">youtube.openeggbert.com</a> · Stack: C++23, OpenCV, FFmpeg, libcurl · ≈1,4k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/youtube-frontend" rel="noreferrer" target="_blank">github.com/openeggbert/youtube-frontend</a> · Web: <a href="https://youtube.openeggbert.com" rel="noreferrer" target="_blank">youtube.openeggbert.com</a> · Stack: C++23, OpenCV, FFmpeg, libcurl · ≈2,3k LOC</p>
 <ul>
 <li>Generuje statické HTML indexové stránky pro videoarchivy ArchiveBox.</li>
 <li>Využívá OpenCV, knihovny FFmpeg a libcurl.</li>
@@ -1498,7 +1499,7 @@
 </div>
 </article>
 </div>
-<p style="margin-top:20px;color:#707784;font-size:0.9rem;text-align:center;">Počty řádků (LOC) změřeny nástrojem cloc (červenec 2026): zdrojové soubory a hlavičky C++ (<code>.cpp</code>/<code>.hpp</code>/<code>.h</code>), pouze adresáře <code>src/</code> a <code>include/</code>, bez testů, vendorovaného kódu a kódu třetích stran. Celkem v portfoliu: ≈363 tisíc řádků C++.</p>
+<p style="margin-top:20px;color:#707784;font-size:0.9rem;text-align:center;">Počty řádků (LOC) změřeny nástrojem cloc (červenec 2026): zdrojové soubory a hlavičky C++ (<code>.cpp</code>/<code>.hpp</code>/<code>.h</code>), pouze adresáře <code>src/</code> a <code>include/</code>, bez testů, vendorovaného kódu a kódu třetích stran. Celkem v portfoliu: ≈447 tisíc řádků C++.</p>
 </div>
 </section>
 </main>
