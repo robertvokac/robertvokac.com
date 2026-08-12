@@ -931,7 +931,7 @@
 <div class="hero-panel">
 <div class="hero-kicker">Modern C++ · Cross-Platform Systems · Compatibility Layers</div>
 <h1>C++ software engineer building cross-platform systems and compatibility layers</h1>
-<p>I design and implement 3D tools, C++ frameworks, platform abstraction layers, and compatibility systems that reproduce legacy API behavior without original dependencies. My work includes the Mesh Craft 3D scene editor and XNA-style, DirectDraw-style, and WinAPI-style layers over SDL3, OpenGL, and related technologies — ≈599.6k lines of C++ in public repositories.</p>
+<p>I design and implement 3D tools, C++ frameworks, platform abstraction layers, and compatibility systems that reproduce legacy API behavior without original dependencies. My work includes the Mesh Craft 3D scene editor and XNA-style, DirectDraw-style, and WinAPI-style layers over SDL3, OpenGL, and related technologies — ≈478.6k lines of C++ in public repositories.</p>
 <div class="hero-highlights">
 <span>Modern C++20/23 systems development</span>
 <span>Windows · Linux · WebAssembly · Android</span>
@@ -1004,7 +1004,7 @@
 <li>Developing <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">Mesh Craft</a> (<a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a>), a C++23 3D scene editor for the MC3 format.</li>
 <li>Developing <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">CNA</a> as a cross-platform C++ framework implementing an XNA-style programming model for Windows, Linux, WebAssembly, and Android — with <a href="https://github.com/openeggbert/cna-samples" rel="noreferrer" target="_blank">CNA Samples</a> porting the official XNA sample collection.</li>
 <li>Developing <a href="https://github.com/openeggbert/free-direct" rel="noreferrer" target="_blank">Free Direct</a> and <a href="https://github.com/openeggbert/free-api" rel="noreferrer" target="_blank">Free API</a> as SDL3-backed compatibility layers for legacy DirectX 3 / WinAPI applications, powering <a href="https://github.com/openeggbert/free-eggbert" rel="noreferrer" target="_blank">Free Eggbert</a> and the demos at <a href="https://speedyblupi.com" rel="noreferrer" target="_blank">speedyblupi.com</a>.</li>
-<li>Supporting framework work with <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">easy-gl</a>, <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">meta-gl</a>, and <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">sharp-runtime</a> (broad C#/.NET subset in native C++).</li>
+<li>Supporting framework work with <a href="https://github.com/openeggbert/easy-gl" rel="noreferrer" target="_blank">easy-gl</a>, <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">meta-gl</a>, <a href="https://github.com/openeggbert/easy-3d" rel="noreferrer" target="_blank">easy-3d</a>, and <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">sharp-runtime</a> (broad C#/.NET subset in native C++).</li>
 <li>Building <a href="https://github.com/openeggbert/mobile-eggbert" rel="noreferrer" target="_blank">Mobile Eggbert</a> and <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">Galaxy Eggbert</a> as real games validating the CNA stack.</li>
 <li>Developing <a href="https://github.com/robertvokac/hive" rel="noreferrer" target="_blank">Hive</a> (<a href="https://hive.robertvokac.com" rel="noreferrer" target="_blank">hive.robertvokac.com</a>), a modular C++23 metadata-driven data server.</li>
 </ul>
@@ -1060,7 +1060,7 @@
 <div class="side-card card"><h4>Flagship project</h4>
 <p>Mesh Craft — 3D scene editor for the MC3 format</p></div>
 <div class="side-card card"><h4>Supporting projects</h4>
-<p>CNA · CNA Samples · Sharp Runtime · Free Direct · Free API · Free Eggbert · Mobile Eggbert · Galaxy Eggbert · easy-gl · meta-gl · Hive</p></div>
+<p>CNA · CNA Samples · Sharp Runtime · Free Direct · Free API · Free Eggbert · Mobile Eggbert · Galaxy Eggbert · easy-gl · easy-3d · meta-gl · Hive</p></div>
 <div class="side-card card"><h4>Target roles</h4>
 <p>C++ systems, cross-platform development, tooling, and framework engineering</p></div>
 <div class="side-card card"><h4>English</h4>
@@ -1108,7 +1108,7 @@
 <div class="project-content">
 <h3>Mesh Craft</h3>
 <p class="project-role">3D scene editor and modeling application for the MC3 format</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Website: <a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a> · <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a> · Stack: C++23, CNA, sharp-runtime, Dear ImGui · Native <code>.mc3.xml</code> format compiled to glTF/GLB · ≈41.2k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Website: <a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a> · <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a> · Stack: C++23, CNA, sharp-runtime, Dear ImGui · Native <code>.mc3.xml</code> format compiled to glTF/GLB · ≈29.4k LOC</p>
 <ul>
 <li>3D modeler with primitive shapes (box, sphere, cylinder, cone, plane, torus, capsule, disk), CSG boolean operations (union, difference, intersection via Manifold), materials, PBR textures, and hierarchical groups.</li>
 <li>Animation support: position, rotation, scale, visibility, material color, and deform channels; reusable prefab/instance definitions, layers, tags, collision hints, fog and environment settings.</li>
@@ -1128,14 +1128,13 @@
 <div class="project-content">
 <h3>CNA</h3>
 <p class="project-role">Cross-platform C++ framework implementing an XNA-style API</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Website: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · <a href="https://cna.openeggbert.com" rel="noreferrer" target="_blank">cna.openeggbert.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, Direct3D 9/11/12, Windows/Linux/WebAssembly/Android · ≈292.2k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Website: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · <a href="https://cna.openeggbert.com" rel="noreferrer" target="_blank">cna.openeggbert.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, Direct3D 9/11/12, Windows/Linux/WebAssembly/Android · ≈181.2k LOC</p>
 <ul>
 <li>XNA-style API in native C++ under <code>Microsoft::Xna::Framework</code>.</li>
 <li>Custom multi-platform cross-platform framework with rendering, input, audio surfaces, resource lifecycle, and
                                 backend abstraction.
                             </li>
-<li>46 rendering backends spanning modern APIs (Vulkan, bgfx, WebGPU, native Direct3D 9/10/11/12, SDL_GPU, Metal, Diligent Engine, Sokol), the full legacy DirectX line (DirectX 1–9, Wine/DXVK-verified), desktop and mobile OpenGL/OpenGL ES/OpenVG, and specialty targets (HTML Canvas, SVG, GDI, Glide, headless).</li>
-<li>Restructured into 15 independently buildable modules plus a renderer layer of ~40 backends, each with its own CMake target.</li>
+<li>12 pluggable rendering backends: SDL_Renderer, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, native Direct3D 9/11/12 (Wine/DXVK-verified), SDL_GPU (Vulkan-driven), HTML Canvas, ASCII, and DX3 (a DirectDraw-shaped backend fronting Free Direct).</li>
 </ul>
 
 <ul><li>Native C++/SDL3 implementation replacing XNA / MonoGame dependencies.</li><li>Used to port a real C# / XNA application to C++.</li><li>Same C++ codebase builds for desktop, WebAssembly, and Android targets.</li></ul>
@@ -1163,12 +1162,27 @@
 </div>
 </article>
 <article class="project-card" data-category="core">
+<div class="project-media">VOXEL<br/>CRAFT</div>
+<div class="project-content">
+<h3>CNA Craft</h3>
+<p class="project-role">Minecraft-like first-person voxel-world prototype built on CNA</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna-craft" rel="noreferrer" target="_blank">github.com/openeggbert/cna-craft</a> · Stack: C++23, CNA, SQLite, CMake · ≈6.3k LOC</p>
+<ul>
+<li>A faithful C++ port of fogleman/Craft: unbounded chunk-streamed block terrain with baked ambient occlusion, a 54-block roster, world-editing commands, and signs.</li>
+<li>DDA voxel raycast for block breaking and placing; SQLite delta-based world persistence; multiplayer against its own server.</li>
+<li>Runs on CNA's OpenGL, Vulkan, and bgfx backends, and is playable in the browser via WebAssembly/WebGL2 — a voxel showcase exercising the framework's 3D path.</li>
+</ul>
+<p><strong>Status:</strong> In development — early prototype.</p>
+<div class="project-actions"><a href="https://github.com/openeggbert/cna-craft" rel="noreferrer" target="_blank">Repository</a></div>
+</div>
+</article>
+<article class="project-card" data-category="core">
 <div class="project-media">CPP<br/>.NET</div>
 <div class="project-content">
 <h3>Sharp Runtime</h3>
 <p class="project-role">C++ reimplementation of a broad C#/.NET runtime subset — <code>System::*</code> API in native C++</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">github.com/openeggbert/sharp-runtime</a> · Website: <a href="https://sharpruntime.openeggbert.com" rel="noreferrer" target="_blank">sharpruntime.openeggbert.com</a>
-                            · Stack: C++20/23, CMake · Broad .NET coverage: System::* namespaces, events, delegates, exceptions, collections · ≈78.9k LOC</p>
+                            · Stack: C++20/23, CMake · Broad .NET coverage: System::* namespaces, events, delegates, exceptions, collections · ≈70.7k LOC</p>
 <ul>
 <li>Implements a broad subset of .NET/C# types under <code>System::*</code> namespaces in idiomatic, modern C++ — familiar API design for C# developers.</li>
 <li>Covers exceptions, events, delegates, collections, and other system-level building blocks; tracks implementation status per class (Todo / Stub / Partial / Implemented / Verified).</li>
@@ -1287,7 +1301,7 @@
 <h3>Galaxy Eggbert</h3>
 <p class="project-role">3D remake of Speedy Blupi built on the CNA engine stack</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">github.com/openeggbert/galaxy-eggbert</a> · Website: <a href="https://galaxyeggbert.openeggbert.com" rel="noreferrer" target="_blank">galaxyeggbert.openeggbert.com</a>
-                            · Stack: C++23, CNA, SDL3, easy-gl, bgfx · Targets: Linux, Windows, WebAssembly, Android · ≈18.5k LOC</p>
+                            · Stack: C++23, CNA, SDL3, easy-gl, bgfx · Targets: Linux, Windows, WebAssembly, Android · ≈17.3k LOC</p>
 <ul>
 <li>3D game built on the full CNA stack — validates the framework as a real cross-platform game runtime.</li>
 <li>Targets Linux, Windows, WebAssembly, and Android from a single C++ codebase; multiple rendering backends: SDL_RENDERER, easy-gl, bgfx.</li>
@@ -1314,12 +1328,27 @@
 </div>
 </article>
 <article class="project-card" data-category="core">
+<div class="project-media">EASY<br/>3D</div>
+<div class="project-content">
+<h3>easy-3d</h3>
+<p class="project-role">Small C++23 helper library beside CNA for lightweight 3D projects</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/easy-3d" rel="noreferrer" target="_blank">github.com/openeggbert/easy-3d</a> · Website: <a href="https://easy3d.openeggbert.com" rel="noreferrer" target="_blank">easy3d.openeggbert.com</a> · Stack: C++23, CNA, CMake · ≈1.0k LOC</p>
+<ul>
+<li>Cameras (Camera3D, OrbitCamera, FollowCamera), texture atlas, billboard and cube batching, and debug draw.</li>
+<li>Deliberately a helper library beside CNA — not a game engine; no ECS, physics, or networking.</li>
+<li>First concrete consumer: Galaxy Eggbert.</li>
+</ul>
+<div class="project-actions"><a href="https://github.com/openeggbert/easy-3d" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://easy3d.openeggbert.com" rel="noreferrer" target="_blank">easy3d.openeggbert.com</a></div>
+</div>
+</article>
+<article class="project-card" data-category="core">
 <div class="project-media">META<br/>GL</div>
 <div class="project-content">
 <h3>meta-gl</h3>
 <p class="project-role">Low-level, type-safe C++23 OpenGL ES 2.0+ function loader and wrapper</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">github.com/openeggbert/meta-gl</a> · Website: <a href="https://metagl.openeggbert.com" rel="noreferrer" target="_blank">metagl.openeggbert.com</a> · Stack:
-                            C++23, OpenGL ES 2.0+, CMake · Foundation layer used by easy-gl · ≈8.9k LOC</p>
+                            C++23, OpenGL ES 2.0+, CMake · Foundation layer used by easy-gl · ≈8.3k LOC</p>
 <ul>
 <li>Runtime OpenGL function loading via a host-supplied <code>GetProcAddress</code> callback — no windowing, no context creation.</li>
 <li>Type-safe <code>enum class</code> wrappers for all OpenGL constants (buffer targets, shader types, texture formats, etc.).</li>
@@ -1340,6 +1369,45 @@
 <li>Related repositories merged via git subtree for historical preservation.</li>
 </ul>
 <div class="project-actions"><a href="https://github.com/openeggbert/mobile-eggbert-legacy" rel="noreferrer" target="_blank">Repository</a></div>
+</div>
+</article>
+<article class="project-card" data-category="other">
+<div class="project-media">LIBGDX<br/>JAVA</div>
+<div class="project-content">
+<h3>Mobile Eggbert LibGDX</h3>
+<p class="project-role">Java/LibGDX port of Speedy Blupi (Mobile Eggbert)</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mobile-eggbert-libgdx" rel="noreferrer" target="_blank">github.com/openeggbert/mobile-eggbert-libgdx</a> · Stack: Java, LibGDX, Gradle</p>
+<ul>
+<li>Continues the port lineage (C# XNA → MonoGame → C++/CNA → Java/LibGDX) with a small XNA/.NET compatibility bridge in the core module.</li>
+<li>Desktop (LWJGL3), Android, and HTML targets.</li>
+</ul>
+<div class="project-actions"><a href="https://github.com/openeggbert/mobile-eggbert-libgdx" rel="noreferrer" target="_blank">Repository</a></div>
+</div>
+</article>
+<article class="project-card" data-category="other">
+<div class="project-media">SPRITE<br/>UTILS</div>
+<div class="project-content">
+<h3>Sprite Utils</h3>
+<p class="project-role">Small C++23 sprite utility library and assets</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sprite-utils" rel="noreferrer" target="_blank">github.com/openeggbert/sprite-utils</a> · Stack: C++23, CMake · ≈2.2k LOC</p>
+<ul>
+<li>Sprite utilities and assets (number spritesheets, web component) supporting the game projects.</li>
+</ul>
+<div class="project-actions"><a href="https://github.com/openeggbert/sprite-utils" rel="noreferrer" target="_blank">Repository</a></div>
+</div>
+</article>
+<article class="project-card" data-category="other">
+<div class="project-media">YT<br/>FRONTEND</div>
+<div class="project-content">
+<h3>YouTube Frontend</h3>
+<p class="project-role">C++23 static HTML index generator for ArchiveBox video archives</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/youtube-frontend" rel="noreferrer" target="_blank">github.com/openeggbert/youtube-frontend</a> · Website: <a href="https://youtube.openeggbert.com" rel="noreferrer" target="_blank">youtube.openeggbert.com</a> · Stack: C++23, OpenCV, FFmpeg, libcurl · ≈2.3k LOC</p>
+<ul>
+<li>Generates static HTML index pages for ArchiveBox video archives.</li>
+<li>Uses OpenCV, FFmpeg libraries, and libcurl.</li>
+</ul>
+<div class="project-actions"><a href="https://github.com/openeggbert/youtube-frontend" rel="noreferrer" target="_blank">Repository</a>
+<a href="https://youtube.openeggbert.com" rel="noreferrer" target="_blank">youtube.openeggbert.com</a></div>
 </div>
 </article>
 <article class="project-card" data-category="core">
@@ -1417,7 +1485,7 @@
 </div>
 </article>
 </div>
-<p style="margin-top:20px;color:#707784;font-size:0.9rem;text-align:center;">LOC measured with cloc (August 2026): C++ sources and headers (<code>.cpp</code>/<code>.hpp</code>/<code>.h</code>), <code>src/</code> and <code>include/</code> directories only, excluding tests, vendored, and third-party code. Portfolio total: ≈599.6k lines of C++.</p>
+<p style="margin-top:20px;color:#707784;font-size:0.9rem;text-align:center;">LOC measured with cloc (July 2026): C++ sources and headers (<code>.cpp</code>/<code>.hpp</code>/<code>.h</code>), <code>src/</code> and <code>include/</code> directories only, excluding tests, vendored, and third-party code. Portfolio total: ≈478.6k lines of C++.</p>
 </div>
 </section>
 </main>
