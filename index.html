@@ -931,7 +931,7 @@
 <div class="hero-panel">
 <div class="hero-kicker">Modern C++ · Cross-Platform Systems · Compatibility Layers</div>
 <h1>C++ software engineer building cross-platform systems and compatibility layers</h1>
-<p>I design and implement 3D tools, C++ frameworks, platform abstraction layers, and compatibility systems that reproduce legacy API behavior without original dependencies. My work includes the Mesh Craft 3D scene editor and XNA-style, DirectDraw-style, and WinAPI-style layers over SDL3, OpenGL, and related technologies — ≈478.6k lines of C++ in public repositories.</p>
+<p>I design and implement 3D tools, C++ frameworks, platform abstraction layers, and compatibility systems that reproduce legacy API behavior without original dependencies. My work includes the Mesh Craft 3D scene editor and XNA-style, DirectDraw-style, and WinAPI-style layers over SDL3, OpenGL, and related technologies — ≈611.4k lines of C++ in public repositories.</p>
 <div class="hero-highlights">
 <span>Modern C++20/23 systems development</span>
 <span>Windows · Linux · WebAssembly · Android</span>
@@ -1108,7 +1108,7 @@
 <div class="project-content">
 <h3>Mesh Craft</h3>
 <p class="project-role">3D scene editor and modeling application for the MC3 format</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Website: <a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a> · <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a> · Stack: C++23, CNA, sharp-runtime, Dear ImGui · Native <code>.mc3.xml</code> format compiled to glTF/GLB · ≈29.4k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/mesh-craft" rel="noreferrer" target="_blank">github.com/openeggbert/mesh-craft</a> · Website: <a href="https://meshcraft3d.com" rel="noreferrer" target="_blank">meshcraft3d.com</a> · <a href="https://meshcraft.openeggbert.com" rel="noreferrer" target="_blank">meshcraft.openeggbert.com</a> · Stack: C++23, CNA, sharp-runtime, Dear ImGui · Native <code>.mc3.xml</code> format compiled to glTF/GLB · ≈41.2k LOC</p>
 <ul>
 <li>3D modeler with primitive shapes (box, sphere, cylinder, cone, plane, torus, capsule, disk), CSG boolean operations (union, difference, intersection via Manifold), materials, PBR textures, and hierarchical groups.</li>
 <li>Animation support: position, rotation, scale, visibility, material color, and deform channels; reusable prefab/instance definitions, layers, tags, collision hints, fog and environment settings.</li>
@@ -1128,13 +1128,14 @@
 <div class="project-content">
 <h3>CNA</h3>
 <p class="project-role">Cross-platform C++ framework implementing an XNA-style API</p>
-<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Website: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · <a href="https://cna.openeggbert.com" rel="noreferrer" target="_blank">cna.openeggbert.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, Direct3D 9/11/12, Windows/Linux/WebAssembly/Android · ≈181.2k LOC</p>
+<p class="project-meta">GitHub: <a href="https://github.com/openeggbert/cna" rel="noreferrer" target="_blank">github.com/openeggbert/cna</a> · Website: <a href="https://libcna.com" rel="noreferrer" target="_blank">libcna.com</a> · <a href="https://cna.openeggbert.com" rel="noreferrer" target="_blank">cna.openeggbert.com</a> · Stack: C++20, SDL3, CMake, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, Direct3D 9/11/12, Windows/Linux/WebAssembly/Android · ≈292.2k LOC</p>
 <ul>
 <li>XNA-style API in native C++ under <code>Microsoft::Xna::Framework</code>.</li>
 <li>Custom multi-platform cross-platform framework with rendering, input, audio surfaces, resource lifecycle, and
                                 backend abstraction.
                             </li>
-<li>12 pluggable rendering backends: SDL_Renderer, OpenGL/easy-gl, Vulkan, bgfx, WebGPU, native Direct3D 9/11/12 (Wine/DXVK-verified), SDL_GPU (Vulkan-driven), HTML Canvas, ASCII, and DX3 (a DirectDraw-shaped backend fronting Free Direct).</li>
+<li>46 rendering backends spanning modern APIs (Vulkan, bgfx, WebGPU, native Direct3D 9/10/11/12, SDL_GPU, Metal, Diligent Engine, Sokol), the full legacy DirectX line (DirectX 1–9, Wine/DXVK-verified), desktop and mobile OpenGL/OpenGL ES/OpenVG, and specialty targets (HTML Canvas, SVG, GDI, Glide, headless).</li>
+<li>Restructured into 15 independently buildable modules plus a renderer layer of ~40 backends, each with its own CMake target.</li>
 </ul>
 
 <ul><li>Native C++/SDL3 implementation replacing XNA / MonoGame dependencies.</li><li>Used to port a real C# / XNA application to C++.</li><li>Same C++ codebase builds for desktop, WebAssembly, and Android targets.</li></ul>
@@ -1182,7 +1183,7 @@
 <h3>Sharp Runtime</h3>
 <p class="project-role">C++ reimplementation of a broad C#/.NET runtime subset — <code>System::*</code> API in native C++</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/sharp-runtime" rel="noreferrer" target="_blank">github.com/openeggbert/sharp-runtime</a> · Website: <a href="https://sharpruntime.openeggbert.com" rel="noreferrer" target="_blank">sharpruntime.openeggbert.com</a>
-                            · Stack: C++20/23, CMake · Broad .NET coverage: System::* namespaces, events, delegates, exceptions, collections · ≈70.7k LOC</p>
+                            · Stack: C++20/23, CMake · Broad .NET coverage: System::* namespaces, events, delegates, exceptions, collections · ≈78.9k LOC</p>
 <ul>
 <li>Implements a broad subset of .NET/C# types under <code>System::*</code> namespaces in idiomatic, modern C++ — familiar API design for C# developers.</li>
 <li>Covers exceptions, events, delegates, collections, and other system-level building blocks; tracks implementation status per class (Todo / Stub / Partial / Implemented / Verified).</li>
@@ -1301,7 +1302,7 @@
 <h3>Galaxy Eggbert</h3>
 <p class="project-role">3D remake of Speedy Blupi built on the CNA engine stack</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/galaxy-eggbert" rel="noreferrer" target="_blank">github.com/openeggbert/galaxy-eggbert</a> · Website: <a href="https://galaxyeggbert.openeggbert.com" rel="noreferrer" target="_blank">galaxyeggbert.openeggbert.com</a>
-                            · Stack: C++23, CNA, SDL3, easy-gl, bgfx · Targets: Linux, Windows, WebAssembly, Android · ≈17.3k LOC</p>
+                            · Stack: C++23, CNA, SDL3, easy-gl, bgfx · Targets: Linux, Windows, WebAssembly, Android · ≈18.5k LOC</p>
 <ul>
 <li>3D game built on the full CNA stack — validates the framework as a real cross-platform game runtime.</li>
 <li>Targets Linux, Windows, WebAssembly, and Android from a single C++ codebase; multiple rendering backends: SDL_RENDERER, easy-gl, bgfx.</li>
@@ -1348,7 +1349,7 @@
 <h3>meta-gl</h3>
 <p class="project-role">Low-level, type-safe C++23 OpenGL ES 2.0+ function loader and wrapper</p>
 <p class="project-meta">GitHub: <a href="https://github.com/openeggbert/meta-gl" rel="noreferrer" target="_blank">github.com/openeggbert/meta-gl</a> · Website: <a href="https://metagl.openeggbert.com" rel="noreferrer" target="_blank">metagl.openeggbert.com</a> · Stack:
-                            C++23, OpenGL ES 2.0+, CMake · Foundation layer used by easy-gl · ≈8.3k LOC</p>
+                            C++23, OpenGL ES 2.0+, CMake · Foundation layer used by easy-gl · ≈8.9k LOC</p>
 <ul>
 <li>Runtime OpenGL function loading via a host-supplied <code>GetProcAddress</code> callback — no windowing, no context creation.</li>
 <li>Type-safe <code>enum class</code> wrappers for all OpenGL constants (buffer targets, shader types, texture formats, etc.).</li>
@@ -1485,7 +1486,7 @@
 </div>
 </article>
 </div>
-<p style="margin-top:20px;color:#707784;font-size:0.9rem;text-align:center;">LOC measured with cloc (July 2026): C++ sources and headers (<code>.cpp</code>/<code>.hpp</code>/<code>.h</code>), <code>src/</code> and <code>include/</code> directories only, excluding tests, vendored, and third-party code. Portfolio total: ≈478.6k lines of C++.</p>
+<p style="margin-top:20px;color:#707784;font-size:0.9rem;text-align:center;">LOC measured with cloc (August 2026): C++ sources and headers (<code>.cpp</code>/<code>.hpp</code>/<code>.h</code>), <code>src/</code> and <code>include/</code> directories only, excluding tests, vendored, and third-party code. Portfolio total: ≈611.4k lines of C++.</p>
 </div>
 </section>
 </main>
